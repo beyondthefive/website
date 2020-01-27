@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../components/layout'
-import { Heading, Flex, Text, Button, Box } from 'rebass'
+import { Flex, Text, Button, Box } from 'rebass'
 import Link from 'next/link'
 
 const register = () => (

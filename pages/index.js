@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Heading } from 'rebass'
+import {} from 'rebass'
 
 const index = () => (
   <Layout header>

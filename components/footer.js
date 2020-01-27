@@ -1,4 +1,4 @@
-import { Flex, Box, Heading, Link } from 'rebass'
+import { Flex, Box, Link } from 'rebass'
 import Waves from './waves'
 import { FaDiscord, FaInstagram } from 'react-icons/fa'
 const links = [
