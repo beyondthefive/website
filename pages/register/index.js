@@ -11,7 +11,7 @@ const register = () => (
           Interested in being a teacher or content creator for Beyond The Five?
         </Text>
         <Flex justifyContent={['center', 'flex-end']}>
-          <Link href="register/instructor">
+          <Link href="/register/instructor">
             <Button m={2}>
               <Text fontSize={[1, 2, 3]}>Instructor Application</Text>
             </Button>
@@ -21,7 +21,7 @@ const register = () => (
     </Flex>
 
     <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfeAjAUVn04UtO6Gm2gpk95Tbddh6UgsCCTTdR9svT0nB8oNQ/viewform?embedded=true"
+      src="https://docs.google.com/forms/d/e/1FAIpQLScD6O4xg-MucacjFguVMyBCcOdQCIFamiM_KqVeN3mCsKqSqw/viewform?embedded=true"
       width="100%"
       height="1500"
       marginHeight="0"
