@@ -1,6 +1,5 @@
 import React from 'react'
-import { Flex, Box, Heading, Button, Text } from 'rebass'
-import Link from 'next/link'
+import { Flex, Box } from 'rebass'
 import { ThemeProvider } from 'emotion-theming'
 import theme from '@rebass/preset'
 import Header from './header'
@@ -14,42 +13,7 @@ const layout = ({ children, header = false }) => (
           minHeight: '100vh'
         }}
       >
-        <Header>
-          {header ? (
-            <Box>
-              <Flex>
-                <Box width={[1, 1 / 2]} px={2}>
-                  <Text fontSize={[3, 4, 5]}>
-                    We connect students studying for AP exams with instructors,
-                    so you can get the resources you need.
-                  </Text>
-                  <Heading fontSize={[3, 4, 5]}>For free.</Heading>
-                </Box>
-                <Box width={[1, 1 / 2]} px={2}>
-                  <Text fontSize={[3, 4, 5]}>We have</Text>
-                  <Text fontSize={[3, 4, 5]}>- 16 AP Courses</Text>
-                  <Text fontSize={[3, 4, 5]}>- Over 160 Students</Text>
-                  <Text fontSize={[3, 4, 5]}>
-                    - A <b>100% AP Test pass rate</b>
-                  </Text>
-                </Box>
-              </Flex>
-
-              <Flex pt={5} width={[1, 1 / 3]}>
-                <Link href="/register">
-                  <Button
-                    mx="auto"
-                    sx={{ borderRadius: 10, boxShadow: '0 0 5px skyblue' }}
-                  >
-                    <Text fontSize={[2, 3, 4]} p={1}>
-                      Register now!
-                    </Text>
-                  </Button>
-                </Link>
-              </Flex>
-            </Box>
-          ) : null}
-        </Header>
+        <Header header={header}></Header>
 
         <Flex
           sx={{
