@@ -16,7 +16,7 @@ const links = [
 
 const footer = () => (
   <Box>
-    <Waves />
+   {/* <Waves />*/}
     <Flex
       bg="#561B25"
       color="white"
@@ -25,8 +25,8 @@ const footer = () => (
       px={5}
       py={3}
     >
-      <Box width={[1, 1 / 2]}></Box>
-      <Box width={[1, 1 / 2]}>
+      <Box width={[1, 2 / 3]} my="auto">AP®️ is a registered trademark of the College Board, which does not sponsor or endorse Beyond The Five.</Box>
+      <Box width={[1, 1 / 3]}>
         <Flex justifyContent={['center', 'flex-end']}>
           {links.map(icon => (
             <Box key={icon.alt} px={2}>
