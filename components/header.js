@@ -65,12 +65,9 @@ const header = ({ header = false }) => (
             Beyond The Five
           </Heading>
           <Text textAlign="center" fontSize={[3, 4, 5]}>
-            We provide free, online, self-paced courses for students to complete
-            to become experts in AP®️ and higher-level classes.
+            We provide <b>free</b>, online, self-paced courses for students in AP®️ and higher-level classes.
           </Text>
-          <Text textAlign="center" fontWeight="bold" fontSize={[3, 4, 5]}>
-            For free.
-          </Text>
+          
           <RegisterButton/>
          
         </Flex>
