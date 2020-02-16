@@ -20,9 +20,9 @@ const register = () => (
       </Box>
     </Flex>
     <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLScD6O4xg-MucacjFguVMyBCcOdQCIFamiM_KqVeN3mCsKqSqw/viewform?embedded=true"
+      src="https://form.jotform.com/200454457448155"
       width="100%"
-      height="500"
+      height="525"
       marginHeight="0"
       marginWidth="0"
       frameBorder="0"
