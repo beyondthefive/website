@@ -6,7 +6,7 @@ import Link from 'next/link'
 const register = () => (
   <Layout>
     <Flex p={3} justifyContent={['center', 'flex-end']}>
-      <Box p={1} mx={[0,5]}>
+      <Box p={1} mx={[0, 5]}>
         <Text fontSize={[2, 3, 4]}>
           Interested in being a teacher or content creator for Beyond The Five?
         </Text>

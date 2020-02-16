@@ -5,11 +5,9 @@ import Link from 'next/link'
 
 const register = () => (
   <Layout>
-     <Flex justifyContent={['center', 'flex-end']}>
-      <Box p={1} mx={[0,5]}>
-        <Text fontSize={[2, 3, 4]}>
-          Looking to register as a student?
-        </Text>
+    <Flex p={3} justifyContent={['center', 'flex-end']}>
+      <Box p={1} mx={[0, 5]}>
+        <Text fontSize={[2, 3, 4]}>Looking to register as a student?</Text>
         <Flex justifyContent={['center', 'flex-end']}>
           <Link href="/register">
             <Button m={2}>
