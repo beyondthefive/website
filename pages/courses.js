@@ -5,11 +5,11 @@ import RegisterButton from '../components/registerButton'
 import apCourses from '../lib/apCourses'
 import higherLevelCourses from '../lib/higherLevelCourses'
 
-const listing = (name, courses) => (
+const listing = (name, desc ,courses) => (
   <Box width={[1, 1 / 2]}>
     <Heading fontSize={[1, 2, 3]}>{name}</Heading>
     <Text fontSize={[1, 2, 3]}>
-      You may take up to 8 credits of AP courses.
+      {desc}
     </Text>
 
     <Box pl={2}>
@@ -41,8 +41,8 @@ const courses = () => (
         semester.
       </Text>
       <Flex p={3}>
-        {listing('AP®️ Courses', apCourses)}
-        {listing('Higher-Level Courses', higherLevelCourses)}
+        {listing('AP®️ Courses', 'You can enroll in up to 8 credits worth of AP®️ courses.', apCourses)}
+        {listing('Higher-Level Courses', 'You can enroll in up to 20 credits worth of higher-level courses.', higherLevelCourses)}
       </Flex>
       <Flex alignItems="center" mt={3} flexDirection="column">
         <Text fontSize={[2, 3, 4]}> Interested in Beyond The Five?</Text>
