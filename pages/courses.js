@@ -1,17 +1,17 @@
-import React from "react";
-import Layout from "../components/layout";
-import { Box, Flex, Text, Heading } from "rebass";
-import RegisterButton from "../components/registerButton";
-import apCourses from "../lib/apCourses";
-import higherLevelCourses from "../lib/higherLevelCourses";
-import CourseTable from "../components/courseTable/courseTable"
+import React from 'react'
+import Layout from '../components/layout'
+import { Box, Flex, Text, Heading } from 'rebass'
+import RegisterButton from '../components/registerButton'
+import apCourses from '../lib/apCourses'
+import higherLevelCourses from '../lib/higherLevelCourses'
+import CourseTable from '../components/courseTable/courseTable'
 
 const courses = () => {
   return (
     <Layout>
       <Box width={[1, 2 / 3]} mx="auto" my={3} p={3}>
         <Heading fontSize={[2, 3, 4]}>
-          Beyond The Five currently offers {apCourses.length} AP®️ courses and{" "}
+          Beyond The Five currently offers {apCourses.length} AP®️ courses and{' '}
           {higherLevelCourses.length} higher-level courses.
         </Heading>
         <Box my={3}>
@@ -30,7 +30,7 @@ const courses = () => {
         </Flex>
       </Box>
     </Layout>
-  );
-};
+  )
+}
 
-export default courses;
+export default courses

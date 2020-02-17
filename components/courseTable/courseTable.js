@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
-import { Box, Heading, Text, Flex, Button } from "rebass";
-import CourseBlock from "./courseBlock";
+import { Box, Heading, Text, Flex, Button } from 'rebass'
+import CourseBlock from './courseBlock'
 
 const table = ({ title, data }) => (
   <Box my={3}>
@@ -9,20 +9,20 @@ const table = ({ title, data }) => (
     <Flex>
       <Flex
         p={1}
-        sx={{ border: "1px black solid", borderBottom: "0px" }}
+        sx={{ border: '1px black solid', borderBottom: '0px' }}
         width={2 / 5}
       >
         <Text my="auto" fontSize={[1, 2, 3]}>
           Course Name
         </Text>
       </Flex>
-      <Flex sx={{ borderTop: "1px black solid" }} width={1 / 9}>
+      <Flex sx={{ borderTop: '1px black solid' }} width={1 / 9}>
         <Text m="auto" fontSize={[1, 2, 3]}>
           Credits
         </Text>
       </Flex>
       <Flex
-        sx={{ border: "1px black solid", borderBottom: "0px" }}
+        sx={{ border: '1px black solid', borderBottom: '0px' }}
         width={32 / 45}
        
       >
@@ -42,6 +42,6 @@ const table = ({ title, data }) => (
       />
     ))}
   </Box>
-);
+)
 
-export default table;
+export default table
