@@ -39,6 +39,7 @@ const header = ({ header = false }) => (
         <Link href="/">
           <Flex justifyContent={['center', 'flex-start']}>
             <Image
+            alt="Beyond The Five Logo"
               src={require('../public/icon.png')}
               sx={{
                 height: ['25%', '20%', '12%'],
