@@ -1,6 +1,10 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Text, Box, Flex, Card } from 'rebass'
+import { Text, Box, Flex } from 'rebass'
+import RegisterButton from '../components/registerButton'
+import Link from 'next/link'
+import apCourses from '../lib/apCourses'
+import higherLevelCourses from '../lib/higherLevelCourses'
 
 const Item = ({ contents }) => (
   <Box sx={{ borderRadius: 6, boxShadow: '0 0 5px lightgrey' }} m={2}>
@@ -22,8 +26,8 @@ const desc2 = [
 ]
 
 const index = () => (
-  <Layout header>
-    <Box width={[1, 1 / 2, 2 / 3]} m={1} p={2} mx="auto" my={4}>
+  <Layout waves header>
+    <Box width={[1, 1 / 2, 2 / 3]} m={1} p={2} mx="auto" mt={4}>
       <Text mb={3} fontSize={[3, 4, 5]} textAlign="center">
         Beyond The Five has:
       </Text>
@@ -36,8 +40,8 @@ const index = () => (
           gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)']
         }}
       >
-        <Item contents="30 AP®️ Courses" />
-        <Item contents="41 higher-level courses" />
+        <Item contents={apCourses.length + ' AP®️ Courses'} />
+        <Item contents={higherLevelCourses.length + ' higher-level courses'} />
         <Item contents="Over 160 Students" />
         <Item contents="A 100% AP®️ test pass rate!" />
       </Box>
@@ -56,6 +60,13 @@ const index = () => (
         ))}
       </Box>
     </Box>
+
+    <Text textAlign="center" m={2} fontSize={[3, 4, 5]}>
+      Check out our <Link href="/courses">course catalog</Link>!
+    </Text>
+    <Flex alignItems="center">
+      <RegisterButton />
+    </Flex>
   </Layout>
 )
 

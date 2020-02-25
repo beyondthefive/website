@@ -26,55 +26,62 @@ const NavLinks = props => {
   )
 }
 
-const header = ({ header = false }) => (
-  <Box bg="#561B25" color="white">
-    <Flex
-      mx="auto"
-      width={[1,7 / 8]}
-      py={1}
-      px={3}
-      flexDirection={['column', 'row']}
-    >
-      <Box width={[1, 1 / 2]}>
-        <Link href="/">
+const header = ({ header = false, waves = false }) => (
+  <Box color="white">
+    <Box bg="#561B25">
+      <Flex
+        mx="auto"
+        width={[1, 7 / 8]}
+        py={1}
+        px={3}
+        flexDirection={['column', 'row']}
+      >
+        <Box width={[1, 1 / 2]}>
           <Flex justifyContent={['center', 'flex-start']}>
-            <Image
-            alt="Beyond The Five Logo"
-              src={require('../public/icon.png')}
-              sx={{
-                height: ['25%', '20%', '12%'],
-                width: ['25%', '20%', '12%']
-              }}
-            />
-            {/*<Heading fontSize={[4, 5]} my="auto">
+            <Link href="/">
+              <Image
+                alt="Beyond The Five Logo"
+                src={require('../public/icon.png')}
+                sx={{
+                  height: ['25%', '20%', '12%'],
+                  width: ['25%', '20%', '12%']
+                }}
+              />
+              {/*<Heading fontSize={[4, 5]} my="auto">
               Beyond The Five
             </Heading>*/}
+            </Link>
           </Flex>
-        </Link>
-      </Box>
-      <Box width={[1, 1 / 2]}>
-        <Flex justifyContent={['center', 'flex-end']}>
-          <NavLinks links={links} />
-        </Flex>
-      </Box>
-    </Flex>
+        </Box>
+        <Box width={[1, 1 / 2]}>
+          <Flex justifyContent={['center', 'flex-end']}>
+            <NavLinks links={links} />
+          </Flex>
+        </Box>
+      </Flex>
 
-    <Box bg="#561B25" color="white">
-      {header ? (
-        <Flex mx="auto" px={3} width={[1, 1 / 2, 2 / 3]} flexDirection="column">
-          <Heading py={3} textAlign="center" fontSize={[4, 5, 6]}>
-            Beyond The Five
-          </Heading>
-          <Text textAlign="center" fontSize={[3, 4, 5]}>
-            We provide <b>free</b>, online, self-paced courses for students in AP®️ and higher-level classes.
-          </Text>
-          
-          <RegisterButton/>
-         
-        </Flex>
-      ) : null}
+      <Box bg="#561B25" color="white">
+        {header ? (
+          <Flex
+            mx="auto"
+            px={3}
+            width={[1, 1 / 2, 2 / 3]}
+            flexDirection="column"
+          >
+            <Heading py={3} textAlign="center" fontSize={[4, 5, 6]}>
+              Beyond The Five
+            </Heading>
+            <Text textAlign="center" fontSize={[3, 4, 5]}>
+              We provide <b>free</b>, online, self-paced courses for students in
+              AP®️ and higher-level classes.
+            </Text>
+
+            <RegisterButton />
+          </Flex>
+        ) : null}
+      </Box>
     </Box>
-    {/*<Waves top />*/}
+    {waves ? <Waves top /> : null}
   </Box>
 )
 

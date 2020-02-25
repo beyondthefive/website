@@ -5,12 +5,11 @@ import { ThemeProvider } from 'emotion-theming'
 import theme from '@rebass/preset'
 import Header from './header'
 import Footer from './footer'
-const layout = ({ children, header = false }) => (
+const layout = ({ children, header = false, waves = false }) => (
   <React.Fragment>
-     <Head>
-         
-          <link rel="icon" type="image/x-icon" href="../public/favicon.ico" />
-        </Head>
+    <Head>
+      <link rel="icon" type="image/x-icon" href="../public/favicon.ico" />
+    </Head>
     <ThemeProvider theme={theme}>
       <Flex
         sx={{
@@ -18,7 +17,7 @@ const layout = ({ children, header = false }) => (
           minHeight: '100vh'
         }}
       >
-        <Header header={header}></Header>
+        <Header waves={waves} header={header}></Header>
 
         <Flex
           sx={{
@@ -51,7 +50,7 @@ const layout = ({ children, header = false }) => (
           Ads
         </Box>*/}
         </Flex>
-        <Footer />
+        <Footer waves={waves} />
       </Flex>
       <style jsx>{`
         :global(body) {
