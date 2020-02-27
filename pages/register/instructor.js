@@ -1,31 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../../components/layout'
-import { Flex, Text, Box, Button } from 'rebass'
-import Link from 'next/link'
+import { Flex } from 'rebass'
+import ReactLoading from 'react-loading'
 
-const register = () => (
-  <Layout>
-    <Flex p={3} justifyContent={['center', 'flex-end']}>
-      <Box p={1} mx={[0, 5]}>
-        <Text fontSize={[2, 3, 4]}>Looking to register as a student?</Text>
-        <Flex justifyContent={['center', 'flex-end']}>
-          <Link href="/register">
-            <Button m={2}>
-              <Text fontSize={[1, 2, 3]}>Student Registration</Text>
-            </Button>
-          </Link>
+const register = () => {
+  const [loaded, setLoaded] = useState(false)
+  let onLoad = () => setLoaded(true)
+  return (
+    <Layout>
+      {!loaded ? (
+        <Flex justifyContent="center" m={3}>
+          <ReactLoading type="spin" color="grey" height={'30%'} width={'30%'} />
         </Flex>
-      </Box>
-    </Flex>
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfeAjAUVn04UtO6Gm2gpk95Tbddh6UgsCCTTdR9svT0nB8oNQ/viewform?embedded=true"
-      width="100%"
-      height="1500"
-      marginHeight="0"
-      marginWidth="0"
-      frameBorder="0"
-    ></iframe>
-  </Layout>
-)
+      ) : null}
+      <iframe
+        onLoad={() => onLoad()}
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfeAjAUVn04UtO6Gm2gpk95Tbddh6UgsCCTTdR9svT0nB8oNQ/viewform?embedded=true"
+        width="100%"
+        height="1300"
+        marginHeight="0"
+        marginWidth="0"
+        frameBorder="0"
+      />
+    </Layout>
+  )
+}
 
 export default register
