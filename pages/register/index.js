@@ -9,7 +9,7 @@ const register = () => {
     <Layout>
       {!loaded ? (
         <Flex justifyContent="center" m={3}>
-          <ReactLoading type="spin" color="grey" height={'30%'} width={'30%'} />
+          <ReactLoading type="spin" color="grey" height={'10%'} width={'10%'} />
         </Flex>
       ) : null}
       <iframe
