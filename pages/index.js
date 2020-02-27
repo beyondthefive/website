@@ -36,7 +36,7 @@ const index = () => (
         flexDirection={['column', 'row']}
         sx={{
           display: 'grid',
-          gridGap: 3,
+          gridGap: 2,
           gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)']
         }}
       >
