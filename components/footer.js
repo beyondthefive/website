@@ -1,4 +1,4 @@
-import { Flex, Box, Link } from 'rebass'
+import { Flex, Box, Link, Text } from 'rebass'
 import Waves from './waves'
 import { FaDiscord, FaInstagram } from 'react-icons/fa'
 const links = [
@@ -13,25 +13,34 @@ const footer = ({ waves = false }) => (
   <Box>
     {waves ? <Waves /> : null}
 
-    <Flex bg="#561B25" color="white" mt={-1} px={[3, 5]} py={3}>
+    <Flex bg="#561B25" color="white" my={-2} px={[3, 5]} py={3}>
       <Box width={1}>
-        <Flex width={1} flexDirection={['column', 'row']}>
-          <Box width={[1, 2 / 3]} my={[3, 'auto']}>
-            AP®️ is a registered trademark of the College Board, which does not
-            sponsor or endorse Beyond The Five.
+        <Flex width={1} my={2} flexDirection={['column', 'row']}>
+          <Box width={[1, 4 / 5]} my={[3, 'auto']}>
+            <Flex>
+              <Text fontSize={[1, 2, 3]}>
+                Interested in being a teacher or content creator for Beyond The
+                Five?
+              </Text>
+              <Link href="/register/instructor">
+                <Text fontSize={[1, 2, 3]}>Apply now!</Text>
+              </Link>
+            </Flex>
           </Box>
-          <Box width={[1, 1 / 3]} my={[2, 'auto']}>
+          <Box width={[1, 1 / 5]} my={[2, 'auto']}>
             <Flex justifyContent={['center', 'flex-end']}>
               {links.map(icon => (
-                <Box key={icon.alt} px={2}>
-                  <Link href={icon.link}>{icon.component} </Link>
+                <Box key={icon.alt} px={2} my="auto">
+                  <Link href={icon.link}>{icon.component}</Link>
                 </Box>
               ))}
             </Flex>
           </Box>
         </Flex>
-        Interested in being a teacher or content creator for Beyond The Five?{' '}
-        <Link href="/register/instructor">Apply now!</Link>
+        <Text fontSize={[1, 2, 3]}>
+          AP®️ is a registered trademark of the College Board, which does not
+          sponsor or endorse Beyond The Five.
+        </Text>
       </Box>
     </Flex>
   </Box>

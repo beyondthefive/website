@@ -16,7 +16,7 @@ const register = () => {
         onLoad={() => onLoad()}
         src="https://form.jotform.com/200454457448155"
         width="100%"
-        height="625"
+        height="100%"
         marginHeight="0"
         marginWidth="0"
         frameBorder="0"

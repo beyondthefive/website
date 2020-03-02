@@ -14,7 +14,7 @@ export default class MyApp extends App {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta
             name="description"
-            content="We connect students studying for AP exams with instructors, so you can get the resources you need. For free."
+            content="We provide free, online, self-paced courses for students in AP®️ and higher-level classes."
           ></meta>
           <link rel="icon" href="../public/favicon.ico" />
         </Head>

@@ -9,7 +9,7 @@ const button = () => (
       mx="auto"
       sx={{ borderRadius: 10, boxShadow: '0 0 5px skyblue' }}
     >
-      <Text fontWeight="normal" fontSize={[2, 3, 4]} mx={2} my={1}>
+      <Text fontWeight="normal" fontSize={[3, 4, 5]} mx={2} my={1}>
         Register now!
       </Text>
     </Button>
