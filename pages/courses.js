@@ -16,16 +16,15 @@ const courses = () => {
         </Heading>
         <Box my={3}>
           <Text fontSize={[1, 2, 3]}>Deadlines for dropping or enrolling:</Text>
-          <Text fontSize={[1, 2, 3]}>2+ point AP®️ courses - January 1</Text>
+          <Text fontSize={[1, 2, 3]}>January 1: 2+ point AP®️ courses</Text>
           <Text fontSize={[1, 2, 3]}>
-            1 point AP®️ courses and all higher-level courses - February 1
+            February 1: 1 point AP®️ courses and all higher-level courses
           </Text>
         </Box>
         <CourseTable title="AP Courses" data={apCourses} />
         <CourseTable title="Higher-Level Courses" data={higherLevelCourses} />
-
         <Flex alignItems="center" mt={3} flexDirection="column">
-          <Text fontSize={[2, 3, 4]}> Interested in Beyond The Five?</Text>
+          <Text fontSize={[2, 3, 4]}> Interested in taking courses with Beyond The Five?</Text>
           <RegisterButton />
         </Flex>
       </Box>

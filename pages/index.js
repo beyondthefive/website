@@ -1,14 +1,13 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Text, Box, Flex } from 'rebass'
+import { Text, Box, Flex, Link } from 'rebass'
 import RegisterButton from '../components/registerButton'
-import Link from 'next/link'
 import apCourses from '../lib/apCourses'
 import higherLevelCourses from '../lib/higherLevelCourses'
 
 const Item = ({ contents }) => (
-  <Box sx={{ borderRadius: 6, boxShadow: '0 0 5px lightgrey' }} m={2}>
-    <Text textAlign="center" m={2} fontSize={[3, 4, 5]}>
+  <Box sx={{ borderRadius: 6, boxShadow: '0 0 5px lightgrey' }} m={2} p={2}>
+    <Text textAlign="center" fontSize={[3, 4, 5]}>
       {contents}
     </Text>
   </Box>
@@ -16,13 +15,13 @@ const Item = ({ contents }) => (
 
 const desc1 = [
   'Our courses are intended for:',
-  '- self-studying & low access students',
-  '- students that need extra assistance'
+  'self-studying & low access students',
+  'students that need extra assistance'
 ]
 
 const desc2 = [
-  'Our courses have lectures, homework, and other things you would expect from a classroom-type learning environnement.',
-  'They are not for students that just want extra resources.'
+  'Our classes have lectures, homework, and other things you would expect from a classroom-type learning environnement.',
+  'They are not for students who just want extra resources.'
 ]
 
 const index = () => (
@@ -62,7 +61,7 @@ const index = () => (
     </Box>
 
     <Text textAlign="center" m={2} fontSize={[3, 4, 5]}>
-      Check out our <Link href="/courses">course catalog</Link>!
+      Check out <Link href="/courses">our course catalog</Link>!
     </Text>
     <Flex alignItems="center">
       <RegisterButton />

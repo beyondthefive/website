@@ -81,6 +81,7 @@ const header = ({ header = false, waves = false }) => (
         ) : null}
       </Box>
     </Box>
+   
     {waves ? <Waves top /> : null}
   </Box>
 )

@@ -71,7 +71,6 @@ class CourseBlock extends React.Component {
             width={1 / 9}
             sx={{
               borderTop: '1px black solid',
-
               borderBottom: bottomBorder
             }}
           >
