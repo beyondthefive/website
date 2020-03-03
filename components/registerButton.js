@@ -1,19 +1,18 @@
-import Link from 'next/link'
-import { Button, Text } from 'rebass'
+import { Button, Text, Link } from "rebass";
 
 const button = () => (
-  <Link href="/register">
-    <Button
-      m={4}
-      bg="#1c7ed6"
-      mx="auto"
-      sx={{ borderRadius: 10, boxShadow: '0 0 5px skyblue' }}
-    >
-      <Text fontWeight="normal" fontSize={[3, 4, 5]} mx={2} my={1}>
+  <Button
+    m={4}
+    bg="#1c7ed6"
+    mx="auto"
+    sx={{ borderRadius: 10, boxShadow: "0 0 5px skyblue" }}
+  >
+    <Link variant="nav" href="/register">
+      <Text color="white" fontWeight="normal" fontSize={[3, 4, 5]}>
         Register now!
       </Text>
-    </Button>
-  </Link>
-)
+    </Link>
+  </Button>
+);
 
-export default button
+export default button;
