@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import Layout from "../../components/layout";
-import { Flex, Text } from "rebass";
-import ReactLoading from "react-loading";
-import { MobileView } from "react-device-detect";
+import React, { useState } from 'react'
+import Layout from '../../components/layout'
+import { Flex, Text } from 'rebass'
+import ReactLoading from 'react-loading'
+import { MobileView } from 'react-device-detect'
 
 const register = () => {
-  const [loaded, setLoaded] = useState(false);
-  let onLoad = () => setLoaded(true);
+  const [loaded, setLoaded] = useState(false)
+  let onLoad = () => setLoaded(true)
   return (
     <Layout>
       <MobileView>
@@ -21,8 +21,8 @@ const register = () => {
           <ReactLoading
             type="spokes"
             color="grey"
-            height={"10%"}
-            width={"10%"}
+            height={'10%'}
+            width={'10%'}
           />
         </Flex>
       ) : null}
@@ -36,7 +36,7 @@ const register = () => {
         frameBorder="0"
       />
     </Layout>
-  );
-};
+  )
+}
 
-export default register;
+export default register
