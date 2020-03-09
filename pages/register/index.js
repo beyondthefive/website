@@ -1,15 +1,29 @@
-import React, { useState } from 'react'
-import Layout from '../../components/layout'
-import { Flex } from 'rebass'
-import ReactLoading from 'react-loading'
+import React, { useState } from "react";
+import Layout from "../../components/layout";
+import { Flex, Text } from "rebass";
+import ReactLoading from "react-loading";
+import { MobileView } from "react-device-detect";
+
 const register = () => {
-  const [loaded, setLoaded] = useState(false)
-  let onLoad = () => setLoaded(true)
+  const [loaded, setLoaded] = useState(false);
+  let onLoad = () => setLoaded(true);
   return (
     <Layout>
+      <MobileView>
+        <Flex>
+          <Text my={4} mx={2} fontSize={[3, 4, 4]} textAlign="center">
+            Please use a non-mobile device to register for Beyond The Five.
+          </Text>
+        </Flex>
+      </MobileView>
       {!loaded ? (
         <Flex justifyContent="center" m={3}>
-          <ReactLoading type="spin" color="grey" height={'10%'} width={'10%'} />
+          <ReactLoading
+            type="spokes"
+            color="grey"
+            height={"10%"}
+            width={"10%"}
+          />
         </Flex>
       ) : null}
       <iframe
@@ -22,7 +36,7 @@ const register = () => {
         frameBorder="0"
       />
     </Layout>
-  )
-}
+  );
+};
 
-export default register
+export default register;
