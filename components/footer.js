@@ -4,7 +4,7 @@ import { FaDiscord, FaInstagram } from 'react-icons/fa'
 const links = [
   {
     component: <FaInstagram color="white" size="2em" />,
-    alt: 'Instagram',
+    alt: 'Follow us on Instagram!',
     link: 'https://www.instagram.com/beyond_the_five/'
   }
 ]
@@ -20,11 +20,8 @@ const footer = ({ waves = false }) => (
             <Flex>
               <Text fontSize={[1, 2, 3]}>
                 Interested in being a teacher or content creator for Beyond The
-                Five?
+                Five? <Link href="/register/instructor">Apply now!</Link>
               </Text>
-              <Link href="/register/instructor">
-                <Text fontSize={[1, 2, 3]}>Apply now!</Text>
-              </Link>
             </Flex>
           </Box>
           <Box width={[1, 1 / 5]} my={[2, 'auto']}>
