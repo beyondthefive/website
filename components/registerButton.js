@@ -9,7 +9,7 @@ const button = () => (
   >
     <Link variant="nav" href="/register">
       <Text color="white" fontWeight="normal" fontSize={[3, 4, 5]}>
-        Register now!
+        <b>Register now!</b>
       </Text>
     </Link>
   </Button>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Box, Heading, Button, Link, Image, Text } from 'rebass'
+import { Flex, Box, Heading, Link, Image, Text } from 'rebass'
 import RegisterButton from '../components/registerButton'
 import Waves from './waves'
 
@@ -81,7 +81,7 @@ const header = ({ header = false, waves = false }) => (
         ) : null}
       </Box>
     </Box>
-   
+
     {waves ? <Waves top /> : null}
   </Box>
 )
