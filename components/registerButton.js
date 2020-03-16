@@ -1,10 +1,10 @@
 import { Button, Text, Link } from 'rebass'
 
-const button = () => (
-  <Button
+const button = ({mx="auto"}) => {
+  return(<Button
     m={4}
     bg="#1c7ed6"
-    mx="auto"
+    mx={mx}
     sx={{ borderRadius: 10, boxShadow: '0 0 5px skyblue' }}
   >
     <Link variant="nav" href="/register">
@@ -12,7 +12,7 @@ const button = () => (
         <b>Register now!</b>
       </Text>
     </Link>
-  </Button>
-)
+  </Button>)
+}
 
 export default button

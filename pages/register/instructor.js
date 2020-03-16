@@ -16,7 +16,7 @@ const register = () => {
       ) : null}
       <MobileView>
         <Flex>
-          <Text my={4} mx={2} fontSize={[3, 4, 4]} textAlign="center">
+          <Text my={4} mx={2} fontSize={[3, 4, 5]} textAlign="center">
             Please use a non-mobile device to apply for a position at Beyond The
             Five.
           </Text>
