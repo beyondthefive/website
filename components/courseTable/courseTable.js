@@ -5,7 +5,7 @@ import CourseBlock from './courseBlock'
 
 const table = ({ title, data }) => (
   <Box my={3}>
-    <Heading my={1}>AP Courses</Heading>
+    <Heading my={1}>{title}</Heading>
     <Flex>
       <Flex
         p={1}
