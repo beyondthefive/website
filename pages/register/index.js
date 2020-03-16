@@ -8,7 +8,7 @@ const register = () => {
   const [loaded, setLoaded] = useState(false)
   let onLoad = () => setLoaded(true)
   return (
-    <Layout>
+    <Layout instructorAd={false}>
       {!loaded ? (
         <Flex justifyContent="center" m={3}>
           <LoadingIndicator/>

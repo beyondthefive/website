@@ -5,7 +5,7 @@ import { ThemeProvider } from 'emotion-theming'
 import theme from '@rebass/preset'
 import Header from './header'
 import Footer from './footer'
-const layout = ({ children, header = false, waves = false }) => (
+const layout = ({ children, header = false, waves = false, instructorAd=true }) => (
   <React.Fragment>
     <Head>
       <link rel="icon" type="image/x-icon" href="../public/favicon.ico" />
@@ -50,7 +50,7 @@ const layout = ({ children, header = false, waves = false }) => (
           Ads
         </Box>*/}
         </Flex>
-        <Footer waves={waves} />
+        <Footer instructorAd={instructorAd} waves={waves} />
       </Flex>
       <style jsx>{`
         :global(body) {
