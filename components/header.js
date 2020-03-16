@@ -1,33 +1,33 @@
-import React from "react";
-import { Flex, Box, Heading, Link, Image, Text } from "rebass";
-import RegisterButton from "../components/registerButton";
-import Waves from "./waves";
-import Learn from "../public/svgs/undraw_researching_22gp.svg";
+import React from 'react'
+import { Flex, Box, Heading, Link, Image, Text } from 'rebass'
+import RegisterButton from '../components/registerButton'
+import Waves from './waves'
+import Learn from '../public/svgs/undraw_researching_22gp.svg'
 
 const links = [
-  { href: "/about", label: "About" },
-  { href: "/courses", label: "Courses" },
-  { href: "/register", label: "Register" }
-];
+  { href: '/#about', label: 'About' },
+  { href: '/courses', label: 'Courses' },
+  { href: '/register', label: 'Register' }
+]
 
 const NavLinks = props => {
-  const links = props.links;
+  const links = props.links
   const linkList = links.map(link => (
-    <Box w={"100%"} p={1} m={1} py="auto" key={link.label}>
+    <Box w={'100%'} p={1} m={1} py="auto" key={link.label}>
       <Link variant="nav" href={link.href}>
         <Text
           fontWeight="normal"
           textAlign="center"
-          my={"auto"}
+          my={'auto'}
           fontSize={[2, 3, 4]}
         >
           {link.label}
         </Text>
       </Link>
     </Box>
-  ));
-  return <Flex p={[0, 3]}>{linkList}</Flex>;
-};
+  ))
+  return <Flex p={[0, 3]}>{linkList}</Flex>
+}
 
 const header = ({ header = false, waves = false }) => (
   <Box color="white">
@@ -37,28 +37,28 @@ const header = ({ header = false, waves = false }) => (
         width={[1, 5 / 6]}
         py={1}
         px={3}
-        flexDirection={["column", "row"]}
+        flexDirection={['column', 'row']}
       >
         <Box width={[1, 1 / 2]}>
-          <Flex justifyContent={["center", "flex-start"]}>
+          <Flex justifyContent={['center', 'flex-start']}>
             <Image
               alt="Beyond The Five Logo"
-              src={require("../public/logo-transparent.png")}
+              src={require('../public/logo-transparent.png')}
               sx={{
-                height: ["25%", "20%", "15%"],
-                width: ["25%", "20%", "15%"]
+                height: ['25%', '20%', '15%'],
+                width: ['25%', '20%', '15%']
               }}
             />
 
             <Heading fontSize={[3, 4, 5]} my="auto">
-              <Link href="/" color="white" sx={{ textDecoration: "none" }}>
+              <Link href="/" color="white" sx={{ textDecoration: 'none' }}>
                 Beyond The Five
               </Link>
             </Heading>
           </Flex>
         </Box>
         <Box width={[1, 1 / 2]} alignSelf="center">
-          <Flex justifyContent={["center", "flex-end"]}>
+          <Flex justifyContent={['center', 'flex-end']}>
             <NavLinks links={links} />
           </Flex>
         </Box>
@@ -71,21 +71,21 @@ const header = ({ header = false, waves = false }) => (
             px={[3,5]}
             //width={[1, 1 / 2, 2 / 3]}
             width={[1]}
-            flexDirection={["column", "row"]}
+            flexDirection={['column', 'row']}
           >
             <Box width={[1, 1 / 2]} ml={[0, 5]} p={1}>
-              <Text fontSize={[4,5,6]} textAlign={["center","left"]}>
+              <Text fontSize={[4,5,6]} textAlign={['center','left']}>
                 Online, self-paced courses for students in AP®️ and higher-level
                 classes.
               </Text>
               <Flex>
-                <RegisterButton mx={["auto",0]} />
+                <RegisterButton mx={['auto',0]} />
               </Flex>
             </Box>
 
             <Flex
               py={2}
-              justifyContent={["center", "flex-start"]}
+              justifyContent={['center', 'flex-start']}
               width={[1, 1 / 2]}
             >
               <Learn height="80%" width="80%" />
@@ -97,6 +97,6 @@ const header = ({ header = false, waves = false }) => (
 
     {waves ? <Waves top /> : null}
   </Box>
-);
+)
 
-export default header;
+export default header

@@ -1,6 +1,6 @@
 import { Button, Text, Link } from 'rebass'
 
-const button = ({mx="auto"}) => {
+const button = ({mx='auto'}) => {
   return(<Button
     m={4}
     bg="#1c7ed6"
