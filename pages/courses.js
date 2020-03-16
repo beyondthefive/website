@@ -21,6 +21,13 @@ const courses = () => {
             February 1: 1 point AP®️ courses and all higher-level courses
           </Text>
         </Box>
+        <Box my={3}>
+          <Text fontSize={[1, 2, 3]}>Credit Limits:</Text>
+          <Text fontSize={[1, 2, 3]}>10 Credits in AP®️ Courses</Text>
+          <Text fontSize={[1, 2, 3]}>
+            20 Credits in all non-AP®️ courses
+          </Text>
+        </Box>
         <CourseTable title="AP Courses" data={apCourses} />
         <CourseTable title="Higher-Level Courses" data={higherLevelCourses} />
         <Flex alignItems="center" mt={3} flexDirection="column">
