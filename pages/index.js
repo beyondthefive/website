@@ -79,7 +79,6 @@ const index = () => (
             Our courses are intended for:
             <Text>- self-studying & low access students</Text>
             <Text>- students that need extra assistance</Text>
-           
           </Text>
         </Flex>
         <Flex justifyContent="center" width={[1, 1 / 2]}>
@@ -95,10 +94,15 @@ const index = () => (
         ))}
       </Box>
     </Box>
-
-    <Text textAlign="center" my={2} mb={6} fontSize={[3, 4, 5]}>
-      Check out <Link href="/courses">our course catalog</Link>!
-    </Text>
+    <Box mt={3} mb={6}>
+      <Text textAlign="center" fontSize={[3, 4, 5]}>
+        Beyond The Five currently offers{' '}
+        {apCourses.length + higherLevelCourses.length} courses.
+      </Text>
+      <Text textAlign="center" fontSize={[3, 4, 5]}>
+        Find them on <Link href="/courses">our course catalog</Link>.
+      </Text>
+    </Box>
     <Text textAlign="center" fontSize={[3, 4, 5]}>
       Ready to learn with us?
     </Text>
