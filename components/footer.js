@@ -41,7 +41,9 @@ const footer = ({ waves = false, instructorAd = true }) => (
                       love.
                     </Text>
                     <Text>
-                      <Link href="/register/instructor">Apply now!</Link>
+                      <Link href="/register/instructor">
+                        <Text color="skyblue">Apply now!</Text>
+                      </Link>
                     </Text>
                   </Text>
                 </Box>
@@ -69,7 +71,7 @@ const footer = ({ waves = false, instructorAd = true }) => (
           <Text fontSize={[1, 2, 3]}>
             Have a question? Shoot us an email:{' '}
             <Link href="mailto:team@beyondthefive.com">
-              team@beyondthefive.com
+              <Text color="skyblue"> team@beyondthefive.com</Text>
             </Link>
           </Text>
           <Text fontSize={[1, 2, 3]} my={2}>
