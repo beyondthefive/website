@@ -3,6 +3,7 @@ import { Flex, Box, Heading, Link, Image, Text } from 'rebass'
 import RegisterButton from '../components/registerButton'
 import Waves from './waves'
 import Learn from '../public/svgs/undraw_researching_22gp.svg'
+import Logo from '../public/new.svg'
 
 const links = [
   { href: '/#about', label: 'About' },
@@ -34,29 +35,21 @@ const header = ({ header = false, waves = false }) => (
     <Box bg="#561B25">
       <Flex
         mx="auto"
-        width={[1, 5 / 6]}
+        width={[1, 4 / 5]}
         py={1}
         px={3}
         flexDirection={['column', 'row']}
       >
-        <Box width={[1, 1 / 2]}>
-          <Flex justifyContent={['center', 'flex-start']}>
-            <Image
-              alt="Beyond The Five Logo"
-              src={require('../public/logo-transparent.png')}
-              sx={{
-                height: ['25%', '20%', '15%'],
-                width: ['25%', '20%', '15%']
-              }}
-            />
-
-            <Heading fontSize={[3, 4, 5]} my="auto">
+        <Flex width={[1, 1 / 2]}>
+          <Flex justifyContent={['center', 'flex-start']} my="auto">
+            <Logo height="6%" width="6%" />
+            <Heading fontSize={[3, 4, 5]} my="auto" mx={3}>
               <Link href="/" color="white" sx={{ textDecoration: 'none' }}>
                 Beyond The Five
               </Link>
             </Heading>
           </Flex>
-        </Box>
+        </Flex>
         <Box width={[1, 1 / 2]} alignSelf="center">
           <Flex justifyContent={['center', 'flex-end']}>
             <NavLinks links={links} />
@@ -68,18 +61,18 @@ const header = ({ header = false, waves = false }) => (
         {header ? (
           <Flex
             mx="auto"
-            px={[3,5]}
+            px={[3, 5]}
             //width={[1, 1 / 2, 2 / 3]}
             width={[1]}
             flexDirection={['column', 'row']}
           >
             <Box width={[1, 1 / 2]} ml={[0, 5]} p={1}>
-              <Text fontSize={[4,5,6]} textAlign={['center','left']}>
+              <Text fontSize={[4, 5, 6]} textAlign={['center', 'left']}>
                 Online, self-paced courses for students in AP®️ and higher-level
                 classes.
               </Text>
               <Flex>
-                <RegisterButton mx={['auto',0]} />
+                <RegisterButton mx={['auto', 0]} />
               </Flex>
             </Box>
 

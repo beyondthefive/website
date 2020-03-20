@@ -55,8 +55,13 @@ const footer = ({ waves = false, instructorAd = true }) => (
               {instructorAd ? (
                 <Box>
                   {links.map(icon => (
-                    <Flex key={icon.alt} justifyContent="flex-end">
-                      <Text m={1} fontSize={[1, 2, 3]} my="auto">
+                    <Flex
+                      key={icon.alt}
+                      justifyContent="flex-end"
+                      verticalAlign="center"
+                      m={1}
+                    >
+                      <Text m={1} fontSize={[1, 2, 3]}>
                         {icon.alt}
                       </Text>
                       <Link href={icon.link}>{icon.component}</Link>
