@@ -1,19 +1,25 @@
-import React from 'react'
-import Head from 'next/head'
-import { Flex, Box } from 'rebass'
-import { ThemeProvider } from 'emotion-theming'
-import theme from '@rebass/preset'
-import Header from './header'
-import Footer from './footer'
-import css from 'styled-jsx/css'
+import React from "react";
+import Head from "next/head";
+import { Flex, Box } from "rebass";
+import { ThemeProvider } from "emotion-theming";
+import theme from "@rebass/preset";
+import Header from "./header";
+import Footer from "./footer";
+import css from "styled-jsx/css";
+import IBMPlexSans from "../public/fonts/IBMPlexSans-Regular.ttf";
 
 const globalStyle = css.global`
-  @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap");
+  @font-face {
+    font-family: "IBM Plex Sans";
+    src: url(${IBMPlexSans}) format("truetype");
+    font-weight: 400;
+    font-display: fallback;
+  }
   :global(body) {
     font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
     margin: 0;
   }
-`
+`;
 
 const layout = ({
   children,
@@ -29,8 +35,8 @@ const layout = ({
       <ThemeProvider theme={theme}>
         <Flex
           sx={{
-            flexDirection: 'column',
-            minHeight: '100vh'
+            flexDirection: "column",
+            minHeight: "100vh"
           }}
         >
           <Header waves={waves} header={header}></Header>
@@ -38,7 +44,7 @@ const layout = ({
           <Flex
             sx={{
               flex: 1,
-              flexDirection: ['column', 'row']
+              flexDirection: ["column", "row"]
             }}
           >
             <Box
@@ -74,7 +80,7 @@ const layout = ({
         </style>
       </ThemeProvider>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default layout
+export default layout;
