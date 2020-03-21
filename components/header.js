@@ -42,7 +42,7 @@ const header = ({ header = false, waves = false }) => (
       >
         <Flex width={[1, 1 / 2]}>
           <Flex justifyContent={['center', 'flex-start']} my="auto">
-            <Logo height="6%" width="6%" />
+            <Logo height="5%" width="5%" />
             <Heading fontSize={[3, 4, 5]} my="auto" mx={3}>
               <Link href="/" color="white" sx={{ textDecoration: 'none' }}>
                 Beyond The Five
@@ -68,8 +68,8 @@ const header = ({ header = false, waves = false }) => (
           >
             <Box width={[1, 1 / 2]} ml={[0, 5]} p={1}>
               <Text fontSize={[4, 5, 6]} textAlign={['center', 'left']}>
-                Online, self-paced courses for students in AP®️ and higher-level
-                classes.
+                <b>Free</b>, online, self-paced courses for students in AP®️ and
+                higher-level classes.
               </Text>
               <Flex>
                 <RegisterButton mx={['auto', 0]} />
