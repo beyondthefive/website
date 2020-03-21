@@ -11,10 +11,6 @@ const data = [
   {
     name: 'David',
     quote: 'I would like to thank Beyond the Five for everything that the organization has taught me. They transcend past the curricula tested on the AP Exam, and I feel that I am more than prepared to do well on the exams. The instructors have a deep understanding of the material tested on the exam, and they have done extraordinary things for the organization. I cannot thank the organization enough for everything they have taught me.'
-  },
-  {
-    name: 'Jane Doe',
-    quote: 'Beyond The Five is very nice.'
   }
 ]
 
