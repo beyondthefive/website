@@ -69,7 +69,7 @@ const header = ({ header = false, waves = false }) => (
             <Box width={[1, 1 / 2]} ml={[0, 5]} p={1}>
               <Text fontSize={[4, 5, 6]} textAlign={['center', 'left']}>
                 <b>Free</b>, online, self-paced courses for students in AP®️ and
-                higher-level classes.
+                higher-level classes
               </Text>
               <Flex>
                 <RegisterButton mx={['auto', 0]} />

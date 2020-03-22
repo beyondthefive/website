@@ -1,8 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import { Flex, Box } from "rebass";
-import { ThemeProvider } from "emotion-theming";
-import theme from "@rebass/preset";
 import Header from "./header";
 import Footer from "./footer";
 import css from "styled-jsx/css";
@@ -32,31 +30,30 @@ const layout = ({
       <Head>
         <link rel="icon" type="image/x-icon" href="../public/favicon.ico" />
       </Head>
-      <ThemeProvider theme={theme}>
+      <Flex
+        sx={{
+          flexDirection: "column",
+          minHeight: "100vh"
+        }}
+      >
+        <Header waves={waves} header={header}></Header>
+
         <Flex
           sx={{
-            flexDirection: "column",
-            minHeight: "100vh"
+            flex: 1,
+            flexDirection: ["column", "row"]
           }}
         >
-          <Header waves={waves} header={header}></Header>
-
-          <Flex
+          <Box
             sx={{
               flex: 1,
-              flexDirection: ["column", "row"]
+              minWidth: 0
             }}
+            bg="#ffffff"
           >
-            <Box
-              sx={{
-                flex: 1,
-                minWidth: 0
-              }}
-              bg="#ffffff"
-            >
-              {children}
-            </Box>
-            {/*
+            {children}
+          </Box>
+          {/*
         <Box
           sx={{
             flexBasis: ["auto", 64],
@@ -72,13 +69,12 @@ const layout = ({
         >
           Ads
         </Box>*/}
-          </Flex>
-          <Footer instructorAd={instructorAd} waves={waves} />
         </Flex>
-        <style jsx global>
-          {globalStyle}
-        </style>
-      </ThemeProvider>
+        <Footer instructorAd={instructorAd} waves={waves} />
+      </Flex>
+      <style jsx global>
+        {globalStyle}
+      </style>
     </React.Fragment>
   );
 };
