@@ -21,8 +21,8 @@ const desc2 = [
 ]
 
 const index = () => {
-  const [apCourses, setApCourses] = useState("~")
-  const [hlCourses, setHLCourses] = useState("~")
+  const [apCourses, setApCourses] = useState('~')
+  const [hlCourses, setHLCourses] = useState('~')
 
   useEffect(async () => {
     setApCourses((await cor()).length)

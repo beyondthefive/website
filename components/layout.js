@@ -1,10 +1,9 @@
-import React from "react";
-import Head from "next/head";
-import { Flex, Box } from "rebass";
-import Header from "./header";
-import Footer from "./footer";
-import css from "styled-jsx/css";
-import IBMPlexSans from "../public/fonts/IBMPlexSans-Regular.ttf";
+import React from 'react'
+import { Flex, Box } from 'rebass'
+import Header from './header'
+import Footer from './footer'
+import css from 'styled-jsx/css'
+import IBMPlexSans from '../public/fonts/IBMPlexSans-Regular.ttf'
 
 const globalStyle = css.global`
   @font-face {
@@ -17,7 +16,7 @@ const globalStyle = css.global`
     font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
     margin: 0;
   }
-`;
+`
 
 const layout = ({
   children,
@@ -27,13 +26,10 @@ const layout = ({
 }) => {
   return (
     <React.Fragment>
-      <Head>
-        <link rel="icon" type="image/x-icon" href="../public/favicon.ico" />
-      </Head>
       <Flex
         sx={{
-          flexDirection: "column",
-          minHeight: "100vh"
+          flexDirection: 'column',
+          minHeight: '100vh'
         }}
       >
         <Header waves={waves} header={header}></Header>
@@ -41,7 +37,7 @@ const layout = ({
         <Flex
           sx={{
             flex: 1,
-            flexDirection: ["column", "row"]
+            flexDirection: ['column', 'row']
           }}
         >
           <Box
@@ -76,7 +72,7 @@ const layout = ({
         {globalStyle}
       </style>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default layout;
+export default layout
