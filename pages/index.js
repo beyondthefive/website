@@ -21,12 +21,12 @@ const desc2 = [
 ]
 
 const index = () => {
-  const [apCourses, setApCourses] = useState([])
-  const [hlCourses, setHLCourses] = useState([])
+  const [apCourses, setApCourses] = useState("~")
+  const [hlCourses, setHLCourses] = useState("~")
 
   useEffect(async () => {
-    setApCourses(await cor())
-    setHLCourses(await cor(true))
+    setApCourses((await cor()).length)
+    setHLCourses((await cor(true)).length)
   }, [])
   return (
     <Layout waves header>
@@ -54,9 +54,9 @@ const index = () => {
             gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)']
           }}
         >
-          <Item contents={apCourses.length + ' AP®️ Courses'} />
+          <Item contents={apCourses + ' AP®️ Courses'} />
           <Item
-            contents={hlCourses.length + ' higher-level courses'}
+            contents={hlCourses + ' higher-level courses'}
           />
         </Box>
         <Text my={2} fontSize={[3, 4, 5]} textAlign="center">
@@ -92,7 +92,7 @@ const index = () => {
       <Box mt={3} mb={6}>
         <Text textAlign="center" fontSize={[3, 4, 5]}>
           Beyond The Five currently offers{' '}
-          {apCourses.length + hlCourses.length} courses.
+          {apCourses + hlCourses} courses.
         </Text>
         <Text textAlign="center" fontSize={[3, 4, 5]}>
           Find them on <Link href="/courses">our course catalog</Link>.
