@@ -18,7 +18,7 @@ export default class MyApp extends App {
             name="description"
             content="Beyond The Five is an online platform and community that provides free instruction in AP®️ and other college level courses. We currently offer 76 courses to over 160 students from around the world. Students enrolled in our courses have a 100% AP®️ test pass rate."
           ></meta>
-          <link rel="icon" href="../public/favicon.ico" />
+          <link rel="icon" href="/favicon.ico" />
         </Head>
 
         <ThemeProvider theme={theme}>
