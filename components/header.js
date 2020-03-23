@@ -3,7 +3,7 @@ import { Flex, Box, Heading, Link, Image, Text } from 'rebass'
 import RegisterButton from '../components/registerButton'
 import Waves from './waves'
 import Learn from '../public/svgs/undraw_researching_22gp.svg'
-import Logo from '../public/new.svg'
+import Logo from '../public/logo.svg'
 
 const links = [
   { href: '/#about', label: 'About' },
