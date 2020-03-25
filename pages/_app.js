@@ -10,7 +10,7 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props
 
     return (
-      <>
+      <html lang="en">
         <Head>
           <title>Beyond The Five</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,7 +24,7 @@ export default class MyApp extends App {
         <ThemeProvider theme={theme}>
           <Component {...pageProps} />
         </ThemeProvider>
-      </>
+      </html>
     )
   }
 }
