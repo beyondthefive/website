@@ -33,6 +33,7 @@ const index = () => {
       <Box width={[1, 1 / 2, 2 / 3]} m={1} p={2} mx="auto">
         <Flex my={3} flexDirection={['column', 'row-reverse']} my={4}>
           <Flex justifyContent="center" width={[1, 1 / 2]} pt={[0, 4]}>
+            <a name="about"></a>
             <Text mb={3} fontSize={[3, 4, 5]} mx={[3, 0]}>
               Beyond The Five is an online platform and community that provides
               free instruction in AP®️ and other college level courses.
@@ -55,12 +56,10 @@ const index = () => {
           }}
         >
           <Item contents={apCourses + ' AP®️ Courses'} />
-          <Item
-            contents={hlCourses + ' higher-level courses'}
-          />
+          <Item contents={hlCourses + ' higher-level courses'} />
         </Box>
         <Text my={2} fontSize={[3, 4, 5]} textAlign="center">
-          to over 160 students from all over the world.
+          to over 160 students from all over the world
         </Text>
 
         <Text my={5} fontSize={[3, 4, 5]} textAlign="center">
@@ -91,8 +90,7 @@ const index = () => {
       </Box>
       <Box mt={3} mb={6}>
         <Text textAlign="center" fontSize={[3, 4, 5]}>
-          Beyond The Five currently offers{' '}
-          {apCourses + hlCourses} courses.
+          Beyond The Five currently offers {apCourses + hlCourses} courses.
         </Text>
         <Text textAlign="center" fontSize={[3, 4, 5]}>
           Find them on <Link href="/courses">our course catalog</Link>.
