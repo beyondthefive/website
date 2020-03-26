@@ -1,18 +1,18 @@
-import { Flex, Box, Link, Text } from 'rebass'
+import { Flex, Box, Link, Text, Heading } from 'rebass'
 import Waves from './waves'
 import { FaDiscord, FaInstagram } from 'react-icons/fa'
-import { MdMailOutline } from 'react-icons/md'
-const links = [
+const socialLinks = [
   {
     component: <FaInstagram color="white" size="2em" />,
     alt: 'Instagram',
     link: 'https://www.instagram.com/beyond_the_five/'
-  },
-  {
-    component: <MdMailOutline color="white" size="2em" />,
-    alt: 'Email',
-    link: 'mailto:team@beyondthefive.com'
   }
+]
+
+const aboutLinks = [
+  { link: '/tou', text: 'Terms of Use' },
+  { link: '/privacypolicy', text: 'Privacy Policy' },
+  { link: '/#about', text: 'About us' }
 ]
 
 const footer = ({ waves = false, instructorAd = true }) => (
@@ -34,12 +34,8 @@ const footer = ({ waves = false, instructorAd = true }) => (
                   </Text>
                   <Text fontSize={[1, 2, 3]}>
                     Teachers for Beyond The Five have the opportunity to teach
-                    hundreds of students from around the world without leaving
-                    home.
-                    <Text>
-                      We provide the tools and the platform to teach what you
-                      love.
-                    </Text>
+                    hundreds of students from around the world. We provide the
+                    tools and the platform to teach what you love.
                     <Text>
                       <Link href="/register/instructor">
                         <Text color="skyblue">Apply now!</Text>
@@ -54,31 +50,56 @@ const footer = ({ waves = false, instructorAd = true }) => (
             <Flex justifyContent={['center', 'flex-end']}>
               {instructorAd ? (
                 <Box>
-                  {links.map(icon => (
-                    <Flex
-                      key={icon.alt}
-                      justifyContent="flex-end"
-                      verticalAlign="center"
-                      m={1}
-                    >
-                      <Text m={1} fontSize={[1, 2, 3]}>
-                        {icon.alt}
+                  <Flex>
+                    <Box mx={2}>
+                      <Heading mb={2}>Connect</Heading>
+                      <Text my={1} fontSize={[1, 2, 3]}>
+                        <Link
+                          sx={{ textDecoration: 'none' }}
+                          href="mailto:team@beyondthefive.com"
+                          color="white"
+                        >
+                          <Text>team@beyondthefive.com</Text>
+                        </Link>
                       </Text>
-                      <Link href={icon.link}>{icon.component}</Link>
-                    </Flex>
-                  ))}
+                      {socialLinks.map(icon => (
+                        <Link
+                          key={icon.alt}
+                          color="white"
+                          sx={{ textDecoration: 'none' }}
+                          href={icon.link}
+                        >
+                          <Flex my={1}>
+                            {icon.component}
+                            <Text my="auto" mx={1} fontSize={[1, 2, 3]}>
+                              {icon.alt}
+                            </Text>
+                          </Flex>
+                        </Link>
+                      ))}
+                    </Box>
+                    <Box mx={2}>
+                      <Heading mb={2}>About</Heading>
+                      {aboutLinks.map(l => (
+                        <Link
+                          key={l.link}
+                          color="white"
+                          sx={{ textDecoration: 'none' }}
+                          href={l.link}
+                        >
+                          <Text my={2} fontSize={[1, 2, 3]}>
+                            {l.text}
+                          </Text>
+                        </Link>
+                      ))}
+                    </Box>
+                  </Flex>
                 </Box>
               ) : null}
             </Flex>
           </Box>
         </Flex>
         <Box mt={instructorAd ? 4 : 2}>
-          <Text fontSize={[1, 2, 3]}>
-            Have a question? Shoot us an email:{' '}
-            <Link href="mailto:team@beyondthefive.com">
-              <Text color="skyblue"> team@beyondthefive.com</Text>
-            </Link>
-          </Text>
           <Text fontSize={[1, 2, 3]} my={2}>
             AP®️ is a registered trademark of the College Board, which does not
             sponsor or endorse Beyond The Five.
