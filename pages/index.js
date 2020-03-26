@@ -56,7 +56,7 @@ const index = () => {
           }}
         >
           <Item contents={apCourses + ' AP®️ Courses'} />
-          <Item contents={hlCourses + ' higher-level courses'} />
+          <Item contents={hlCourses + ' Higher-Level Courses'} />
         </Box>
         <Text my={2} fontSize={[3, 4, 5]} textAlign="center">
           to over 160 students from all over the world
