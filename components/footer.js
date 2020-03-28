@@ -52,14 +52,14 @@ const footer = ({ waves = false, instructorAd = true }) => (
                 <Box>
                   <Flex>
                     <Box mx={2}>
-                      <Heading mb={2}>Connect</Heading>
-                      <Text my={1} fontSize={[1, 2, 3]}>
+                      <Heading mb={3}>Connect</Heading>
+                      <Text py={1} my={2} fontSize={[1, 2, 3]}>
                         <Link
                           sx={{ textDecoration: 'none' }}
                           href="mailto:team@beyondthefive.com"
                           color="white"
                         >
-                          <Text>team@beyondthefive.com</Text>
+                          team@beyondthefive.com
                         </Link>
                       </Text>
                       {socialLinks.map(icon => (
@@ -69,7 +69,7 @@ const footer = ({ waves = false, instructorAd = true }) => (
                           sx={{ textDecoration: 'none' }}
                           href={icon.link}
                         >
-                          <Flex my={1}>
+                          <Flex my={2} py={1}>
                             {icon.component}
                             <Text my="auto" mx={1} fontSize={[1, 2, 3]}>
                               {icon.alt}
@@ -79,7 +79,7 @@ const footer = ({ waves = false, instructorAd = true }) => (
                       ))}
                     </Box>
                     <Box mx={2}>
-                      <Heading mb={2}>About</Heading>
+                      <Heading mb={3}>About</Heading>
                       {aboutLinks.map(l => (
                         <Link
                           key={l.link}
@@ -87,7 +87,7 @@ const footer = ({ waves = false, instructorAd = true }) => (
                           sx={{ textDecoration: 'none' }}
                           href={l.link}
                         >
-                          <Text my={2} fontSize={[1, 2, 3]}>
+                          <Text py={1} my={2} fontSize={[1, 2, 3]}>
                             {l.text}
                           </Text>
                         </Link>
