@@ -10,7 +10,6 @@ const socialLinks = [
 ]
 
 const aboutLinks = [
-  { link: '/tou', text: 'Terms of Use' },
   { link: '/privacypolicy', text: 'Privacy Policy' },
   { link: '/#about', text: 'About us' }
 ]
