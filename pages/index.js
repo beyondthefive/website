@@ -36,7 +36,8 @@ const index = () => {
             <a name="about"></a>
             <Text mb={3} fontSize={[3, 4, 5]} mx={[3, 0]}>
               Beyond The Five is an online platform and community that provides
-              free instruction in AP®️ and other college level courses.
+              free instruction in AP®️ courses, college level courses, and
+              SAT/ACT preparation.
             </Text>
           </Flex>
           <Flex justifyContent="center" width={[1, 1 / 2]}>
