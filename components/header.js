@@ -36,7 +36,7 @@ const header = ({ header = false, waves = false }) => {
   const [annoucementOpen, setOpen] = useState(true)
   return (
     <Box color="white">
-      <Box bg="#561B25">
+      <Box bg="#561B25" pt={[2, 1, 0]}>
         <Flex
           mx="auto"
           width={[1, 4 / 5]}
@@ -62,45 +62,44 @@ const header = ({ header = false, waves = false }) => {
 
         <Box bg="#561B25" color="white">
           {header ? (
-            <Box mx="auto" px={[3, 5]} width={1}>
-              {annoucementOpen ? (
-                <Flex
-                  mx="auto"
-                  sx={{ borderRadius: 5, boxShadow: '0 0 2px black' }}
-                  mb={2}
-                  p={1}
-                  px={2}
-                  py="auto"
-                  width={[7 / 8, 5 / 6, 3 / 4]}
-                >
-                  <Text fontSize={[1, 2, 3]} textAlign={['center', 'left']}>
-                    Beyond The Five now offers courses in SAT/ACT preparation
-                    and college applications!
-                  </Text>
-                  <Box mx="auto" />
-                  <Flex alignItems="center">
-                    <MdClose size="1em" onClick={() => setOpen(false)} />
-                  </Flex>
-                </Flex>
-              ) : null}
+            <Box mx="auto" px={[3, 4, 5]} width={1}>
               <Flex flexDirection={['column', 'row']}>
                 <Box width={[1, 1 / 2]} ml={[0, 5]} p={1}>
                   <Text fontSize={[4, 5, 6]} textAlign={['center', 'left']}>
-                    <b>Free</b>, online, self-paced courses for students in AP®️
-                    and higher-level classes
+                    <b>Free</b>, online, self-paced courses in AP®️, SAT/ACT,
+                    and college level classes
                   </Text>
                   <Flex>
                     <RegisterButton mx={['auto', 0]} />
                   </Flex>
                 </Box>
 
-                <Flex py={2} justifyContent={['center']} width={[1, 1 / 2]}>
+                <Flex pt={2} justifyContent={['center']} width={[1, 1 / 2]}>
                   <Learn height="80%" width="80%" />
                 </Flex>
               </Flex>
             </Box>
           ) : null}
         </Box>
+        {header && annoucementOpen ? (
+          <Flex py={[3, 2, 1]} px={[3, 4, 5]}>
+            <Flex
+              mx="auto"
+              sx={{ borderRadius: 5, boxShadow: '0 0 2px black' }}
+              py={2}
+              px={2}
+              width={[4 / 5,3/4,2/3]}
+            >
+              <Text mx="auto" fontSize={[1, 2, 3]} textAlign={'center'}>
+                Beyond The Five now offers college applications courses!
+              </Text>
+
+              <Flex ml={2} p={1} alignItems="center">
+                <MdClose size="1em" onClick={() => setOpen(false)} />
+              </Flex>
+            </Flex>
+          </Flex>
+        ) : null}
       </Box>
 
       {waves ? <Waves top /> : null}
