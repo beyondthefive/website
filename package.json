@@ -43,6 +43,8 @@
     }
   },
   "dependencies": {
+    "@mdx-js/loader": "^1.5.8",
+    "@next/mdx": "^9.3.3",
     "@rebass/preset": "^4.0.5",
     "@zeit/next-css": "^1.0.1",
     "emotion-theming": "^10.0.27",
