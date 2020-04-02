@@ -1,6 +1,7 @@
-import React from 'react'
-import MoonLoader from 'react-spinners/MoonLoader'
+import { SpinnerCircular } from "spinners-react";
 
-const load = () => <MoonLoader color="#1c7ed6" />
+const load = () => (
+  <SpinnerCircular color="#1c7ed6" size={100} speed={123} thickness={200} />
+);
 
-export default load
+export default load;
