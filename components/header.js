@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Flex, Box, Heading, Link, Text } from 'rebass'
+import { Flex, Box, Heading, Link, Text, Button } from 'rebass'
 import RegisterButton from '../components/registerButton'
 import Waves from './waves'
 import { FaWindowClose } from 'react-icons/fa'
@@ -10,24 +10,30 @@ import Logo from '../public/logo.svg'
 const links = [
   { href: '/#about', label: 'About' },
   { href: '/courses', label: 'Courses' },
-  { href: '/register', label: 'Register' }
+  { href: '/register', label: 'Register' },
+  { href: 'https://canvas.instructure.com/courses/', label: 'Login' }
 ]
 
 const NavLinks = props => {
   const links = props.links
   const linkList = links.map(link => (
-    <Box w={'100%'} p={1} m={1} py="auto" key={link.label}>
-      <Link variant="nav" href={link.href}>
-        <Text
-          fontWeight="normal"
-          textAlign="center"
-          my={'auto'}
-          fontSize={[2, 3, 4]}
-        >
-          {link.label}
-        </Text>
-      </Link>
-    </Box>
+    <Link
+      key={link.label}
+      p={1}
+      mx={2}
+      py="auto"
+      variant="nav"
+      href={link.href}
+    >
+      <Text
+        fontWeight="normal"
+        textAlign="center"
+        my={'auto'}
+        fontSize={[2, 3, 4]}
+      >
+        {link.label}
+      </Text>
+    </Link>
   ))
   return <Flex p={[0, 3]}>{linkList}</Flex>
 }
@@ -88,7 +94,7 @@ const header = ({ header = false, waves = false }) => {
               sx={{ borderRadius: 5, boxShadow: '0 0 2px black' }}
               py={2}
               px={2}
-              width={[4 / 5,3/4,2/3]}
+              width={[4 / 5, 3 / 4, 2 / 3]}
             >
               <Text mx="auto" fontSize={[1, 2, 3]} textAlign={'center'}>
                 Beyond The Five now offers college applications courses!
