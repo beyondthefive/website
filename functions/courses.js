@@ -20,10 +20,11 @@ exports.handler = function(event, context, callback) {
         process.env.SHEET_ID +
         '&limit=100'
     )
+
     .then(json => {
       callback(null, {
         statusCode: 200,
-        body: JSON.stringify(json.data)
+        body: JSON.stringify(json.data.results)
       })
     })
     .catch(ex => callback(ex))
