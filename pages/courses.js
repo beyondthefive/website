@@ -5,13 +5,6 @@ import { Label, Radio } from '@rebass/forms'
 import cor from '../lib/courses'
 import LoadingIndicator from '../components/loadingIndicator'
 
-let reqParse = s => {
-  if (s != undefined) {
-    return s
-  }
-  return 'None'
-}
-
 const courses = () => {
   const [courses, setCourses] = useState([])
 
@@ -28,10 +21,15 @@ const courses = () => {
     <Layout>
       <Box width={[1, 4 / 5]} mx="auto" my={3} p={3}>
         <Flex flexDirection={['column', 'row']}>
-          <Box my={[1, 2, 3]} mx={[0, 1, 2]} width={[1, 1 / 3]}>
+          <Box my={[1, 2, 3]} mr={[0, 2, 3]} width={[1, 1 / 3]}>
             <Box
-              sx={{ border: '1px solid grey', borderRadius: 5 }}
-              p={3}
+              sx={{
+                border: '1px solid grey',
+                borderRadius: 5,
+                position: 'sticky',
+                top: 12
+              }}
+              p={2}
               bg="whitesmoke"
             >
               {/*} <Text fontSize={[2, 3, 4]}>
@@ -101,9 +99,16 @@ const courses = () => {
                   <Text fontSize={[1, 2, 3]} color="#5c5f68">
                     {c.Notes}
                   </Text>
-                  <Text fontSize={[1, 2, 3]} color="#5c5f68">
-                    Prerequisite(s): {reqParse(c['Prerequisite(s)'])}
-                  </Text>
+                  {c['Prerequisite(s)'] ? (
+                    <Text fontSize={[1, 2, 3]} color="#5c5f68">
+                      Prerequisite(s): {c['Prerequisite(s)']}
+                    </Text>
+                  ) : null}
+                  {c.Corequisite ? (
+                    <Text fontSize={[1, 2, 3]} color="#5c5f68">
+                      Corequisite: {c.Corequisite}
+                    </Text>
+                  ) : null}
                   {c.Instructors ? (
                     <Text fontSize={[1, 2, 3]} color="#5c5f68">
                       Instructors(s): {c.Instructors}
