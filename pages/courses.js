@@ -104,9 +104,9 @@ const courses = () => {
                       Prerequisite(s): {c['Prerequisite(s)']}
                     </Text>
                   ) : null}
-                  {c.Corequisite ? (
+                  {c['Corequisite(s)'] ? (
                     <Text fontSize={[1, 2, 3]} color="#5c5f68">
-                      Corequisite: {c.Corequisite}
+                      Corequisite(s): {c['Corequisite(s)']}
                     </Text>
                   ) : null}
                   {c.Instructors ? (
