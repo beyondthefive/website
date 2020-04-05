@@ -8,7 +8,7 @@ import Study from '../public/svgs/undraw_studying_s3l7.svg'
 import Knowlege from '../public/svgs/undraw_knowledge_g5gf.svg'
 
 const Item = ({ contents }) => (
-  <Box sx={{ borderRadius: 6, boxShadow: '0 0 5px lightgrey' }} m={2} p={2}>
+  <Box sx={{ borderRadius: 6, boxShadow: '0 0 5px lightgrey' }} m={2} p={1}>
     <Text textAlign="center" fontSize={[3, 4, 5]}>
       {contents}
     </Text>
@@ -23,10 +23,12 @@ const desc2 = [
 const index = () => {
   const [apCourses, setApCourses] = useState('~')
   const [hlCourses, setHLCourses] = useState('~')
+  const [oCourses, setOCourses] = useState('~')
 
   useEffect(async () => {
     setApCourses((await cor()).length)
-    setHLCourses((await cor(true)).length)
+    setHLCourses((await cor(2)).length)
+    setOCourses((await cor(3)).length)
   }, [])
   return (
     <Layout waves header>
@@ -53,11 +55,12 @@ const index = () => {
           sx={{
             display: 'grid',
             gridGap: 1,
-            gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)']
+            gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(3, 1fr)']
           }}
         >
           <Item contents={apCourses + ' AP®️ Courses'} />
           <Item contents={hlCourses + ' Higher-Level Courses'} />
+          <Item contents={oCourses + ' Test Prep & misc. Courses'} />
         </Box>
         <Text my={2} fontSize={[3, 4, 5]} textAlign="center">
           to over 160 students from all over the world
@@ -91,7 +94,8 @@ const index = () => {
       </Box>
       <Box mt={3} mb={6}>
         <Text textAlign="center" fontSize={[3, 4, 5]}>
-          Beyond The Five currently offers {apCourses + hlCourses} courses.
+          Beyond The Five currently offers {apCourses + hlCourses + oCourses}{' '}
+          courses.
         </Text>
         <Text textAlign="center" fontSize={[3, 4, 5]}>
           Find them on <Link href="/courses">our course catalog</Link>.
