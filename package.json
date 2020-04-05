@@ -4,7 +4,7 @@
   "scripts": {
     "start": "next start",
     "build": "next build",
-    "dev": "next dev",
+    "dev": "netlify dev -c next dev -f functions/ -p 8000",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "export": "next build && next export"
@@ -48,6 +48,8 @@
     "@rebass/forms": "^4.0.6",
     "@rebass/preset": "^4.0.5",
     "@zeit/next-css": "^1.0.1",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
     "emotion-theming": "^10.0.27",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.3.1",
@@ -67,6 +69,7 @@
     "babel-eslint": "^10.0.3",
     "babel-plugin-inline-react-svg": "^1.1.1",
     "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.18.0"
+    "eslint-plugin-react": "^7.18.0",
+    "netlify-cli": "^2.40.0"
   }
 }
