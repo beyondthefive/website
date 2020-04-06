@@ -27,7 +27,7 @@ const courses = () => {
                 border: '1px solid grey',
                 borderRadius: 5,
                 position: 'sticky',
-                top: 12
+                top: 12,
               }}
               p={2}
               bg="whitesmoke"
@@ -39,14 +39,10 @@ const courses = () => {
                 {miscCourses.length} Test Prep & misc. courses
   </Text>*/}
               <Text mb={3} fontSize={[1, 2, 3]}>
-                Deadlines to drop or enroll:
-                <Text>January 1: 2+ point AP®️ courses</Text>
-                February 1: 1 point AP®️ courses and all higher-level courses
+                Deadline to drop or enroll in any course: January 1
               </Text>
               <Text fontSize={[1, 2, 3]}>
-                You are permitted to enroll in up to:
-                <Text>10 Credits in AP®️ Courses</Text>
-                20 Credits in all non-AP®️ courses
+                You are permitted to enroll in up to 40 credits of courses
               </Text>
               <Box mt={3}>
                 <Text fontSize={[1, 2, 3]}>Course Category:</Text>
@@ -84,7 +80,7 @@ const courses = () => {
             {courses.length === 0 ? (
               <LoadingIndicator />
             ) : (
-              courses.map(c => (
+              courses.map((c) => (
                 <Box
                   key={c.Name}
                   my={1}
