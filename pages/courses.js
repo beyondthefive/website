@@ -91,35 +91,34 @@ const courses = () => {
                   <Text fontSize={[1, 2, 3]} my={2} color="darkred">
                     <b>{c.Name}</b> ({c.Credits} Credits)
                   </Text>
-
                   <Text fontSize={[1, 2, 3]} color="#5c5f68">
-                    {c.Notes}
+                    <Text>{c.Notes}</Text>
+                    {c['Prerequisite(s)'] ? (
+                      <Text>Prerequisite(s): {c['Prerequisite(s)']}</Text>
+                    ) : null}
+                    {c['Corequisite(s)'] ? (
+                      <Text>Corequisite(s): {c['Corequisite(s)']}</Text>
+                    ) : null}
+                    {c.Instructors ? (
+                      <Text>Instructors(s): {c.Instructors}</Text>
+                    ) : null}
+                    {c['Approximate Completion Time'] ? (
+                      <Text>
+                        Approximate Completion Time:{' '}
+                        {c['Approximate Completion Time']}
+                      </Text>
+                    ) : null}
+                    {c.Syllabus ? (
+                      <Link
+                        target="_blank"
+                        color="#0077CC"
+                        sx={{ textDecoration: 'none' }}
+                        href={c.Syllabus}
+                      >
+                        <Text>Syllabus</Text>
+                      </Link>
+                    ) : null}
                   </Text>
-                  {c['Prerequisite(s)'] ? (
-                    <Text fontSize={[1, 2, 3]} color="#5c5f68">
-                      Prerequisite(s): {c['Prerequisite(s)']}
-                    </Text>
-                  ) : null}
-                  {c['Corequisite(s)'] ? (
-                    <Text fontSize={[1, 2, 3]} color="#5c5f68">
-                      Corequisite(s): {c['Corequisite(s)']}
-                    </Text>
-                  ) : null}
-                  {c.Instructors ? (
-                    <Text fontSize={[1, 2, 3]} color="#5c5f68">
-                      Instructors(s): {c.Instructors}
-                    </Text>
-                  ) : null}
-                  {c.Syllabus ? (
-                    <Link
-                      target="_blank"
-                      color="#0077CC"
-                      sx={{ textDecoration: 'none' }}
-                      href={c.Syllabus}
-                    >
-                      <Text fontSize={[1, 2, 3]}>Syllabus</Text>
-                    </Link>
-                  ) : null}
                 </Box>
               ))
             )}
