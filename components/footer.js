@@ -6,6 +6,11 @@ const socialLinks = [
     component: <FaInstagram color="white" size="2em" />,
     alt: 'Instagram',
     link: 'https://www.instagram.com/beyond_the_five/'
+  },
+  {
+    component: <FaDiscord color="white" size="2em" />,
+    alt: 'Discord',
+    link: 'https://discord.gg/WTbHyFY'
   }
 ]
 
