@@ -10,7 +10,7 @@ const socialLinks = [
   {
     component: <FaDiscord color="white" size="2em" />,
     alt: 'Discord',
-    link: 'https://discord.gg/WTbHyFY'
+    link: '/discord'
   }
 ]
 
