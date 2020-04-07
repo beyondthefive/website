@@ -16,8 +16,8 @@ const Item = ({ contents }) => (
 )
 
 const desc2 = [
-  'Our classes have lectures, homework, and other things you would expect from a classroom-type learning environnement.',
-  'They are not for students who just want extra resources.'
+  'Our classes have lectures, homework, and other things you would expect from a classroom-type learning environment.',
+  'They are not for students who just want extra resources.',
 ]
 
 const index = () => {
@@ -55,7 +55,7 @@ const index = () => {
           sx={{
             display: 'grid',
             gridGap: 1,
-            gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(3, 1fr)']
+            gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(3, 1fr)'],
           }}
         >
           <Item contents={apCourses + ' AP®️ Courses'} />
@@ -85,7 +85,7 @@ const index = () => {
         </Flex>
 
         <Box my={4}>
-          {desc2.map(d => (
+          {desc2.map((d) => (
             <Text key={d} textAlign="center" fontSize={[3, 4, 5]}>
               {d}
             </Text>
