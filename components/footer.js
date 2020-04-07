@@ -5,18 +5,18 @@ const socialLinks = [
   {
     component: <FaInstagram color="white" size="2em" />,
     alt: 'Instagram',
-    link: 'https://www.instagram.com/beyond_the_five/'
+    link: 'https://www.instagram.com/beyond_the_five/',
   },
   {
     component: <FaDiscord color="white" size="2em" />,
     alt: 'Discord',
-    link: '/discord'
-  }
+    link: '/discord',
+  },
 ]
 
 const aboutLinks = [
   { link: '/privacypolicy', text: 'Privacy Policy' },
-  { link: '/#about', text: 'About us' }
+  { link: '/#about', text: 'About us' },
 ]
 
 const footer = ({ waves = false, instructorAd = true }) => (
@@ -55,7 +55,7 @@ const footer = ({ waves = false, instructorAd = true }) => (
               {instructorAd ? (
                 <Box>
                   <Flex>
-                    <Box mx={2}>
+                    <Box mr={2}>
                       <Heading mb={3}>Connect</Heading>
                       <Text py={1} my={2} fontSize={[1, 2, 3]}>
                         <Link
@@ -66,7 +66,7 @@ const footer = ({ waves = false, instructorAd = true }) => (
                           team@beyondthefive.com
                         </Link>
                       </Text>
-                      {socialLinks.map(icon => (
+                      {socialLinks.map((icon) => (
                         <Link
                           key={icon.alt}
                           color="white"
@@ -83,9 +83,9 @@ const footer = ({ waves = false, instructorAd = true }) => (
                         </Link>
                       ))}
                     </Box>
-                    <Box mx={2}>
+                    <Box ml={2}>
                       <Heading mb={3}>About</Heading>
-                      {aboutLinks.map(l => (
+                      {aboutLinks.map((l) => (
                         <Link
                           key={l.link}
                           color="white"
