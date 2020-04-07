@@ -39,10 +39,10 @@ const courses = () => {
                 {miscCourses.length} Test Prep & misc. courses
   </Text>*/}
               <Text mb={3} fontSize={[1, 2, 3]}>
-                Deadline to drop or enroll in any course: January 1
+                Deadline to enroll or switch courses: January 1
               </Text>
               <Text fontSize={[1, 2, 3]}>
-                You are permitted to enroll in up to 40 credits of courses
+                You are permitted to enroll in up to 30 credits of courses.
               </Text>
               <Box mt={3}>
                 <Text fontSize={[1, 2, 3]}>Course Category:</Text>
