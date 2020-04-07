@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
 import { Box, Flex, Text, Button, Link } from 'rebass'
 import { Label, Radio } from '@rebass/forms'
-import cor from '../lib/courses'
-import LoadingIndicator from '../components/loadingIndicator'
+import cor from '../../lib/courses'
+import LoadingIndicator from '../../components/loadingIndicator'
 
 const courses = () => {
   const [courses, setCourses] = useState([])
@@ -58,7 +58,15 @@ const courses = () => {
                   <Radio name="color" id="blue" value="blue" />
                   <Text fontSize={[1, 2, 3]}>Test Prep & Misc. Courses</Text>
                 </Label>
-                <Text mt={3} fontSize={[1, 2, 3]}>
+
+                <Text my={3} fontSize={[1, 2, 3]}>
+                  Don't know what courses to take?
+                  <Text>
+                    Look at our <Link href="/courses/paths">course paths</Link>
+                  </Text>
+                </Text>
+
+                <Text fontSize={[1, 2, 3]}>
                   Interested in taking courses with Beyond The Five?
                 </Text>
                 <Button my={1} bg="#1c7ed6">
