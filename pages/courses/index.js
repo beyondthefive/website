@@ -32,12 +32,6 @@ const courses = () => {
               p={2}
               bg="whitesmoke"
             >
-              {/*} <Text fontSize={[2, 3, 4]}>
-                Beyond The Five currently offers:
-                <Text>{courses.length} AP®️ courses</Text>
-                <Text>{hlCourses.length} college-level courses</Text>
-                {miscCourses.length} Test Prep & misc. courses
-  </Text>*/}
               <Text mb={3} fontSize={[1, 2, 3]}>
                 Deadline to enroll or switch courses: January 1
               </Text>
@@ -64,6 +58,11 @@ const courses = () => {
                   <Text>
                     Look at our <Link href="/courses/paths">course paths</Link>
                   </Text>
+                </Text>
+
+                <Text mb={3} fontSize={[1, 2, 3]}>
+                  Note: These courses <b>DO NOT</b> provide credit. The credits
+                  are solely for the purposes of scheduling classes.
                 </Text>
 
                 <Text fontSize={[1, 2, 3]}>
