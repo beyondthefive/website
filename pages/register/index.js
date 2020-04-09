@@ -20,7 +20,6 @@ const register = () => {
         className="airtable-embed airtable-dynamic-height"
         src="https://airtable.com/embed/shrtLpsHjJtC3KIat?backgroundColor=gray"
         frameBorder="0"
-        onmousewheel=""
         width="100%"
         height="4507"
         style={{ background: 'transparent' }}
