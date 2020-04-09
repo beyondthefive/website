@@ -15,7 +15,7 @@ const register = () => {
         </Flex>
       ) : null}*/}
       <Text m={4} fontSize={3}>
-        Instructor applications are currently not open.
+        Instructor applications are currently not open. Please contact us on discord.
       </Text>
     </Layout>
   )
