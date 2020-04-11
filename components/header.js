@@ -11,12 +11,12 @@ const links = [
   { href: '/#about', label: 'About' },
   { href: '/courses', label: 'Courses' },
   { href: '/register', label: 'Register' },
-  { href: 'https://canvas.instructure.com/courses/', label: 'Login' }
+  { href: 'https://canvas.instructure.com/courses/', label: 'Login' },
 ]
 
-const NavLinks = props => {
+const NavLinks = (props) => {
   const links = props.links
-  const linkList = links.map(link => (
+  const linkList = links.map((link) => (
     <Link
       key={link.label}
       p={1}
@@ -52,7 +52,7 @@ const header = ({ header = false, waves = false }) => {
           <Flex width={[1, 1 / 2]}>
             <Flex justifyContent={['center', 'flex-start']} my="auto">
               <Logo height="4%" width="4%" />
-              <Heading fontSize={[3, 4, 5]} my="auto" mx={3}>
+              <Heading fontSize={[3, 4, 5]} my="auto" mx={3} mb={[2, 1, 0]}>
                 <Link href="/" color="white" sx={{ textDecoration: 'none' }}>
                   Beyond The Five
                 </Link>
