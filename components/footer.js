@@ -73,6 +73,7 @@ const footer = ({ waves = false, instructorAd = true }) => (
                           sx={{ textDecoration: 'none' }}
                           href={icon.link}
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <Flex my={2} py={1}>
                             {icon.component}
