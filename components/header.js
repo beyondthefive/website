@@ -97,7 +97,7 @@ const header = ({ header = false, waves = false }) => {
               width={[4 / 5, 3 / 4, 2 / 3]}
             >
               <Text mx="auto" fontSize={[1, 2, 3]} textAlign={'center'}>
-                Beyond The Five now offers college applications courses!
+                Registration for the 2020-21 school year is now open!
               </Text>
 
               <Flex ml={2} p={1} alignItems="center">
