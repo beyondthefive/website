@@ -100,24 +100,25 @@ const courses = () => {
                   </Text>
                   <Text fontSize={[1, 2, 3]} color="#5c5f68">
                     <Text>{c.Notes}</Text>
-                    {c['Prerequisite(s)'] ? (
-                      <Text>Prerequisite(s): {c['Prerequisite(s)']}</Text>
+                    {c.Prerequisites ? (
+                      <Text>Prerequisite(s): {c.Prerequisites}</Text>
                     ) : null}
-                    {c['Corequisite(s)'] ? (
-                      <Text>Corequisite(s): {c['Corequisite(s)']}</Text>
+                    {c.Corequisites ? (
+                      <Text>Corequisite(s): {c.Corequisites}</Text>
                     ) : null}
                     {c.Instructors ? (
                       <Text>Instructors(s): {c.Instructors}</Text>
                     ) : null}
-                    {c['Approximate Completion Time'] ? (
+                    {c.ApproximateCompletionTime ? (
                       <Text>
-                        Approximate Completion Time:{' '}
-                        {c['Approximate Completion Time']}
+                        Approximate Completion Time:
+                        {c.ApproximateCompletionTime}
                       </Text>
                     ) : null}
                     {c.Syllabus ? (
                       <Link
                         target="_blank"
+                        rel="noreferrer"
                         color="#0077CC"
                         sx={{ textDecoration: 'none' }}
                         href={c.Syllabus}
