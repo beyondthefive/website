@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Flex, Box, Heading, Link, Text, Button } from 'rebass'
 import RegisterButton from '../components/registerButton'
 import Waves from './waves'
-import { FaWindowClose } from 'react-icons/fa'
 import { MdClose } from 'react-icons/md'
 import Learn from '../public/svgs/undraw_researching_22gp.svg'
 import Logo from '../public/logo.svg'
@@ -91,7 +90,7 @@ const header = ({ header = false, waves = false }) => {
           <Flex py={[3, 2, 1]} px={[3, 4, 5]}>
             <Flex
               mx="auto"
-              sx={{ borderRadius: 5, boxShadow: '0 0 2px black' }}
+              sx={{ borderRadius: 5, boxShadow: '0 0 3px black' }}
               py={2}
               px={2}
               width={[4 / 5, 3 / 4, 2 / 3]}
