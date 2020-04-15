@@ -12,7 +12,7 @@ exports.handler = function (event, context, callback) {
     c = 'CL Courses'
   } else if (category == 3) {
     c = 'TP Courses'
-  } else if (category == 3) {
+  } else if (category == 4) {
     c = 'Misc. Courses'
   }
 

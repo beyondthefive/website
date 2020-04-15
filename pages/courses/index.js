@@ -41,18 +41,21 @@ const courses = () => {
               <Box mt={3}>
                 <Text fontSize={[1, 2, 3]}>Course Category:</Text>
                 <Label onClick={() => changeCourses()}>
-                  <Radio name="color" id="red" value="red" defaultChecked />
+                  <Radio name="c" value="v" defaultChecked />
                   <Text fontSize={[1, 2, 3]}>AP®️ Courses</Text>
                 </Label>
                 <Label onClick={() => changeCourses(2)}>
-                  <Radio name="color" id="green" value="green" />
+                  <Radio name="c" value="v" />
                   <Text fontSize={[1, 2, 3]}>College-Level Courses</Text>
                 </Label>
                 <Label onClick={() => changeCourses(3)}>
-                  <Radio name="color" id="blue" value="blue" />
-                  <Text fontSize={[1, 2, 3]}>Test Prep & Misc. Courses</Text>
+                  <Radio name="c" value="v" />
+                  <Text fontSize={[1, 2, 3]}>Test Prep Courses</Text>
                 </Label>
-
+                <Label onClick={() => changeCourses(4)}>
+                  <Radio name="c" value="v" />
+                  <Text fontSize={[1, 2, 3]}>Misc. Courses</Text>
+                </Label>
                 <Text my={3} fontSize={[1, 2, 3]}>
                   Don't know what courses to take?
                   <Text>
@@ -111,7 +114,7 @@ const courses = () => {
                     ) : null}
                     {c.ApproximateCompletionTime ? (
                       <Text>
-                        Approximate Completion Time:
+                        Approximate Completion Time:{' '}
                         {c.ApproximateCompletionTime}
                       </Text>
                     ) : null}
