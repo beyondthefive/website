@@ -1,12 +1,12 @@
-import App from 'next/app'
-import Head from 'next/head'
-import React from 'react'
-import { ThemeProvider } from 'emotion-theming'
-import theme from '../lib/theme'
+import App from "next/app";
+import Head from "next/head";
+import React from "react";
+import { ThemeProvider } from "emotion-theming";
+import theme from "../lib/theme";
 
 export default class MyApp extends App {
   render() {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps } = this.props;
 
     return (
       <html lang="en">
@@ -19,16 +19,10 @@ export default class MyApp extends App {
           ></meta>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <script
-          src="//instant.page/3.0.0"
-          type="module"
-          defer
-          integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"
-        ></script>
         <ThemeProvider theme={theme}>
           <Component {...pageProps} />
         </ThemeProvider>
       </html>
-    )
+    );
   }
 }
