@@ -50,7 +50,7 @@ const courses = () => {
                 </Label>
                 <Label onClick={() => changeCourses(3)}>
                   <Radio name="c" value="v" />
-                  <Text fontSize={[1, 2, 3]}>Test Prep Courses</Text>
+                  <Text fontSize={[1, 2, 3]}>College & Test Prep Courses</Text>
                 </Label>
                 <Label onClick={() => changeCourses(4)}>
                   <Radio name="c" value="v" />

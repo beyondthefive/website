@@ -11,7 +11,7 @@ exports.handler = function (event, context, callback) {
   if (category == 2) {
     c = 'CL Courses'
   } else if (category == 3) {
-    c = 'TP Courses'
+    c = 'College & TP Courses'
   } else if (category == 4) {
     c = 'Misc. Courses'
   }
