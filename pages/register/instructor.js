@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import Layout from '../../components/layout'
 import {Flex, Text} from 'rebass'
 import LoadingIndicator from '../../components/loadingIndicator'
-import {MobileView} from 'react-device-detect'
 
 const register = () => {
 	const [loaded, setLoaded] = useState(false)
