@@ -1,12 +1,12 @@
-import App from "next/app";
-import Head from "next/head";
-import React from "react";
-import { ThemeProvider } from "emotion-theming";
-import theme from "../lib/theme";
+import App from 'next/app'
+import Head from 'next/head'
+import React from 'react'
+import { ThemeProvider } from 'emotion-theming'
+import theme from '../lib/theme'
 
 export default class MyApp extends App {
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps } = this.props
 
     return (
       <html lang="en">
@@ -23,6 +23,6 @@ export default class MyApp extends App {
           <Component {...pageProps} />
         </ThemeProvider>
       </html>
-    );
+    )
   }
 }
