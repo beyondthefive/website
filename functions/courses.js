@@ -1,4 +1,3 @@
-const axios = require('axios')
 var Airtable = require('airtable')
 require('dotenv').config()
 
@@ -11,7 +10,7 @@ exports.handler = function (event, context, callback) {
   if (category == 2) {
     c = 'CL Courses'
   } else if (category == 3) {
-    c = 'College & TP Courses'
+    c = 'C&TP Courses'
   } else if (category == 4) {
     c = 'Misc. Courses'
   }
