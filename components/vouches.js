@@ -34,7 +34,7 @@ const Item = ({name, contents}) => (
 	</Box>
 )
 
-const testinmonials = () => {
+const Testimonials = () => {
 	return (
 		<Box width={1} m={[1, 2]} p={[2, 4]}>
 			<Text fontSize={[3, 4, 5]} mb={4}>
@@ -47,4 +47,4 @@ const testinmonials = () => {
 	)
 }
 
-export default testinmonials
+export default Testimonials
