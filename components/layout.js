@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Box } from 'rebass'
+import {Flex, Box} from 'rebass'
 import Header from './header'
 import Footer from './footer'
 import css from 'styled-jsx/css'
@@ -19,37 +19,37 @@ const globalStyle = css.global`
 `
 
 const layout = ({
-  children,
-  header = false,
-  waves = false,
-  instructorAd = true
+	children,
+	header = false,
+	waves = false,
+	instructorAd = true
 }) => {
-  return (
-    <React.Fragment>
-      <Flex
-        sx={{
-          flexDirection: 'column',
-          minHeight: '100vh'
-        }}
-      >
-        <Header waves={waves} header={header}></Header>
+	return (
+		<>
+			<Flex
+				sx={{
+					flexDirection: 'column',
+					minHeight: '100vh'
+				}}
+			>
+				<Header waves={waves} header={header}/>
 
-        <Flex
-          sx={{
-            flex: 1,
-            flexDirection: ['column', 'row']
-          }}
-        >
-          <Box
-            sx={{
-              flex: 1,
-              minWidth: 0
-            }}
-            bg="#ffffff"
-          >
-            {children}
-          </Box>
-          {/*
+				<Flex
+					sx={{
+						flex: 1,
+						flexDirection: ['column', 'row']
+					}}
+				>
+					<Box
+						sx={{
+							flex: 1,
+							minWidth: 0
+						}}
+						bg="#ffffff"
+					>
+						{children}
+					</Box>
+					{/*
         <Box
           sx={{
             flexBasis: ["auto", 64],
@@ -64,15 +64,15 @@ const layout = ({
           }}
         >
           Ads
-        </Box>*/}
-        </Flex>
-        <Footer instructorAd={instructorAd} waves={waves} />
-      </Flex>
-      <style jsx global>
-        {globalStyle}
-      </style>
-    </React.Fragment>
-  )
+        </Box> */}
+				</Flex>
+				<Footer instructorAd={instructorAd} waves={waves}/>
+			</Flex>
+			<style jsx global>
+				{globalStyle}
+			</style>
+		</>
+	)
 }
 
 export default layout

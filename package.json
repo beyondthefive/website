@@ -5,7 +5,7 @@
     "start": "next start",
     "build": "next build",
     "dev": "netlify dev -c next dev -f functions/ -p 8000",
-    "lint": "xo *.js --plugin=react --fix",
+    "lint": "xo --plugin=react --fix",
     "export": "next build && next export"
   },
   "version": "1.0.0",
