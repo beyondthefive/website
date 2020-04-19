@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Layout from '../components/layout'
 import {Text, Box, Flex, Link} from 'rebass'
 import RegisterButton from '../components/registerButton'
-import Testimonials from '../components/vouches'
+import Testimonials from '../components/testimonials'
 import cor from '../lib/courses'
 import Study from '../public/svgs/undraw_studying_s3l7.svg'
 import Knowlege from '../public/svgs/undraw_knowledge_g5gf.svg'
@@ -11,6 +11,8 @@ const Item = ({num, text}) => (
 	<Text
 		fontSize={[3, 4, 5]}
 		m={1}
+		mx={[2, 1]}
+		p={1}
 		textAlign="center"
 		bg="whitesmoke"
 		sx={{borderRadius: 5, boxShadow: '0 0 1px grey'}}

@@ -1,5 +1,7 @@
-import React from 'react'
-import {Text, Box, Flex, Link} from 'rebass'
+import React, {useState} from 'react'
+import {Text, Box, Flex, Button} from 'rebass'
+import Swiper from 'react-id-swiper'
+import 'swiper/css/swiper.css'
 
 const data = [
 	{
@@ -23,9 +25,7 @@ const Item = ({name, contents}) => (
 	<Box
 		bg="whitesmoke"
 		sx={{borderRadius: 5, boxShadow: '0 0 1px grey'}}
-
-		my={3}
-		p={[3, 4]}
+		p={[2, 3, 4]}
 	>
 		<Text fontSize={[2, 3, 4]}>{contents}</Text>
 		<Text fontSize={[2, 3, 4]} m={2} textAlign="right">
@@ -35,14 +35,46 @@ const Item = ({name, contents}) => (
 )
 
 const Testimonials = () => {
+	const [swiper, setSwiper] = useState(null)
+
+	const goNext = () => {
+		if (swiper !== null) {
+			swiper.slideNext()
+		}
+	}
+
+	const goPrevious = () => {
+		if (swiper !== null) {
+			swiper.slidePrev()
+		}
+	}
+
 	return (
 		<Box width={1} m={[1, 2]} p={[2, 4]}>
-			<Text fontSize={[3, 4, 5]} mb={4}>
+			<Text fontSize={[3, 4, 5]} mb={[2, 3, 4]} textAlign={['center', 'left']}>
 				What our students have to say:
 			</Text>
-			{data.map(t => (
-				<Item key={t.name} name={t.name} contents={t.quote}/>
-			))}
+			<Flex>
+				<Swiper
+					{...{
+						navigation: {
+							nextEl: '.swiper-button-next',
+							prevEl: '.swiper-button-prev'
+						},
+						pagination: {
+							el: '.swiper-pagination',
+							clickable: true
+						}
+					}}
+					getSwiper={setSwiper}
+				>
+					{data.map(t => (
+						<Box key={t.name} px={5} py={1}>
+							<Item name={t.name} contents={t.quote}/>
+						</Box>
+					))}
+				</Swiper>
+			</Flex>
 		</Box>
 	)
 }
