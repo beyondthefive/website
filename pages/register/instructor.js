@@ -13,8 +13,9 @@ const register = () => {
           <LoadingIndicator />
         </Flex>
       ) : null} */}
-			<Text m={4} fontSize={3}>
-				Instructor applications are currently not open. Please contact us on discord.
+			<Text m={4} fontSize={[2, 3, 4]}>
+				Interested becoming an instructor for Beyond The Five?
+				<Text>Join our discord and contact an Organization Representative.</Text>
 			</Text>
 		</Layout>
 	)
