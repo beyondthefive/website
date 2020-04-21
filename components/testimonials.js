@@ -37,18 +37,6 @@ const Item = ({name, contents}) => (
 const Testimonials = () => {
 	const [swiper, setSwiper] = useState(null)
 
-	const goNext = () => {
-		if (swiper !== null) {
-			swiper.slideNext()
-		}
-	}
-
-	const goPrevious = () => {
-		if (swiper !== null) {
-			swiper.slidePrev()
-		}
-	}
-
 	return (
 		<Box width={1} m={[1, 2]} p={[2, 4]}>
 			<Text fontSize={[3, 4, 5]} mb={[2, 3, 4]} textAlign={['center', 'left']}>

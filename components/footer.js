@@ -110,9 +110,10 @@ const footer = ({waves = false, instructorAd = true}) => (
 						AP®️ is a registered trademark of the College Board, which does not
 						sponsor or endorse Beyond The Five.
 					</Text>
+					{/*
 					<Text fontSize={[1, 2, 3]} mt={2}>
 						© 2020 Beyond The Five 501(c)(3) nonprofit
-					</Text>
+					</Text> */}
 				</Box>
 			</Box>
 		</Flex>
