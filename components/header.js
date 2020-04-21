@@ -9,8 +9,8 @@ import Logo from '../public/logo.svg'
 const links = [
 	{href: '/#about', label: 'About'},
 	{href: '/courses', label: 'Courses'},
-	{href: '/register', label: 'Register'},
-	{href: 'https://canvas.instructure.com/courses/', label: 'Login'}
+	{href: '/register', label: 'Register'}
+	// {href: 'https://canvas.instructure.com/courses/', label: 'Login'}
 ]
 
 const NavLinks = props => {
