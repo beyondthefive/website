@@ -2,8 +2,6 @@ const Airtable = require('airtable')
 require('dotenv').config()
 
 exports.handler = function (event, context, callback) {
-	const category = event.queryStringParameters.category
-
 	const base = new Airtable({apiKey: process.env.KEY}).base(
 		'apprEDMBB2pnH11HZ'
 	)
