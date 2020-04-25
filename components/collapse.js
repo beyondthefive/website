@@ -7,8 +7,9 @@ export default ({children, title}) => {
 	const [open, setOpen] = useState(false)
 	return (
 		<Box>
-			<Flex alignItems="center">
-				<Button variant="blank" p={2} onClick={() => setOpen(!open)}>
+			<Button variant="blank" p={1} onClick={() => setOpen(!open)}>
+				{' '}
+				<Flex alignItems="center">
 					{open ? (
 						<Flex alignItems="center">
 							<FaMinus color="darkgrey" size="0.6em"/>
@@ -18,9 +19,12 @@ export default ({children, title}) => {
 							<FaPlus color="darkred" size="0.6em"/>
 						</Flex>
 					)}
-				</Button>
-				<Text fontSize={[1, 2, 3]}>{title}</Text>
-			</Flex>
+					<Text ml={1} fontSize={[1, 2, 3]}>
+						{title}
+					</Text>
+				</Flex>
+			</Button>
+
 			<Box pl={[0, 1, 2]}>
 				<Collapse isOpened={open}>
 					<Box
