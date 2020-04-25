@@ -10,7 +10,7 @@ exports.handler = function (event, context, callback) {
 	const courses = []
 	base('Course Catalog')
 		.select({
-			maxRecords: 100,
+			maxRecords: 1000,
 			view: 'Grid view'
 		})
 		.eachPage(
