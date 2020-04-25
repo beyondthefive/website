@@ -8,7 +8,6 @@ exports.handler = function (event, context, callback) {
 	const courses = []
 	base('Course Catalog')
 		.select({
-			maxRecords: 1000,
 			view: 'Grid view'
 		})
 		.eachPage(
@@ -30,13 +29,17 @@ exports.handler = function (event, context, callback) {
 						Category: record.get('Raw Category')
 					})
 				})
+				fetchNextPage()
+			},
+			function done(err) {
+				if (err) {
+					callback(err)
+				}
+
 				callback(null, {
 					statusCode: 200,
 					body: JSON.stringify(courses)
 				})
-			},
-			function done(err) {
-				callback(err)
 			}
 		)
 }
