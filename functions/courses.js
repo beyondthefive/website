@@ -4,22 +4,11 @@ require('dotenv').config()
 exports.handler = function (event, context, callback) {
 	const category = event.queryStringParameters.category
 
-	// 1 for ap, 2 for college level, 3 for test prep, 4 for misc.
-	// default 1
-	let c = 'AP Courses'
-	if (category == 2) {
-		c = 'CL Courses'
-	} else if (category == 3) {
-		c = 'C&TP Courses'
-	} else if (category == 4) {
-		c = 'Misc. Courses'
-	}
-
 	const base = new Airtable({apiKey: process.env.KEY}).base(
 		'apprEDMBB2pnH11HZ'
 	)
 	const courses = []
-	base(c)
+	base('Course Catalog')
 		.select({
 			maxRecords: 100,
 			view: 'Grid view'
@@ -28,16 +17,19 @@ exports.handler = function (event, context, callback) {
 			function page(records, fetchNextPage) {
 				records.forEach(record => {
 					courses.push({
+						FormattedName: record.get('Formatted Name'),
 						Name: record.get('Name'),
+						Code: record.get('Course Code'),
 						Credits: record.get('Credits'),
 						Prerequisites: record.get('Prerequisite(s)'),
 						Corequisites: record.get('Corequisite(s)'),
 						Syllabus: record.get('Syllabus'),
 						Notes: record.get('Notes'),
+						Description: record.get('Description'),
 						Instructors: record.get('Instructors'),
-						ApproximateCompletionTime: record.get(
-							'Approximate Completion Time'
-						)
+						Time: record.get('Estimated Completion Time'),
+						Subject: record.get('Raw Subject').split(', '),
+						Category: record.get('Raw Category')
 					})
 				})
 				callback(null, {
