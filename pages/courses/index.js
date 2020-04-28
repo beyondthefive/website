@@ -5,7 +5,7 @@ import cor from '../../lib/courses'
 import LoadingIndicator from '../../components/loadingIndicator'
 import Popup from 'reactjs-popup'
 import {MdClose} from 'react-icons/md'
-import Filterbox from '../../components/filterCheckbox'
+import FilterCheckbox from '../../components/filterCheckbox'
 import Collapse from '../../components/collapse'
 
 const Tag = ({children}) => (
@@ -45,7 +45,7 @@ const TagList = ({c}) => {
 const categoryFilters = [
 	{name: 'AP®️ Courses', filter: 'Advanced Placement'},
 	{name: 'College-Level', filter: 'College-Level'},
-	{name: 'College & Test Preperation', filter: 'College & Test Prep Courses'},
+	{name: 'College & Test Preparation', filter: 'College & Test Preparation'},
 	{name: 'Misc.', filter: 'Miscellaneous'}
 ]
 
@@ -137,7 +137,7 @@ const courses = () => {
 							<Collapse title="Filter courses:">
 								<Collapse title="Filter by course category">
 									{categoryFilters.map(c => (
-										<Filterbox
+										<FilterCheckbox
 											key={c.name}
 											title={c.name}
 											filter={c.filter}
@@ -148,7 +148,7 @@ const courses = () => {
 
 								<Collapse title="Filter by course subject">
 									{subjectFilters.map(c => (
-										<Filterbox
+										<FilterCheckbox
 											key={c.name}
 											title={c.name}
 											filter={c.filter}
