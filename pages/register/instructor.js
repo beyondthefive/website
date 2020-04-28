@@ -1,20 +1,29 @@
 import React, {useState} from 'react'
 import Layout from '../../components/layout'
-import {Flex, Text} from 'rebass'
+import {Flex} from 'rebass'
+import LoadingIndicator from '../../components/loadingIndicator'
 
-const register = () => {
+export default () => {
 	const [loaded, setLoaded] = useState(false)
 	const onLoad = () => setLoaded(true)
 	return (
 		<Layout instructorAd={false}>
-			<Text m={4} fontSize={[2, 3, 4]}>
-				Interested becoming an instructor for Beyond The Five?
-				<Text>
-					Join our discord and contact an Organization Representative.
-				</Text>
-			</Text>
+			{!loaded ? (
+				<Flex justifyContent="center" m={3}>
+					<LoadingIndicator/>
+				</Flex>
+			) : null}
+			<script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"/>
+			<iframe
+				className="airtable-embed airtable-dynamic-height"
+				src="https://airtable.com/embed/shr0g45zTMwkHGs7V?backgroundColor=purple"
+				frameBorder="0"
+				width="100%"
+				height="2579"
+				style={{background: 'transparent'}}
+				onLoad={() => onLoad()}
+			 />
 		</Layout>
 	)
 }
 
-export default register
