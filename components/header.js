@@ -71,12 +71,12 @@ const header = ({header = false, waves = false}) => {
 							<Flex flexDirection={['column', 'row']}>
 								<Box width={[1, 1 / 2]} ml={[0, 5]} p={1}>
 									<Text fontSize={[4, 5, 6]} textAlign={['center', 'left']}>
-									<b>Free</b>, online, self-paced courses in AP®️, SAT/ACT,
-									and college level classes
+										<b>Free</b>, online, self-paced courses in AP®️, SAT/ACT,
+										and college level classes
 									</Text>
 									<Flex>
-									<RegisterButton mx={['auto', 0]}/>
-        </Flex>
+										<RegisterButton mx={['auto', 0]}/>
+									</Flex>
 								</Box>
 
 								<Flex pt={2} justifyContent={['center']} width={[1, 1 / 2]}>
