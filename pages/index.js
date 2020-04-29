@@ -51,7 +51,7 @@ const index = () => {
 						<Text mb={3} fontSize={[3, 4, 5]} mx={[3, 0]}>
 							Beyond The Five is an online platform and community that provides
 							free instruction in AP®️, SAT/ACT preparation, and college level
-							courses
+							courses.
 						</Text>
 					</Flex>
 					<Flex justifyContent="center" width={[1, 1 / 2]}>
@@ -127,7 +127,8 @@ const index = () => {
 					Beyond The Five currently offers {stats.totalCourses} courses.
 				</Text>
 				<Text textAlign="center" fontSize={[3, 4, 5]}>
-					Find them on <Link href="/courses">our course catalog</Link>.
+					Learn more about them on{' '}
+					<Link href="/courses">our course catalog</Link>.
 				</Text>
 			</Box>
 			<Text textAlign="center" fontSize={[3, 4, 5]}>
