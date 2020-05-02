@@ -16,7 +16,8 @@ const socialLinks = [
 
 const aboutLinks = [
 	{link: '/privacypolicy', text: 'Privacy Policy'},
-	{link: '/#about', text: 'About us'}
+	{link: '/#about', text: 'About Us'},
+	{link: '/staff', text: 'Our Staff'}
 ]
 
 const footer = ({waves = false, instructorAd = true}) => (
