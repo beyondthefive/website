@@ -9,7 +9,9 @@ import Logo from '../public/logo.svg'
 const links = [
 	{href: '/#about', label: 'About'},
 	{href: '/courses', label: 'Courses'},
+	{href: '/register/instructor', label: 'Join The Team'},
 	{href: '/register', label: 'Register'}
+	
 	// {href: 'https://canvas.instructure.com/courses/', label: 'Login'}
 ]
 
