@@ -7,31 +7,20 @@ import Learn from '../public/svgs/undraw_researching_22gp.svg'
 import Logo from '../public/logo.svg'
 
 const links = [
-	{href: '/#about', label: 'About'},
+	/* { href: '/#about', label: 'About' }, */
 	{href: '/courses', label: 'Courses'},
+	{href: '/staff', label: 'Our Team'},
 	{href: '/register/instructor', label: 'Join The Team'},
 	{href: '/register', label: 'Register'}
-	
+
 	// {href: 'https://canvas.instructure.com/courses/', label: 'Login'}
 ]
 
 const NavLinks = props => {
 	const links = props.links
 	const linkList = links.map(link => (
-		<Link
-			key={link.label}
-			p={1}
-			mx={2}
-			py="auto"
-			variant="nav"
-			href={link.href}
-		>
-			<Text
-				fontWeight="normal"
-				textAlign="center"
-				my="auto"
-				fontSize={[2, 3, 4]}
-			>
+		<Link key={link.label} p={[0, 1]} mx={2} py="auto" variant="nav" href={link.href}>
+			<Text fontWeight="normal" textAlign="center" my="auto" fontSize={[2, 3, 4]}>
 				{link.label}
 			</Text>
 		</Link>
@@ -44,15 +33,10 @@ const header = ({header = false, waves = false}) => {
 	return (
 		<Box color="white">
 			<Box bg="#561B25" pt={[2, 1, 0]}>
-				<Flex
-					mx="auto"
-					width={[1, 4 / 5]}
-					px={3}
-					flexDirection={['column', 'row']}
-				>
-					<Flex width={[1, 1 / 2]}>
+				<Flex mx="auto" width={[1, 4 / 5]} px={3} flexDirection={['column', 'row']}>
+					<Flex width={[1, 1 / 3]}>
 						<Flex justifyContent={['center', 'flex-start']} my="auto">
-							<Logo height="4%" width="4%"/>
+							<Logo height="6%" width="6%"/>
 							<Heading fontSize={[3, 4, 5]} my="auto" mx={3} mb={[2, 1, 0]}>
 								<Link href="/" color="white" sx={{textDecoration: 'none'}}>
 									Beyond The Five
@@ -60,7 +44,7 @@ const header = ({header = false, waves = false}) => {
 							</Heading>
 						</Flex>
 					</Flex>
-					<Box width={[1, 1 / 2]} alignSelf="center">
+					<Box width={[1, 2 / 3]} alignSelf="center">
 						<Flex justifyContent={['center', 'flex-end']}>
 							<NavLinks links={links}/>
 						</Flex>
@@ -73,8 +57,7 @@ const header = ({header = false, waves = false}) => {
 							<Flex flexDirection={['column', 'row']}>
 								<Box width={[1, 1 / 2]} ml={[0, 5]} p={1}>
 									<Text fontSize={[4, 5, 6]} textAlign={['center', 'left']}>
-										<b>Free</b>, online, self-paced courses in AP®️, SAT/ACT,
-										and college level classes
+										<b>Free</b>, online, self-paced courses in AP®️, SAT/ACT, and college level classes
 									</Text>
 									<Flex>
 										<RegisterButton mx={['auto', 0]}/>
@@ -90,16 +73,9 @@ const header = ({header = false, waves = false}) => {
 				</Box>
 				{header && annoucementOpen ? (
 					<Flex py={[3, 2, 1]} px={[3, 4, 5]}>
-						<Flex
-							mx="auto"
-							sx={{borderRadius: 5, boxShadow: '0 0 3px black'}}
-							py={2}
-							px={2}
-							width={[4 / 5, 3 / 4, 2 / 3]}
-						>
+						<Flex mx="auto" sx={{borderRadius: 5, boxShadow: '0 0 3px black'}} py={2} px={2} width={[4 / 5, 3 / 4, 2 / 3]}>
 							<Text mx="auto" fontSize={[1, 2, 3]}>
-								Beyond The Five is now offering preparation sessions for this
-								years AP®️ tests!
+								Beyond The Five is now offering preparation sessions for this years AP®️ tests!
 								<Link href="/5to5">
 									<Text color="skyblue">Click here to learn more</Text>
 								</Link>
