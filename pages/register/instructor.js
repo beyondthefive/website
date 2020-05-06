@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
-import Layout from '../../components/layout'
-import {Flex} from 'rebass'
-import LoadingIndicator from '../../components/loadingIndicator'
+import React, {useState} from 'react';
+import Layout from '../../components/layout';
+import {Flex} from 'rebass';
+import LoadingIndicator from '../../components/loadingIndicator';
 
 export default () => {
-	const [loaded, setLoaded] = useState(false)
-	const onLoad = () => setLoaded(true)
+	const [loaded, setLoaded] = useState(false);
+	const onLoad = () => setLoaded(true);
 	return (
 		<Layout instructorAd={false}>
 			{!loaded ? (
@@ -24,6 +24,6 @@ export default () => {
 				onLoad={() => onLoad()}
 			 />
 		</Layout>
-	)
-}
+	);
+};
 

@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
-import {Flex, Box, Heading, Link, Text, Button} from 'rebass'
-import RegisterButton from '../components/registerButton'
-import Waves from './waves'
-import {MdClose} from 'react-icons/md'
-import Learn from '../public/svgs/undraw_researching_22gp.svg'
-import Logo from '../public/logo.svg'
+import React, {useState} from 'react';
+import {Flex, Box, Heading, Link, Text, Button} from 'rebass';
+import RegisterButton from '../components/registerButton';
+import Waves from './waves';
+import {MdClose} from 'react-icons/md';
+import Learn from '../public/svgs/undraw_researching_22gp.svg';
+import Logo from '../public/logo.svg';
 
 const links = [
 	/* { href: '/#about', label: 'About' }, */
@@ -14,22 +14,22 @@ const links = [
 	{href: '/register', label: 'Register'}
 
 	// {href: 'https://canvas.instructure.com/courses/', label: 'Login'}
-]
+];
 
 const NavLinks = props => {
-	const links = props.links
+	const links = props.links;
 	const linkList = links.map(link => (
 		<Link key={link.label} p={[0, 1]} mx={2} py="auto" variant="nav" href={link.href}>
 			<Text fontWeight="normal" textAlign="center" my="auto" fontSize={[2, 3, 4]}>
 				{link.label}
 			</Text>
 		</Link>
-	))
-	return <Flex p={[0, 3]}>{linkList}</Flex>
-}
+	));
+	return <Flex p={[0, 3]}>{linkList}</Flex>;
+};
 
 const header = ({header = false, waves = false}) => {
-	const [annoucementOpen, setOpen] = useState(true)
+	const [annoucementOpen, setOpen] = useState(true);
 	return (
 		<Box color="white">
 			<Box bg="#561B25" pt={[2, 1, 0]}>
@@ -91,7 +91,7 @@ const header = ({header = false, waves = false}) => {
 
 			{waves ? <Waves top/> : null}
 		</Box>
-	)
-}
+	);
+};
 
-export default header
+export default header;

@@ -1,11 +1,11 @@
-const Airtable = require('airtable')
-require('dotenv').config()
+const Airtable = require('airtable');
+require('dotenv').config();
 
 exports.handler = function (event, context, callback) {
 	const base = new Airtable({apiKey: process.env.KEY}).base(
 		'apprEDMBB2pnH11HZ'
-	)
-	const data = []
+	);
+	const data = [];
 	base('Instructors')
 		.select({
 			view: 'Grid view'
@@ -19,20 +19,20 @@ exports.handler = function (event, context, callback) {
 						Email: record.get('Email'),
 						Location: record.get('Location'),
 						About: record.get('About')
-					})
-				})
+					});
+				});
 
-				fetchNextPage()
+				fetchNextPage();
 			},
 			function done(err) {
 				if (err) {
-					callback(err)
+					callback(err);
 				}
 
 				callback(null, {
 					statusCode: 200,
 					body: JSON.stringify(data)
-				})
+				});
 			}
-		)
-}
+		);
+};

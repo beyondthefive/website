@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from 'react'
-import Layout from '../../components/layout'
-import {Box, Flex, Text, Button, Link} from 'rebass'
-import cor from '../../lib/courses'
-import LoadingIndicator from '../../components/loadingIndicator'
-import Popup from 'reactjs-popup'
-import {MdClose} from 'react-icons/md'
-import FilterCheckbox from '../../components/filterCheckbox'
-import Collapse from '../../components/collapse'
+import React, {useState, useEffect} from 'react';
+import Layout from '../../components/layout';
+import {Box, Flex, Text, Button, Link} from 'rebass';
+import cor from '../../lib/courses';
+import LoadingIndicator from '../../components/loadingIndicator';
+import Popup from 'reactjs-popup';
+import {MdClose} from 'react-icons/md';
+import FilterCheckbox from '../../components/filterCheckbox';
+import Collapse from '../../components/collapse';
 
 const Tag = ({children}) => (
 	<Box
@@ -19,7 +19,7 @@ const Tag = ({children}) => (
 	>
 		{children}
 	</Box>
-)
+);
 
 const TagList = ({c}) => {
 	return (
@@ -39,15 +39,15 @@ const TagList = ({c}) => {
 				))}
 			</Flex>
 		</Box>
-	)
-}
+	);
+};
 
 const categoryFilters = [
 	{name: 'AP®️ Courses', filter: 'Advanced Placement'},
 	{name: 'College-Level', filter: 'College-Level'},
 	{name: 'College & Test Preparation', filter: 'College & Test Preparation'},
 	{name: 'Misc.', filter: 'Miscellaneous'}
-]
+];
 
 const subjectFilters = [
 	{name: 'English', filter: 'English'},
@@ -62,33 +62,33 @@ const subjectFilters = [
 	{name: 'Languages', filter: 'Languages'},
 	{name: 'College & Test Prep.', filter: 'College & Test Prep.'},
 	{name: 'Misc.', filter: 'Misc.'}
-]
+];
 
 const courses = () => {
-	const [courses, setCourses] = useState([])
-	const [filter, setFilter] = useState([])
+	const [courses, setCourses] = useState([]);
+	const [filter, setFilter] = useState([]);
 
 	const fetchData = async () => {
-		return await cor()
-	}
+		return await cor();
+	};
 
 	useEffect(() => {
-		const d = async () => setCourses(await fetchData())
-		d()
-	}, [])
+		const d = async () => setCourses(await fetchData());
+		d();
+	}, []);
 
 	const update = async c => {
 		if (filter.includes(c)) {
-			filter.splice(filter.indexOf(c), 1)
+			filter.splice(filter.indexOf(c), 1);
 		} else {
-			filter.push(c)
+			filter.push(c);
 		}
 
 		// For the reload
-		const data = courses.slice()
-		setCourses([])
-		setCourses(data)
-	}
+		const data = courses.slice();
+		setCourses([]);
+		setCourses(data);
+	};
 
 	return (
 		<Layout>
@@ -163,14 +163,14 @@ const courses = () => {
 									// Copied from other filter
 									courses.filter(c => {
 										function hasAllElements(array, array2) {
-											return array.every(i => array2.includes(i))
+											return array.every(i => array2.includes(i));
 										}
 
-										const comparison = c.Subject.slice()
-										comparison.push(c.Category)
+										const comparison = c.Subject.slice();
+										comparison.push(c.Category);
 										return (
 											filter.length == 0 || hasAllElements(filter, comparison)
-										)
+										);
 									}).length
 								}{' '}
 								of {courses.length} courses
@@ -185,14 +185,14 @@ const courses = () => {
 							courses
 								.filter(c => {
 									function hasAllElements(array, array2) {
-										return array.every(i => array2.includes(i))
+										return array.every(i => array2.includes(i));
 									}
 
-									const comparison = c.Subject.slice()
-									comparison.push(c.Category)
+									const comparison = c.Subject.slice();
+									comparison.push(c.Category);
 									return (
 										filter.length == 0 || hasAllElements(filter, comparison)
-									)
+									);
 								})
 								.map(c => (
 									<Box
@@ -302,7 +302,7 @@ const courses = () => {
 				</Flex>
 			</Box>
 		</Layout>
-	)
-}
+	);
+};
 
-export default courses
+export default courses;

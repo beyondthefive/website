@@ -1,11 +1,11 @@
-import React from 'react'
-import Layout from '../../components/layout'
-import {Box, Flex, Text} from 'rebass'
-import Math from '../../public/svgs/paths/math.svg'
-import Physics from '../../public/svgs/paths/physics.svg'
-import CS from '../../public/svgs/paths/cs.svg'
+import React from 'react';
+import Layout from '../../components/layout';
+import {Box, Flex, Text} from 'rebass';
+import Math from '../../public/svgs/paths/math.svg';
+import Physics from '../../public/svgs/paths/physics.svg';
+import CS from '../../public/svgs/paths/cs.svg';
 
-const Graphic = ({children}) => <Box my={3}>{children}</Box>
+const Graphic = ({children}) => <Box my={3}>{children}</Box>;
 
 const courses = () => {
 	return (
@@ -25,7 +25,7 @@ const courses = () => {
 				</Flex>
 			</Box>
 		</Layout>
-	)
-}
+	);
+};
 
-export default courses
+export default courses;

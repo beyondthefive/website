@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react'
-import Layout from '../components/layout'
-import {Text, Box, Flex, Link} from 'rebass'
-import RegisterButton from '../components/registerButton'
-import Testimonials from '../components/testimonials'
-import get from '../lib/stats'
-import Study from '../public/svgs/undraw_studying_s3l7.svg'
-import Knowlege from '../public/svgs/undraw_knowledge_g5gf.svg'
+import React, {useState, useEffect} from 'react';
+import Layout from '../components/layout';
+import {Text, Box, Flex, Link} from 'rebass';
+import RegisterButton from '../components/registerButton';
+import Testimonials from '../components/testimonials';
+import get from '../lib/stats';
+import Study from '../public/svgs/undraw_studying_s3l7.svg';
+import Knowlege from '../public/svgs/undraw_knowledge_g5gf.svg';
 
 const Item = ({num, text}) => (
 	<Text
@@ -20,20 +20,20 @@ const Item = ({num, text}) => (
 		<b>{num}</b>
 		<Text> {text}</Text>
 	</Text>
-)
+);
 
 const desc2 = [
 	'Our classes have lectures, homework, and other things you would expect from a classroom-type learning environment.',
 	'They are not for students who just want extra resources.'
-]
+];
 
 const index = () => {
-	const [stats, setStats] = useState('')
+	const [stats, setStats] = useState('');
 
 	useEffect(async () => {
-		const d = async () => setStats(await get())
-		d()
-	}, [])
+		const d = async () => setStats(await get());
+		d();
+	}, []);
 	return (
 		<Layout waves header>
 			<Box width={[1, 1 / 2, 2 / 3]} m={1} p={2} mx="auto">
@@ -138,7 +138,7 @@ const index = () => {
 				<RegisterButton/>
 			</Flex>
 		</Layout>
-	)
-}
+	);
+};
 
-export default index
+export default index;

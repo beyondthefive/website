@@ -1,9 +1,9 @@
-const Airtable = require('airtable')
-require('dotenv').config()
+const Airtable = require('airtable');
+require('dotenv').config();
 
 exports.handler = function (event, context, callback) {
-	base = new Airtable({apiKey: process.env.KEY}).base('appT5Qlz3I0sE6p8U')
-	const data = []
+	base = new Airtable({apiKey: process.env.KEY}).base('appT5Qlz3I0sE6p8U');
+	const data = [];
 	base('Staff')
 		.select({
 			view: 'Grid view'
@@ -16,19 +16,19 @@ exports.handler = function (event, context, callback) {
 						Email: record.get('Email'),
 						Location: record.get('Location'),
 						About: record.get('About')
-					})
-				})
-				fetchNextPage()
+					});
+				});
+				fetchNextPage();
 			},
 			function done(err) {
 				if (err) {
-					callback(err)
+					callback(err);
 				}
 
 				callback(null, {
 					statusCode: 200,
 					body: JSON.stringify(data)
-				})
+				});
 			}
-		)
-}
+		);
+};

@@ -52,7 +52,6 @@
     "xo": "^0.29.1"
   },
   "xo": {
-    "extends": "xo-react",
-    "semicolon": false
+    "extends": "xo-react"
   }
 }

@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
-import {Collapse} from 'react-collapse'
-import {FaPlus, FaMinus} from 'react-icons/fa'
-import {Box, Flex, Text, Button, Link} from 'rebass'
+import React, {useState} from 'react';
+import {Collapse} from 'react-collapse';
+import {FaPlus, FaMinus} from 'react-icons/fa';
+import {Box, Flex, Text, Button, Link} from 'rebass';
 
 export default ({children, title}) => {
-	const [open, setOpen] = useState(false)
+	const [open, setOpen] = useState(false);
 	return (
 		<Box>
 			<Button variant="blank" p={1} onClick={() => setOpen(!open)}>
@@ -41,5 +41,5 @@ export default ({children, title}) => {
 				</Collapse>
 			</Box>
 		</Box>
-	)
-}
+	);
+};

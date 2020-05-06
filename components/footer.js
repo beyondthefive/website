@@ -1,6 +1,6 @@
-import {Flex, Box, Link, Text, Heading} from 'rebass'
-import Waves from './waves'
-import {FaDiscord, FaInstagram} from 'react-icons/fa'
+import {Flex, Box, Link, Text, Heading} from 'rebass';
+import Waves from './waves';
+import {FaDiscord, FaInstagram} from 'react-icons/fa';
 const socialLinks = [
 	{
 		component: <FaInstagram color="white" size="2em"/>,
@@ -12,13 +12,13 @@ const socialLinks = [
 		alt: 'Discord',
 		link: '/discord'
 	}
-]
+];
 
 const aboutLinks = [
 	{link: '/privacypolicy', text: 'Privacy Policy'},
 	{link: '/#about', text: 'About Us'},
 	{link: '/staff', text: 'Our Staff'}
-]
+];
 
 const footer = ({waves = false, instructorAd = true}) => (
 	<Box>
@@ -119,6 +119,6 @@ const footer = ({waves = false, instructorAd = true}) => (
 			</Box>
 		</Flex>
 	</Box>
-)
+);
 
-export default footer
+export default footer;

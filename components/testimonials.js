@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
-import {Text, Box, Flex, Button} from 'rebass'
-import Swiper from 'react-id-swiper'
-import 'swiper/css/swiper.css'
+import React, {useState} from 'react';
+import {Text, Box, Flex, Button} from 'rebass';
+import Swiper from 'react-id-swiper';
+import 'swiper/css/swiper.css';
 
 const data = [
 	{
@@ -19,7 +19,7 @@ const data = [
 		quote:
       'Beyond the Five has not only transformed my knowledge on the subjects I signed up for, it completely reshaped how I envision my future. The team at Beyond the Five is composed of some of the kindest, smartest people I\'ll ever meet, and I know that they truly care about both the program and the students. Whenever I have trouble with school, would like to discuss my high school plans, or just want to talk to some friends, I love being able to consult with the people at Beyond the Five. Joining Beyond the Five has honestly turned me onto a much higher path in life, and I strongly recommend all ambitious, driven students join.'
 	}
-]
+];
 
 const Item = ({name, contents}) => (
 	<Box
@@ -32,10 +32,10 @@ const Item = ({name, contents}) => (
 			- {name}
 		</Text>
 	</Box>
-)
+);
 
 const Testimonials = () => {
-	const [swiper, setSwiper] = useState(null)
+	const [swiper, setSwiper] = useState(null);
 
 	return (
 		<Box width={1} m={[1, 2]} p={[2, 4]}>
@@ -64,7 +64,7 @@ const Testimonials = () => {
 				</Swiper>
 			</Flex>
 		</Box>
-	)
-}
+	);
+};
 
-export default Testimonials
+export default Testimonials;

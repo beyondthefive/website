@@ -1,4 +1,4 @@
-import {Button, Text, Link} from 'rebass'
+import {Button, Text, Link} from 'rebass';
 
 const button = ({mx = 'auto'}) => {
 	return (
@@ -14,7 +14,7 @@ const button = ({mx = 'auto'}) => {
 				</Text>
 			</Link>
 		</Button>
-	)
-}
+	);
+};
 
-export default button
+export default button;

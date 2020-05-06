@@ -1,9 +1,9 @@
-import React from 'react'
-import {Flex, Box} from 'rebass'
-import Header from './header'
-import Footer from './footer'
-import css from 'styled-jsx/css'
-import IBMPlexSans from '../public/fonts/IBMPlexSans-Regular.ttf'
+import React from 'react';
+import {Flex, Box} from 'rebass';
+import Header from './header';
+import Footer from './footer';
+import css from 'styled-jsx/css';
+import IBMPlexSans from '../public/fonts/IBMPlexSans-Regular.ttf';
 
 const globalStyle = css.global`
   @font-face {
@@ -16,7 +16,7 @@ const globalStyle = css.global`
     font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
     margin: 0;
   }
-`
+`;
 
 const layout = ({
 	children,
@@ -72,7 +72,7 @@ const layout = ({
 				{globalStyle}
 			</style>
 		</>
-	)
-}
+	);
+};
 
-export default layout
+export default layout;

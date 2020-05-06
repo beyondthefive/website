@@ -1,21 +1,21 @@
-import React, {useState, useEffect} from 'react'
-import {Box, Flex, Text, Button, Link} from 'rebass'
-import {FaArrowDown, FaArrowUp} from 'react-icons/fa'
-import Layout from '../components/layout'
-import LoadingIndicator from '../components/loadingIndicator'
-import fetchData from '../lib/staff-data'
+import React, {useState, useEffect} from 'react';
+import {Box, Flex, Text, Button, Link} from 'rebass';
+import {FaArrowDown, FaArrowUp} from 'react-icons/fa';
+import Layout from '../components/layout';
+import LoadingIndicator from '../components/loadingIndicator';
+import fetchData from '../lib/staff-data';
 
 export default () => {
-	const [one, setAdministrativeData] = useState([])
-	const [two, setInstructorsData] = useState([])
+	const [one, setAdministrativeData] = useState([]);
+	const [two, setInstructorsData] = useState([]);
 	useEffect(() => {
 		const d = async () => {
 			// SetAdministrativeData(await fetchData());
-			setInstructorsData(await fetchData('instructors'))
-		}
+			setInstructorsData(await fetchData('instructors'));
+		};
 
-		d()
-	}, [])
+		d();
+	}, []);
 
 	return (
 		<Layout>
@@ -47,11 +47,11 @@ export default () => {
 				</Box>
 			</Box>
 		</Layout>
-	)
-}
+	);
+};
 
 const Card = ({name, email, position, location, desc}) => {
-	const [open, setOpen] = useState(false)
+	const [open, setOpen] = useState(false);
 	return (
 		<Box
 			m={1}
@@ -86,5 +86,5 @@ const Card = ({name, email, position, location, desc}) => {
 				) : null}
 			</Text>
 		</Box>
-	)
-}
+	);
+};
