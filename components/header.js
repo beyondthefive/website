@@ -75,10 +75,7 @@ const header = ({header = false, waves = false}) => {
 					<Flex py={[3, 2, 1]} px={[3, 4, 5]}>
 						<Flex mx="auto" sx={{borderRadius: 5, boxShadow: '0 0 3px black'}} py={2} px={2} width={[4 / 5, 3 / 4, 2 / 3]}>
 							<Text mx="auto" fontSize={[1, 2, 3]}>
-								Beyond The Five is now offering preparation sessions for this years AP®️ tests!
-								<Link href="/5to5">
-									<Text color="skyblue">Click here to learn more</Text>
-								</Link>
+								Registration for the 2020-21 school year is now open!
 							</Text>
 
 							<Flex ml={2} p={1} alignItems="center">
