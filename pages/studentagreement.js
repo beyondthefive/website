@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Layout from '../components/layout';
-import {Flex, Text} from 'rebass';
+import {Flex} from 'rebass';
 import LoadingIndicator from '../components/loadingIndicator';
 
 const register = () => {
@@ -13,13 +13,12 @@ const register = () => {
 					<LoadingIndicator/>
 				</Flex>
 			) : null}
-			<script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"/>
+
 			<iframe
-				className="airtable-embed airtable-dynamic-height"
-				src="https://airtable.com/embed/shr7GQzrLKHSVSW5t?backgroundColor=gray"
+				src="https://docs.google.com/document/d/e/2PACX-1vQ-6Uojkr23fRa0rM3GJ_6HuuPLA1XA0XHCv2Dbk76GTxasdflyydkxEbwCuUYELiO8WCpKRt9HcNbQ/pub"
 				frameBorder="0"
 				width="100%"
-				height="3596"
+				height="2100"
 				style={{background: 'transparent'}}
 				onLoad={() => onLoad()}
 			/>
