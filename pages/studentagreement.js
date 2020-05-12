@@ -18,7 +18,7 @@ const register = () => {
 				src="https://docs.google.com/document/d/e/2PACX-1vQ-6Uojkr23fRa0rM3GJ_6HuuPLA1XA0XHCv2Dbk76GTxasdflyydkxEbwCuUYELiO8WCpKRt9HcNbQ/pub"
 				frameBorder="0"
 				width="100%"
-				height="2100"
+				height="1200"
 				style={{background: 'transparent'}}
 				onLoad={() => onLoad()}
 			/>
