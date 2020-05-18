@@ -58,7 +58,6 @@ const subjectFilters = [
 	{name: 'Social Sciences', filter: 'Social Sciences'},
 	{name: 'Computer Science', filter: 'Computer Science'},
 	{name: 'Physics', filter: 'Physics'},
-
 	{name: 'Languages', filter: 'Languages'},
 	{name: 'College & Test Prep.', filter: 'College & Test Prep.'},
 	{name: 'Misc.', filter: 'Misc.'}
@@ -68,16 +67,25 @@ const courses = () => {
 	const [courses, setCourses] = useState([]);
 	const [filter, setFilter] = useState([]);
 
-	const fetchData = async () => {
-		return await cor();
-	};
-
 	useEffect(() => {
-		const d = async () => setCourses(await fetchData());
+		const d = async () => setCourses(removeDuds(await cor()));
 		d();
 	}, []);
 
+	// Removes all courses with no category or subject
+	// does not work yet
+	const removeDuds = c => {
+		const out = [];
+		c.map(i => {
+			if (i.Category != null && i.Subject != null) {
+				out.push(i);
+			}
+		});
+		return out;
+	};
+
 	const update = async c => {
+		// If filter is already applied, remove it
 		if (filter.includes(c)) {
 			filter.splice(filter.indexOf(c), 1);
 		} else {
@@ -98,11 +106,8 @@ const courses = () => {
 						<Box
 							bg="whitesmoke"
 							sx={{
-								// Border: "1px solid grey",
 								borderTopRightRadius: 5,
 								borderTopLeftRadius: 5
-								// Position: "sticky",
-								// top: 12,
 							}}
 							p={2}
 						>
@@ -265,9 +270,11 @@ const courses = () => {
 														) : null}
 														{c.Notes ? <Text mb={2}>{c.Notes}</Text> : null}
 														<Box mb={2}>
-															{c.Prerequisites ? (
-																<Text>Prerequisite(s): {c.Prerequisites}</Text>
-															) : null}
+															<Text>
+																Prerequisite(s):{' '}
+																{c.Prerequisites ? c.Prerequisites : 'None'}
+															</Text>
+
 															{c.Corequisites ? (
 																<Text>Corequisite(s): {c.Corequisites}</Text>
 															) : null}
