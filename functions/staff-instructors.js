@@ -15,7 +15,8 @@ exports.handler = function (event, context, callback) {
 				records.forEach(record => {
 					data.push({
 						Name: record.get('Name'),
-						Position: record.get('Position'),
+						Role: record.get('Role'),
+						Courses: record.get('Courses Teaching').join(', '),
 						Email: record.get('Email'),
 						Location: record.get('Location'),
 						About: record.get('About')

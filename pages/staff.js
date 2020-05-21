@@ -33,6 +33,11 @@ export default () => {
               />
             ))
             ) */}
+
+				<Text fontSize={[2, 3, 4]} mb={2}>
+					Interested in becoming an instructor for Beyond The Five? Fill out a{' '}
+					<Link href="/register/instructor">teacher application</Link>!
+				</Text>
 				<Text fontSize={[3, 4, 5]} mb={2}>
 					Our Teaching Team
 				</Text>
@@ -43,15 +48,31 @@ export default () => {
 						gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)']
 					}}
 				>
-					{two.length === 0 ? <LoadingIndicator/> : two.map(i => <Card key={i.Name} name={i.Name} position={i.Position} location={i.Location} email={i.Email} desc={i.About}/>)}
+					{two.length === 0 ? (
+						<LoadingIndicator/>
+					) : (
+						two.map(i => (
+							<Card
+								key={i.Name}
+								name={i.Name}
+								role={i.Role}
+								position={i.Courses}
+								location={i.Location}
+								email={i.Email}
+								desc={i.About}
+							/>
+						))
+					)}
 				</Box>
 			</Box>
 		</Layout>
 	);
 };
 
-const Card = ({name, email, position, location, desc}) => {
-	const [open, setOpen] = useState(false);
+const Card = ({name, email, role, position, location, desc}) => {
+	const [coursesOpen, setCoursesOpen] = useState(false);
+	const [bioOpen, setBioOpen] = useState(false);
+	console.log(position);
 	return (
 		<Box
 			m={1}
@@ -64,26 +85,44 @@ const Card = ({name, email, position, location, desc}) => {
 		>
 			<Text fontSize={[1, 2, 3]}>
 				<Text mb={2} mx={2}>
-					<Text color="darkred">
-						<b> {name}</b>
-					</Text>
-					<Flex alignItems="center" justifyContent="space-between">
-						<Text>{position}</Text>
-						<Button py="auto" variant="blank" onClick={() => setOpen(!open)}>
-							Learn more {open ? <FaArrowUp size="0.75em"/> : <FaArrowDown size="0.75em"/>}
-						</Button>
+					<Flex justifyContent="space-between" mb={2}>
+						<Flex color="darkred">
+							<b>{name}</b>
+							{/* location ? <Text color="black">{"  "} - {location}</Text> : null */}
+						</Flex>
+						{role}
 					</Flex>
 				</Text>
-
-				{open ? (
-					<Box sx={{borderTop: '1px solid grey'}} p={3}>
+				<Flex justifyContent="space-between" mx={2} mb={2}>
+					<Button
+						p={0}
+						variant="blank"
+						onClick={() => setCoursesOpen(!coursesOpen)}
+					>
 						<Text>
-							{desc}
-							{email ? <Text mt={2}>Contact: {email}</Text> : null}
-							{location ? <Text>{location}</Text> : null}
+							{coursesOpen ? (
+								<FaArrowUp size="0.75em"/>
+							) : (
+								<FaArrowDown size="0.75em"/>
+							)}{' '}
+							Courses
 						</Text>
-					</Box>
-				) : null}
+					</Button>
+					<Button p={0} variant="blank" onClick={() => setBioOpen(!bioOpen)}>
+						<Text>
+							{bioOpen ? (
+								<FaArrowUp size="0.75em"/>
+							) : (
+								<FaArrowDown size="0.75em"/>
+							)}{' '}
+							Learn more
+						</Text>
+					</Button>
+				</Flex>
+				<Box mx={2}>
+					<Box mb={2}>{coursesOpen ? position : null}</Box>
+					<Box>{bioOpen ? desc : null}</Box>
+				</Box>
 			</Text>
 		</Box>
 	);
