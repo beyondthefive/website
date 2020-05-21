@@ -24,10 +24,10 @@
     "dotenv": "^8.2.0",
     "emotion-theming": "^10.0.27",
     "isomorphic-unfetch": "^3.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.25.3",
     "netlify-plugin-cache-nextjs": "^1.4.0",
-    "netlify-plugin-subfont": "^4.0.1",
-    "next": "^9.3.5",
+    "netlify-plugin-subfont": "^4.0.2",
+    "next": "^9.4.0",
     "next-fonts": "^1.1.0",
     "next-images": "^1.4.0",
     "react": "^16.13.1",
@@ -37,19 +37,19 @@
     "react-id-swiper": "^3.0.0",
     "reactjs-popup": "^1.5.0",
     "rebass": "^4.0.7",
-    "spinners-react": "^1.0.3",
+    "spinners-react": "^1.0.4",
     "styled-components": "^5.1.0",
-    "styled-jsx": "^3.2.5",
-    "swiper": "^5.3.7"
+    "styled-jsx": "^3.3.0",
+    "swiper": "^5.4.1"
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^1.1.1",
     "eslint": "^6.8.0",
     "eslint-config-xo-react": "^0.23.0",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^3.0.0",
-    "netlify-cli": "^2.47.0",
-    "xo": "^0.29.1"
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.2",
+    "netlify-cli": "^2.51.0",
+    "xo": "^0.30.0"
   },
   "xo": {
     "extends": "xo-react"
