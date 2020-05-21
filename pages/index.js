@@ -65,7 +65,7 @@ const index = () => {
 					}}
 				>
 					<Text mb={2} fontSize={[3, 4, 5]} textAlign="center">
-						We currently offer, self paced, online instruction, in:
+						We currently offer self-paced, online instruction in:
 					</Text>
 					{stats != '' ? (
 						<Box
@@ -94,7 +94,7 @@ const index = () => {
 					) : null}
 
 					<Text my={2} fontSize={[3, 4, 5]} textAlign="center">
-						to over 160 students, from 10+ countries
+						to over 400 students, from 25+ countries
 					</Text>
 
 					<Text my={5} fontSize={[3, 4, 5]} textAlign="center">
