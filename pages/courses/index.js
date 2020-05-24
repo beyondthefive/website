@@ -60,6 +60,7 @@ const subjectFilters = [
 	{name: 'Physics', filter: 'Physics'},
 	{name: 'Languages', filter: 'Languages'},
 	{name: 'College & Test Prep.', filter: 'College & Test Prep.'},
+	{name: 'Neuropsychology', filter: 'Neuropsychology'},
 	{name: 'Misc.', filter: 'Misc.'}
 ];
 
