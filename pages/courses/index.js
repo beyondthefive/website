@@ -116,7 +116,7 @@ const courses = () => {
 								Deadline to enroll or switch courses: January 1
 							</Text>
 							<Text fontSize={[1, 2, 3]}>
-								You are permitted to enroll in up to 30 credits of courses.
+								You are permitted to enroll in up to 50 credits of courses.
 							</Text>
 							<Text my={3} fontSize={[1, 2, 3]}>
 								Don't know what courses to take?
