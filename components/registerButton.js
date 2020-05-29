@@ -1,20 +1,19 @@
 import {Button, Text, Link} from 'rebass';
 
-const button = ({mx = 'auto'}) => {
+export default () => {
 	return (
 		<Button
-			m={4}
-			bg="#1c7ed6"
-			mx={mx}
-			sx={{borderRadius: 10, boxShadow: '0 0 1px black'}}
+			bg="bt5red"
+			m={1}
+			p={2}
+			py={0}
+			sx={{borderRadius: 5, boxShadow: '-3px 3px 3px rgba(0, 0, 0, 0.25)'}}
 		>
 			<Link variant="nav" href="/register">
-				<Text sx={{fontFamily: 'IBM Plex Sans'}} color="white" fontWeight="normal" fontSize={[3, 4, 5]}>
-					<b>Register now!</b>
+				<Text sx={{fontFamily: 'IBM Plex Sans'}} color="white" fontWeight="normal" fontSize={[2, 3, 4]}>
+					<b>Register</b>
 				</Text>
 			</Link>
 		</Button>
 	);
 };
-
-export default button;

@@ -1,7 +1,7 @@
-const waves = ({color = '#561B25', top = false}) => {
+const waves = ({color = '#123456', top = false}) => {
 	if (top) {
 		return (
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 9 1440 100">
 				<path
 					fill={color}
 					fillOpacity="1"
