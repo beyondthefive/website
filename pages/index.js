@@ -134,7 +134,7 @@ const index = () => {
 			<Text textAlign="center" fontSize={[3, 4, 5]}>
 				Ready to learn with us?
 			</Text>
-			<Flex alignItems="center">
+			<Flex justifyContent="center">
 				<RegisterButton/>
 			</Flex>
 		</Layout>
