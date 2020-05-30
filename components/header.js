@@ -108,12 +108,12 @@ const header = ({header = false, waves = false}) => {
 											in AP®️, SAT/ACT, and college level classes
 										</Text>
 									</Text>
-									<Flex my={3} flexDirection={['column', 'row']} justifyContent={'center', 'flex-end'}>
+									<Flex my={3} flexDirection={['column', 'row']} justifyContent={['center', 'flex-end']}>
 										<BrowseCoursesButton/>
 										<Box width={10}/>
 										<RegisterButton/>
 									</Flex>
-									<Text mt={4} fontSize={[1, 2, 3]} textAlign={['center', 'right']}>Registration for the 2020-21 school year is now open!</Text>
+									<Text mt={[2, 3, 4]} fontSize={[1, 2, 3]} textAlign={['center', 'right']}>Registration for the 2020-21 school year is now open!</Text>
 								</Box>
 								<Flex justifyContent="center">
 									<Learn height="16em" width="21em"/>
