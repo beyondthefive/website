@@ -67,7 +67,7 @@ const header = ({header = false, waves = false}) => {
 						ml={[0, 1, 2, 3]}
 						pl={[0, 1, 2, 3]}
 					>
-						<Logo height="3em" width="3em"/>
+						<Logo height="2.3em" width="2.3em"/>
 						<Link
 							fontSize={[2, 3, 4]}
 							href="/"
@@ -103,7 +103,7 @@ const header = ({header = false, waves = false}) => {
 							<Flex justifyContent="center" flexDirection={['column', 'row-reverse']}>
 								<Box ml={[0, 5]} p={1}>
 									<Text fontSize={[3, 4, 5]} textAlign={['center', 'right']}>
-										<b> Free</b>, online, self-paced courses
+										Free, online, self-paced courses
 										<Text mt={[1, 2, 3]}>
 											in AP®️, SAT/ACT, and college level classes
 										</Text>
