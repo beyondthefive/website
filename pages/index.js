@@ -5,22 +5,20 @@ import RegisterButton from '../components/registerButton';
 import Testimonials from '../components/testimonials';
 import get from '../lib/stats';
 import Study from '../public/svgs/undraw_studying_s3l7.svg';
-import Knowlege from '../public/svgs/undraw_knowledge_g5gf.svg';
+import Knowledge from '../public/svgs/undraw_knowledge_g5gf.svg';
+import Prof from '../public/svgs/undraw_professor_8lrt.svg';
+import BrowseCoursesButton from '../components/browseCoursesButton';
 
 const Item = ({num, text}) => (
-	<Text
-		fontSize={[3, 4, 5]}
-		m={1}
-		mx={[2, 1]}
-		p={1}
-		textAlign="center"
-		bg="whitesmoke"
-		sx={{borderRadius: 5, boxShadow: '0 0 1px grey'}}
-	>
-		<b>{num}</b>
-		<Text> {text}</Text>
-	</Text>
+	<Box mx={[1, 2, 3]} textAlign="center">
+		<Text fontSize={[4, 6, 7]}>
+			<b>{num}</b>
+		</Text>
+		<Text fontSize={[1, 2, 3]}> {text}</Text>
+	</Box>
 );
+
+const Tick = () => <Box width="1px" bg="lightgrey"/>;
 
 const desc2 = [
 	'Our classes have lectures, homework, and other things you would expect from a classroom-type learning environment.',
@@ -36,16 +34,8 @@ const index = () => {
 	}, []);
 	return (
 		<Layout waves header>
-			<Box width={[1, 1 / 2, 2 / 3]} m={1} p={2} mx="auto">
-				<Flex
-					my={3}
-					flexDirection={['column', 'row']}
-					my={4}
-					pb={[2, 1, 0]}
-					sx={{
-						borderBottom: '1px solid #EAEAEA'
-					}}
-				>
+			<Box width={[1, 1 / 2, 2 / 3]} mx="auto">
+				<Flex flexDirection={['column', 'row']} my={3} pb={[2, 1, 0]}>
 					<Flex justifyContent="center" width={[1, 2 / 3]} pt={[0, 4]}>
 						<a name="about"/>
 						<Box textAlign="center">
@@ -58,7 +48,6 @@ const index = () => {
 								<Link variant="nav" href="#learn-more">
 									<Text
 										sx={{fontFamily: 'IBM Plex Sans'}}
-
 										fontWeight="normal"
 										fontSize={[1, 2, 3]}
 									>
@@ -72,50 +61,52 @@ const index = () => {
 						<Study width="80%" height="80%"/>
 					</Flex>
 				</Flex>
-				<Box
-					pb={[2, 1, 0]}
-					sx={{
-						borderBottom: '1px solid #EAEAEA'
-					}}
-				>
-					<a name="learn-more"/>
-					<Text mb={2} fontSize={[3, 4, 5]} textAlign="center">
-						We currently offer self-paced, online instruction in:
-					</Text>
-					{stats != '' ? (
-						<Box
-							mx="auto"
-							flexDirection={['column', 'row']}
-							sx={{
-								display: 'grid',
-								gridGap: 1,
-								gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)']
-							}}
-						>
-							<Item
-								num={stats.categories.AdvancedPlacement}
-								text="AP®️ Courses"
-							/>
-							<Item
-								num={stats.categories.CollegeLevel}
-								text="College-Level Courses"
-							/>
-							<Item
-								num={stats.categories.CollegeTestPreparation}
-								text="College & Test Prep Courses"
-							/>
-							<Item num={stats.categories.Miscellaneous} text="Misc. Courses"/>
-						</Box>
-					) : null}
+			</Box>
+			<Flex
+				pb={4}
+				flexDirection="column"
+				alignItems="center"
+				width={1}
+				bg="whitesmoke"
+			>
+				<a name="learn-more"/>
 
-					<Text my={2} fontSize={[3, 4, 5]} textAlign="center">
-						to over 400 students, from 25+ countries
-					</Text>
+				<Prof width="21em" height="16em"/>
+				{stats ? (
+					<Flex mt={2}>
+						<Item
+							num={stats.categories.AdvancedPlacement}
+							text="AP®️ Courses"
+						/>
+						<Tick/>
+						<Item
+							num={stats.categories.CollegeLevel}
+							text="College-Level Courses"
+						/>
+						<Tick/>
+						<Item num={stats.categories.Miscellaneous} text="Misc. Courses"/>
+						<Tick/>
+						<Item
+							num={stats.categories.CollegeTestPreparation}
+							text="College & Test Prep Courses"
+						/>
+					</Flex>
+				) : null}
 
-					<Text my={5} fontSize={[3, 4, 5]} textAlign="center">
-						<b>100%</b> of our students pass their AP®️ tests!
-					</Text>
-				</Box>
+				<Text my={2} fontSize={[3, 4, 5]} textAlign="center">
+					<b>500+</b> students from <b>25+</b> countries
+				</Text>
+				<BrowseCoursesButton
+					bold
+					my={[1, 2, 3]}
+					bg="lightgrey"
+					fontSize={[3, 4, 5]}
+				/>
+				<Text fontSize={[3, 4, 5]} textAlign="center">
+					<b>100%</b> of our students pass their AP®️ tests!
+				</Text>
+			</Flex>
+			<Box width={[1, 1 / 2, 2 / 3]} mx="auto">
 				<Testimonials/>
 				<Flex my={3} flexDirection={['column', 'row']} my={4}>
 					<Flex justifyContent="center" width={[1, 1 / 2]} pt={[0, 4]}>
@@ -126,7 +117,7 @@ const index = () => {
 						</Text>
 					</Flex>
 					<Flex justifyContent="center" width={[1, 1 / 2]}>
-						<Knowlege width="90%" height="90%"/>
+						<Knowledge width="90%" height="90%"/>
 					</Flex>
 				</Flex>
 				<Box my={4}>
