@@ -9,14 +9,14 @@ export default () => {
 	return (
 		<Layout instructorAd={false}>
 			{!loaded ? (
-				<Flex justifyContent="center" m={3}>
+				<Flex justifyContent="center">
 					<LoadingIndicator/>
 				</Flex>
 			) : null}
 			<script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"/>
 			<iframe
 				className="airtable-embed airtable-dynamic-height"
-				src="https://airtable.com/embed/shr0g45zTMwkHGs7V?backgroundColor=purple"
+				src="https://airtable.com/embed/shr0g45zTMwkHGs7V?backgroundColor=gray"
 				frameBorder="0"
 				width="100%"
 				height="2579"

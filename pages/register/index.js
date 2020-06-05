@@ -9,7 +9,7 @@ const register = () => {
 	return (
 		<Layout instructorAd={false}>
 			{!loaded ? (
-				<Flex justifyContent="center" m={3}>
+				<Flex justifyContent="center">
 					<LoadingIndicator/>
 				</Flex>
 			) : null}

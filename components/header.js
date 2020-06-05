@@ -52,11 +52,11 @@ const NavLinks = props => {
 const header = ({header = false, waves = false}) => {
 	return (
 		<Box color="white">
-			<Box bg="#123456" pt={[2, 1, 0]}>
+			<Box bg="#123456" py={[2, 1, 0]}>
 				<Flex
 					mx="auto"
 					width={1}
-					mb={[0, 1, 2]}
+					mb={[2, 1, 0]}
 					px={[1, 2, 3]}
 					flexDirection={['column', 'row']}
 				>
@@ -101,7 +101,7 @@ const header = ({header = false, waves = false}) => {
 					{header ? (
 						<Box mx="auto" px={[3, 4, 5]} width={1}>
 							<Flex justifyContent="center" flexDirection={['column', 'row-reverse']}>
-								<Box ml={[0, 5]} p={1}>
+								<Box mx={[0, 3, 5]}>
 									<Text fontSize={[3, 4, 5]} textAlign={['center', 'right']}>
 										Free, online, self-paced courses
 										<Text mt={[1, 2, 3]}>
@@ -116,7 +116,7 @@ const header = ({header = false, waves = false}) => {
 									<Text mt={[2, 3, 4]} fontSize={[1, 2, 3]} textAlign={['center', 'right']}>Registration for the 2020-21 school year is now open!</Text>
 								</Box>
 								<Flex justifyContent="center">
-									<Learn height="16em" width="21em"/>
+									<Learn height="16em" width="18em"/>
 								</Flex>
 							</Flex>
 						</Box>
