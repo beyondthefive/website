@@ -19,7 +19,7 @@ export default () => {
 				src="https://airtable.com/embed/shr0g45zTMwkHGs7V?backgroundColor=gray"
 				frameBorder="0"
 				width="100%"
-				height="2579"
+				height="2445"
 				style={{background: 'transparent'}}
 				onLoad={() => onLoad()}
 			 />
