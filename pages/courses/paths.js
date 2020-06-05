@@ -28,7 +28,7 @@ const courses = () => {
 					}}
 				>
 					{paths.map(c => (
-						<Graphic>{c}</Graphic>
+						<Graphic key={c}>{c}</Graphic>
 					))}
 				</Box>
 			</Box>
