@@ -7,6 +7,7 @@ import get from '../lib/stats';
 import Study from '../public/svgs/undraw_studying_s3l7.svg';
 import Knowledge from '../public/svgs/undraw_knowledge_g5gf.svg';
 import Prof from '../public/svgs/undraw_professor_8lrt.svg';
+import Comparison from '../public/svgs/comparison.svg';
 import BrowseCoursesButton from '../components/browseCoursesButton';
 
 const Item = ({num, text}) => (
@@ -34,7 +35,7 @@ const index = () => {
 	}, []);
 	return (
 		<Layout waves header>
-			<Box width={[1, 1 / 2, 2 / 3]} mx="auto">
+			<Box width={[1, 2 / 3]} mx="auto">
 				<Flex flexDirection={['column', 'row']} my={3} pb={[2, 1, 0]}>
 					<Flex justifyContent="center" width={[1, 2 / 3]} pt={[0, 4]}>
 						<a name="about"/>
@@ -58,7 +59,7 @@ const index = () => {
 						</Box>
 					</Flex>
 					<Flex justifyContent="center" width={[1, 1 / 2]}>
-						<Study width="80%" height="80%"/>
+						<Study width="16em" height="13em"/>
 					</Flex>
 				</Flex>
 			</Box>
@@ -71,7 +72,7 @@ const index = () => {
 			>
 				<a name="learn-more"/>
 
-				<Prof width="21em" height="16em"/>
+				<Prof width="20em" height="16em"/>
 				{stats ? (
 					<Flex mt={2}>
 						<Item
@@ -106,6 +107,18 @@ const index = () => {
 					<b>100%</b> of our students pass their AP®️ tests!
 				</Text>
 			</Flex>
+			<Box
+				width={[1, 2 / 3, 1 / 2]}
+				mx="auto"
+				my={[3, 4, 5]}
+				pb={[3, 4, 5]}
+				px={2}
+				sx={{
+					borderBottom: '1px solid lightgrey'
+				}}
+			>
+				<Comparison height="98%em" width="98%em"/>
+			</Box>
 			<Box width={[1, 1 / 2, 2 / 3]} mx="auto">
 				<Testimonials/>
 				<Flex my={3} flexDirection={['column', 'row']} my={4}>
