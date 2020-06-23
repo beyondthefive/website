@@ -13,7 +13,7 @@
   "author": "Joshua Martinez",
   "license": "MIT",
   "dependencies": {
-    "@mdx-js/loader": "^1.6.4",
+    "@mdx-js/loader": "^1.6.6",
     "@next/mdx": "^9.4.4",
     "@rebass/forms": "^4.0.6",
     "@rebass/preset": "^4.0.5",
@@ -24,8 +24,8 @@
     "emotion-theming": "^10.0.27",
     "isomorphic-unfetch": "^3.0.0",
     "moment": "^2.25.3",
-    "next": "^9.4.0",
-    "next-fonts": "^1.1.0",
+    "next": "^9.4.4",
+    "next-fonts": "^1.2.0",
     "next-images": "^1.4.0",
     "react": "^16.13.1",
     "react-collapse": "^5.0.1",
@@ -34,7 +34,7 @@
     "reactjs-popup": "^1.5.0",
     "rebass": "^4.0.7",
     "spinners-react": "^1.0.4",
-    "styled-components": "^5.1.0",
+    "styled-components": "^5.1.1",
     "styled-jsx": "^3.3.0"
   },
   "devDependencies": {
