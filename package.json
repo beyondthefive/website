@@ -14,8 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "@mdx-js/loader": "^1.6.4",
-    "@netlify/plugin-sitemap": "^0.3.3",
-    "@next/mdx": "^9.4.2",
+    "@next/mdx": "^9.4.4",
     "@rebass/forms": "^4.0.6",
     "@rebass/preset": "^4.0.5",
     "@zeit/next-css": "^1.0.1",
@@ -25,8 +24,6 @@
     "emotion-theming": "^10.0.27",
     "isomorphic-unfetch": "^3.0.0",
     "moment": "^2.25.3",
-    "netlify-plugin-cache-nextjs": "^1.4.0",
-    "netlify-plugin-subfont": "^4.1.0",
     "next": "^9.4.0",
     "next-fonts": "^1.1.0",
     "next-images": "^1.4.0",
@@ -34,13 +31,11 @@
     "react-collapse": "^5.0.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
-    "react-id-swiper": "^3.0.0",
     "reactjs-popup": "^1.5.0",
     "rebass": "^4.0.7",
     "spinners-react": "^1.0.4",
     "styled-components": "^5.1.0",
-    "styled-jsx": "^3.3.0",
-    "swiper": "^5.4.1"
+    "styled-jsx": "^3.3.0"
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^1.1.1",
