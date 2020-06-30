@@ -9,14 +9,14 @@ export default ({
 }) => {
 	return (
 		<Button
-			my={my}
 			bg={bg}
+			my={my}
 			m={1}
-			p={2}
+			px={2}
 			py={0}
 			sx={{borderRadius: 5, boxShadow: '-3px 3px 3px rgba(0, 0, 0, 0.25)'}}
 		>
-			<Link variant="nav" href="/courses">
+			<Link href="/courses" variant="nav" width={1}>
 				<Text
 					sx={{fontFamily: 'IBM Plex Sans'}}
 					color={color}
