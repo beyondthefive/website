@@ -18,6 +18,7 @@ export default class MyApp extends App {
 						content="Beyond The Five is an online platform and community that provides free instruction in AP®️, SAT/ACT, and college level classes. Students enrolled in our courses have a 100% AP®️ test pass rate. Registration for the 2020-21 school year is now open!"
 					/>
 					<link rel="icon" href="/favicon.ico"/>
+					<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet"/>
 				</Head>
 				<ThemeProvider theme={theme}>
 					<Component {...pageProps}/>

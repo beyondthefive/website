@@ -3,12 +3,12 @@ import {Flex, Box} from 'rebass';
 import Header from './header';
 import Footer from './footer';
 import css from 'styled-jsx/css';
-import IBMPlexSans from '../public/fonts/IBMPlexSans-Regular.ttf';
+// Import IBMPlexSans from '../public/fonts/IBMPlexSans-Regular.ttf';
 
 const globalStyle = css.global`
   @font-face {
     font-family: "IBM Plex Sans";
-    src: url(${IBMPlexSans}) format("truetype");
+  
     font-weight: 400;
     font-display: fallback;
   }
