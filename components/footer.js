@@ -4,7 +4,8 @@ import {
 	FaDiscord,
 	FaInstagram,
 	FaTumblrSquare,
-	FaFacebookSquare
+	FaFacebookSquare,
+	FaLinkedin
 } from 'react-icons/fa';
 const socialLinks = [
 	{
@@ -26,6 +27,11 @@ const socialLinks = [
 		component: <FaFacebookSquare color="white" size="1.3em"/>,
 		alt: 'Facebook',
 		link: 'https://www.facebook.com/beyond.thefive/'
+	},
+	{
+		component: <FaLinkedin color="white" size="1.3em"/>,
+		alt: 'Linkedin',
+		link: 'linkedin.com/company/beyondthefive'
 	}
 ];
 
@@ -34,6 +40,7 @@ const aboutLinks = [
 	{link: '/#about', text: 'About Us'},
 	{link: '/staff', text: 'Our Staff'},
 	{link: '/register/instructor', text: 'Join Our Team'},
+	{link: '/donate', text: 'Donate'},
 	{link: '/register', text: 'Register Now!'}
 ];
 
