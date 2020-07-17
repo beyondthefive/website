@@ -11,7 +11,8 @@ const links = [
 	/* { href: '/#about', label: 'About' }, */
 	{href: '/courses', label: 'Courses'},
 	{href: '/faqs', label: 'FAQs'},
-	{href: '/staff', label: 'Our Team'}
+	{href: '/staff', label: 'Our Team'},
+	{href: '/donate', label: 'Donate'}
 
 	// {href: 'https://canvas.instructure.com/courses/', label: 'Login'}
 ];
