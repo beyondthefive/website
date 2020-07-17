@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Layout from '../components/layout';
-import {Text, Box, Flex, Link, Button} from 'rebass';
+import {Text, Box, Flex, Link, Button, Image} from 'rebass';
 import RegisterButton from '../components/registerButton';
 import Testimonials from '../components/testimonials';
 import get from '../lib/stats';
@@ -95,7 +95,7 @@ const index = () => {
 				) : null}
 
 				<Text my={2} fontSize={[3, 4, 5]} textAlign="center">
-					<b>500+</b> students from <b>25+</b> countries
+					<b>800+</b> students from <b>50+</b> countries
 				</Text>
 				<BrowseCoursesButton
 					bold
@@ -117,31 +117,38 @@ const index = () => {
 					borderBottom: '1px solid lightgrey'
 				}}
 			>
-				<Comparison height="98%em" width="98%em"/>
+				<Comparison height="98%" width="98%"/>
 			</Box>
-			<Box width={[1, 1 / 2, 2 / 3]} mx="auto">
-				<Testimonials/>
-				<Flex my={3} flexDirection={['column', 'row']} my={4}>
-					<Flex justifyContent="center" width={[1, 1 / 2]} pt={[0, 4]}>
-						<Text mb={3} fontSize={[3, 4, 5]} mx={[3, 0]}>
-							Our courses are intended for:
-							<Text>- self-studying & low access students</Text>
-							<Text>- students that need extra assistance</Text>
-						</Text>
-					</Flex>
-					<Flex justifyContent="center" width={[1, 1 / 2]}>
-						<Knowledge width="90%" height="90%"/>
-					</Flex>
+
+			<Box width={[1, 2 / 3]} mx="auto" my={[3, 4, 5]} px={2}>
+				<Image height="98%" width="98%" src="/showcase.png"/>
+				<Flex justifyContent="center">
+					<Button
+						bg="#123456"
+						color="white"
+						p={2}
+						mt={2}
+						py={0}
+						sx={{
+							borderRadius: 5,
+							boxShadow: '-3px 3px 3px rgba(0, 0, 0, 0.25)'
+						}}
+					>
+						<Link variant="nav" href="/staff#instructors">
+							<Text sx={{fontFamily: 'IBM Plex Sans'}} fontSize={[2, 3, 4]}>
+								Browse Instructors
+							</Text>
+						</Link>
+					</Button>
 				</Flex>
-				<Box my={4}>
-					{desc2.map(d => (
-						<Text key={d} textAlign="center" fontSize={[3, 4, 5]}>
-							{d}
-						</Text>
-					))}
-				</Box>
 			</Box>
-			<Box mt={3} mb={6}>
+			<Box width={1} bg="whitesmoke">
+				<Flex width={[1, 3 / 4]} mx="auto">
+					<Testimonials/>
+				</Flex>
+			</Box>
+
+			<Box my={5}>
 				<Text textAlign="center" fontSize={[3, 4, 5]}>
 					Beyond The Five currently offers {stats.totalCourses} courses.
 				</Text>
