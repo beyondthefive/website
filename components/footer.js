@@ -87,10 +87,10 @@ const footer = ({waves = false, instructorAd = true}) => (
 											<Text py={1} my={2} fontSize={[1, 2]}>
 												<Link
 													sx={{textDecoration: 'none'}}
-													href="mailto:team@beyondthefive.com"
+													href="mailto:team@beyondthefive.org"
 													color="white"
 												>
-													team@beyondthefive.com
+													team@beyondthefive.org
 												</Link>
 											</Text>
 											{socialLinks.map(icon => (
@@ -141,7 +141,7 @@ const footer = ({waves = false, instructorAd = true}) => (
 					</Box>
 					<Flex width={[1, 1 / 3]} justifyContent={['center', 'flex-end']}>
 						<Text fontSize={[1, 2]}>
-							© 2020 Beyond The Five 501(c)(3) nonprofit
+							© 2020 Beyond The Five
 						</Text>
 					</Flex>
 				</Flex>
