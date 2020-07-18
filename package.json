@@ -13,7 +13,7 @@
   "author": "Joshua Martinez",
   "license": "MIT",
   "dependencies": {
-    "@mdx-js/loader": "^1.6.10",
+    "@mdx-js/loader": "^1.6.11",
     "@next/mdx": "^9.4.4",
     "@rebass/forms": "^4.0.6",
     "@rebass/preset": "^4.0.5",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^1.1.1",
-    "eslint": "^7.4.0",
+    "eslint": "^7.5.0",
     "eslint-config-xo-react": "^0.23.0",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
