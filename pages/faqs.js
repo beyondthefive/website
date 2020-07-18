@@ -19,7 +19,6 @@ export default () => {
 	}, []);
 
 	const updateFilter = e => {
-		console.log('New value: ' + e.target.value);
 		setQuery(e.target.value);
 	};
 
@@ -94,7 +93,12 @@ const Card = ({question, answer}) => {
 			fontSize={[1, 2, 3]}
 			onClick={() => setOpen(!open)}
 		>
-			<Button sx={{fontFamily: 'IBM Plex Sans'}} p={0} width={1} variant="blank">
+			<Button
+				sx={{fontFamily: 'IBM Plex Sans'}}
+				p={0}
+				width={1}
+				variant="blank"
+			>
 				<Flex mb={2} mx={2} justifyContent="space-between" color="bt5blue">
 					<Text textAlign="left">{question}</Text>
 
