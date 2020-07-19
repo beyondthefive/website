@@ -8,7 +8,7 @@ import css from 'styled-jsx/css';
 const globalStyle = css.global`
   @font-face {
     font-family: "IBM Plex Sans";
-  
+
     font-weight: 400;
     font-display: fallback;
   }
@@ -22,7 +22,8 @@ const layout = ({
 	children,
 	header = false,
 	waves = false,
-	instructorAd = true
+	instructorAd = true,
+	noFooter = false
 }) => {
 	return (
 		<>
@@ -49,24 +50,8 @@ const layout = ({
 					>
 						{children}
 					</Box>
-					{/*
-        <Box
-          sx={{
-            flexBasis: ["auto", 64],
-            order: -1
-          }}
-        >
-          Nav
-        </Box>
-        <Box
-          sx={{
-            flexBasis: ["auto", 64]
-          }}
-        >
-          Ads
-        </Box> */}
 				</Flex>
-				<Footer instructorAd={instructorAd} waves={waves}/>
+				{!noFooter ? <Footer instructorAd={instructorAd} waves={waves}/> : null}
 			</Flex>
 			<style jsx global>
 				{globalStyle}
