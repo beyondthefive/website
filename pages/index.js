@@ -100,7 +100,7 @@ const index = () => {
 				<BrowseCoursesButton
 					bold
 					my={[1, 2, 3]}
-					bg="lightgrey"
+					bg="#E9E9E9"
 					fontSize={[3, 4, 5]}
 				/>
 				<Text fontSize={[3, 4, 5]} textAlign="center">
@@ -121,6 +121,9 @@ const index = () => {
 			</Box>
 
 			<Box width={[1, 2 / 3]} mx="auto" my={[3, 4, 5]} px={2}>
+				<Text fontSize={[3, 4, 5]} color="bt5blue" textAlign="center">
+					<b>Our Instructors Have Been Accepted To</b>
+				</Text>
 				<Image height="98%" width="98%" src="/showcase.png"/>
 				<Flex justifyContent="center">
 					<Button
@@ -143,16 +146,19 @@ const index = () => {
 				</Flex>
 			</Box>
 			<Box width={1} bg="whitesmoke">
+				<Text pt={3} fontSize={[3, 4, 5]} textAlign="center" color="bt5blue">
+					<b> What Our Students Have To Say</b>
+				</Text>
 				<Flex width={[1, 3 / 4]} mx="auto">
 					<Testimonials/>
 				</Flex>
 			</Box>
 
-			<Box my={5}>
-				<Text textAlign="center" fontSize={[3, 4, 5]}>
-					Beyond The Five currently offers {stats.totalCourses} courses.
+			<Box my={5} textAlign="center" fontSize={[3, 4, 5]}>
+				<Text>
+					Beyond The Five currently offers {stats.totalCourses} courses!
 				</Text>
-				<Text textAlign="center" fontSize={[3, 4, 5]}>
+				<Text>
 					Learn more about them on{' '}
 					<Link href="/courses">our course catalog</Link>.
 				</Text>
