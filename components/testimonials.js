@@ -5,7 +5,7 @@ const data = [
 	{
 		name: 'Salah',
 		quote:
-      'Beyond the five is not only one of the best programs for students who are hoping to expand their vast knowledge, but it also offers an inclusive community for students. I love reaching out and having conversations with students from all around the world who are all eager to learn and challenge themselves to their limits.'
+      'Beyond The Five is not only one of the best programs for students who are hoping to expand their vast knowledge, but it also offers an inclusive community for students. I love reaching out and having conversations with students from all around the world who are all eager to learn and challenge themselves to their limits.'
 	},
 	{
 		name: 'Paris',
