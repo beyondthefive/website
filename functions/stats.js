@@ -3,7 +3,7 @@ const axios = require('axios');
 
 exports.handler = function (event, context, callback) {
 	axios
-		.get('https://beyondthefive.com/.netlify/functions/courses')
+		.get('https://beyondthefive.org/.netlify/functions/courses')
 		.then(response => {
 			const categories = {
 				AdvancedPlacement: 0,
