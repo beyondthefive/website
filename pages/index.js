@@ -125,6 +125,12 @@ const index = () => {
 					<b>Our Instructors Have Been Accepted To</b>
 				</Text>
 				<Image height="98%" width="98%" src="/showcase.png"/>
+				<Text fontSize={[2, 3, 4]} color="bt5blue" textAlign="center">
+					...and many more prestigious universities!
+				</Text>
+				<Text fontSize={[1, 2]} textAlign="center" my={1}>
+					Beyond the Five is neither owned nor endorsed by any of these universities.
+				</Text>
 				<Flex justifyContent="center">
 					<Button
 						bg="#123456"
