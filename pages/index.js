@@ -124,7 +124,7 @@ const index = () => {
 				<Text fontSize={[3, 4, 5]} color="bt5blue" textAlign="center">
 					<b>Our Instructors Have Been Accepted To</b>
 				</Text>
-				<Image height="98%" width="98%" src="/showcase.png"/>
+				<Image height="98%" width="98%" src="/showcase.jpg"/>
 				<Text fontSize={[2, 3, 4]} color="bt5blue" textAlign="center">
 					...and many more prestigious universities!
 				</Text>
