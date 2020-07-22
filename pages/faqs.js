@@ -24,8 +24,8 @@ export default () => {
 
 	const searchFilter = i => {
 		if (
-			i.Question.toLowerCase().includes(query) ||
-      i.Answer.toLowerCase().includes(query)
+			i.Question.toLowerCase().includes(query.toLowerCase()) ||
+      i.Answer.toLowerCase().includes(query.toLowerCase())
 		) {
 			return i;
 		}
