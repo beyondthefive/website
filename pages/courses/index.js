@@ -113,10 +113,11 @@ const courses = () => {
 							p={2}
 						>
 							<Text mb={3} fontSize={[1, 2, 3]}>
-								Deadline to enroll or switch courses: January 1
+								Deadline to enroll in AP®️ courses: January 1st
+								<Text>All other courses are open year round.</Text>
 							</Text>
 							<Text fontSize={[1, 2, 3]}>
-								You are permitted to enroll in up to 50 credits of courses.
+								You are permitted to enroll in up to 50 credits of courses.<Text>Read our <Link href="/courses/paths">FAQs</Link> to learn how to get more credits.</Text>
 							</Text>
 							<Text my={3} fontSize={[1, 2, 3]}>
 								Don't know what courses to take?
