@@ -19,8 +19,11 @@ const register = () => {
 				frameBorder="0"
 				width="100%"
 				position="absolute"
-				height="1300"
-				style={{background: 'transparent'}}
+				style={{
+					background: 'transparent',
+					position: 'absolute',
+					height: '90%'
+				}}
 				onLoad={() => onLoad()}
 			/>
 		</Layout>
