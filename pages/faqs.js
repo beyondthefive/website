@@ -33,17 +33,18 @@ export default () => {
 
 	return (
 		<Layout>
-			<Box width={[1, 4 / 5]} mx="auto" my={3} p={3}>
+			<Box width={1} bg="bt5blue" p={[1, 2]}>
+				<Text color="white" fontSize={[3, 4, 5]} mb={2} textAlign="center">
+					Frequently Asked Questions
+				</Text>
+			</Box>
+			<Box width={[1, 4 / 5]} mx="auto" my={2} p={3}>
 				<Flex
-					justifyContent="space-between"
-					alignItems="center"
+					justifyContent="center"
 					flexDirection={['column', 'row']}
-					my={[3, 2, 1]}
+					mb={[3, 2]}
 				>
-					<Text fontSize={[3, 4, 5]} mb={2} textAlign={['center', 'left']}>
-						Frequently Asked Questions
-					</Text>
-					<Box width={[1, 1 / 2]}>
+					<Box width={[1, 1 / 2, 3 / 4]}>
 						<Input
 							placeholder="Search"
 							value={query}
