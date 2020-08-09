@@ -13,12 +13,13 @@
   "author": "Joshua Martinez",
   "license": "MIT",
   "dependencies": {
+    "@happykit/analytics": "^1.0.1",
     "@mdx-js/loader": "^1.6.16",
     "@next/mdx": "^9.5.1",
     "@rebass/forms": "^4.0.6",
     "@rebass/preset": "^4.0.5",
     "@zeit/next-css": "^1.0.1",
-    "airtable": "^0.8.1",
+    "airtable": "^0.9.0",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "emotion-theming": "^10.0.27",
@@ -43,7 +44,7 @@
     "eslint-config-xo-react": "^0.23.0",
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8",
-    "netlify-cli": "^2.58.0",
+    "netlify-cli": "^2.59.0",
     "xo": "^0.32.1"
   },
   "xo": {
