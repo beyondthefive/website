@@ -139,10 +139,11 @@ const footer = ({waves = false, instructorAd = true}) => (
 							not sponsor or endorse Beyond The Five.
 						</Text>
 					</Box>
-					<Flex width={[1, 1 / 3]} justifyContent={['center', 'flex-end']}>
+					<Flex width={[1, 1 / 3]} justifyContent={['center', 'space-between']} alignItems="center">
 						<Text fontSize={[1, 2]}>
 							© 2020 Beyond The Five
 						</Text>
+						<a href="//www.dmca.com/Protection/Status.aspx?ID=9ea468f8-343f-43a9-b0b8-d5db3873314d" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=9ea468f8-343f-43a9-b0b8-d5db3873314d"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
 					</Flex>
 				</Flex>
 			</Box>
