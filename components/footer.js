@@ -18,7 +18,7 @@ const socialLinks = [
 		alt: 'Discord',
 		link: '/discord'
 	},
-	{
+	/*{
 		component: <FaTumblrSquare color="white" size="1.3em"/>,
 		alt: 'Tumblr',
 		link: 'https://beyondthefive.tumblr.com/'
@@ -27,7 +27,7 @@ const socialLinks = [
 		component: <FaFacebookSquare color="white" size="1.3em"/>,
 		alt: 'Facebook',
 		link: 'https://www.facebook.com/beyond.thefive/'
-	},
+	},*/
 	{
 		component: <FaLinkedin color="white" size="1.3em"/>,
 		alt: 'Linkedin',
