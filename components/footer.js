@@ -31,7 +31,7 @@ const socialLinks = [
 	{
 		component: <FaLinkedin color="white" size="1.3em"/>,
 		alt: 'Linkedin',
-		link: 'linkedin.com/company/beyondthefive'
+		link: 'https://linkedin.com/company/beyondthefive'
 	}
 ];
 
