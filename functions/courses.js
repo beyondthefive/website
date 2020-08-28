@@ -8,7 +8,7 @@ exports.handler = function (event, context, callback) {
 	const courses = [];
 	base('Course Catalog')
 		.select({
-			view: 'Grid view'
+			view: 'Published View'
 		})
 		.eachPage(
 			function page(records, fetchNextPage) {
