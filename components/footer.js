@@ -36,11 +36,12 @@ const socialLinks = [
 ];
 
 const aboutLinks = [
-	{link: '/privacypolicy', text: 'Privacy Policy'},
+
 	{link: '/#about', text: 'About Us'},
 	{link: '/staff', text: 'Our Staff'},
 	{link: '/register/instructor', text: 'Join Our Team'},
 	{link: '/donate', text: 'Donate'},
+	{link: '/privacypolicy', text: 'Privacy Policy'},
 	{link: '/register', text: 'Register Now!'}
 ];
 
