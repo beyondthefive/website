@@ -235,10 +235,10 @@ const courses = () => {
 											p={2}
 										>
 											<TagList c={c}/>
-
 											<Popup
 												closeOnDocumentClick
 												modal
+												nested
 												trigger={
 													<Button bg="darkred">
 														<Text
@@ -252,6 +252,9 @@ const courses = () => {
 											>
 												{close => (
 													<Box
+													sx={{borderRadius: 3, border: '1px solid grey'}}
+													mx={[2,3,4]}
+													bg="whitesmoke"
 														fontSize={[1, 2, 3]}
 														p={[1, 2, 3]}
 														color="#373C3F"
@@ -264,7 +267,7 @@ const courses = () => {
 																<b>{c.Name}</b>
 															</Text>
 															<Button variant="blank" onClick={close}>
-																<MdClose size="1.5em"/>
+															<MdClose size="1.5em"/>
 															</Button>
 														</Flex>
 														{c.Description ? (
