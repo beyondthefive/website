@@ -20,7 +20,7 @@ export default () => {
 				<iframe
 					className="airtable-embed"
 					src="https://airtable.com/embed/shrs5PQox4r1xmSyc?backgroundColor=gray&viewControls=on"
-					onmousewheel=""
+					onMouseWheel=""
 					width="100%"
 					height="100%"
 					frameBorder="0"
