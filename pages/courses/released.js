@@ -3,7 +3,7 @@ import Layout from '../../components/layout';
 import {Flex, Text, Box} from 'rebass';
 import LoadingIndicator from '../../components/loadingIndicator';
 
-export default () => {
+let released = () => {
 	const [loaded, setLoaded] = useState(false);
 	const onLoad = () => setLoaded(true);
 	return (
@@ -35,3 +35,5 @@ export default () => {
 		</Layout>
 	);
 };
+
+export default released
