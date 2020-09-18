@@ -95,7 +95,7 @@ const index = () => {
 				) : null}
 
 				<Text my={2} fontSize={[3, 4, 5]} textAlign="center">
-					<b>800+</b> students from <b>50+</b> countries
+					<b>850+</b> students from <b>50+</b> countries
 				</Text>
 				<BrowseCoursesButton
 					bold
@@ -104,7 +104,7 @@ const index = () => {
 					fontSize={[3, 4, 5]}
 				/>
 				<Text fontSize={[3, 4, 5]} textAlign="center">
-					<b>100%</b> of our students pass their AP®️ tests!
+					<b>100%</b> of our students pass their AP®️ exams!
 				</Text>
 			</Flex>
 			<Box
