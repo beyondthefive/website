@@ -129,7 +129,7 @@ const index = () => {
 					...and many more prestigious universities!
 				</Text>
 				<Text fontSize={[1, 2]} textAlign="center" my={1}>
-					Beyond the Five is neither owned nor endorsed by any of these universities.
+					Beyond The Five is neither owned nor endorsed by any of these universities.
 				</Text>
 				<Flex justifyContent="center">
 					<Button
