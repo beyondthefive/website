@@ -33,7 +33,7 @@
     "react-collapse": "^5.0.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
-    "reactjs-popup": "^2.0.3",
+    "reactjs-popup": "^2.0.4",
     "rebass": "^4.0.7",
     "spinners-react": "^1.0.4",
     "styled-components": "^5.2.0",
@@ -41,6 +41,6 @@
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^1.1.1",
-    "netlify-cli": "^2.64.0"
+    "netlify-cli": "^2.64.1"
   }
 }
