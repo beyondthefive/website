@@ -58,7 +58,7 @@ const footer = ({waves = false, instructorAd = true}) => (
 								<Box pl={[0, 1, 2]}>
 									<Text fontSize={[1, 2]}>
 										<b>
-											Interested in being a teacher or content creator for
+											Interested in being an instructor for
 											Beyond The Five?
 										</b>
 									</Text>
