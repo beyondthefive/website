@@ -3,9 +3,8 @@ import Waves from './waves';
 import {
 	FaDiscord,
 	FaInstagram,
-	FaTumblrSquare,
 	FaFacebookSquare,
-	FaLinkedin
+	FaLinkedin, FaNewspaper
 } from 'react-icons/fa';
 const socialLinks = [
 	{
@@ -32,6 +31,11 @@ const socialLinks = [
 		component: <FaLinkedin color="white" size="1.3em"/>,
 		alt: 'Linkedin',
 		link: 'https://linkedin.com/company/beyondthefive'
+	},
+	{
+		component: <FaNewspaper color="white" size="1.3em"/>,
+		alt: 'Newsletter',
+		link: '/newsletter'
 	}
 ];
 
