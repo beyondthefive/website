@@ -34,8 +34,8 @@ const newsletter = () => {
               succeed in your academic journey?
               
             </Text>
-            <Box height={[5,6,7]}/>
-            Sign up for the Beyond The Five monthly newsletter!
+            <Box height={[7,8,9]}/>
+            <b>Sign up for the Beyond The Five monthly newsletter!</b>
            
             <Text>In our newsletter, you will find</Text>
             <Text>
