@@ -5,9 +5,8 @@
     "start": "next start",
     "build": "next build",
     "dev": "netlify dev -c next dev -f functions/ -p 8000",
-    "lint": "xo --plugin=react --fix",
-    "export": "next build && next export",
-    "test": "xo"
+    "lint": "xo --fix --no-semicolon --prettier",
+    "export": "next build && next export"
   },
   "version": "1.0.0",
   "main": "pages/index.js",
@@ -42,6 +41,7 @@
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^1.1.2",
-    "netlify-cli": "^2.67.0"
+    "netlify-cli": "^2.67.0",
+    "xo": "^0.34.1"
   }
 }
