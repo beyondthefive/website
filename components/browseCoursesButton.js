@@ -1,6 +1,6 @@
-import {Button, Text, Link} from 'rebass';
+import {Button, Text, Link} from 'rebass'
 
-export default ({
+const button = ({
 	color = 'bt5blue',
 	bg = 'whitesmoke',
 	fontSize = [2, 3, 4],
@@ -27,5 +27,7 @@ export default ({
 				</Text>
 			</Link>
 		</Button>
-	);
-};
+	)
+}
+
+export default button
