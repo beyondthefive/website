@@ -1,14 +1,14 @@
-import React, {useState, useEffect} from 'react';
-import Layout from '../components/layout';
-import {Text, Box, Flex, Link, Button, Image} from 'rebass';
-import RegisterButton from '../components/registerButton';
-import Testimonials from '../components/testimonials';
-import get from '../lib/stats';
-import Study from '../public/svgs/undraw_studying_s3l7.svg';
-import Knowledge from '../public/svgs/undraw_knowledge_g5gf.svg';
-import Prof from '../public/svgs/undraw_professor_8lrt.svg';
-import Comparison from '../public/svgs/comparison.svg';
-import BrowseCoursesButton from '../components/browseCoursesButton';
+import React, {useState, useEffect} from 'react'
+import Layout from '../components/layout'
+import {Text, Box, Flex, Link, Button, Image} from 'rebass'
+import RegisterButton from '../components/registerButton'
+import Testimonials from '../components/testimonials'
+import get from '../lib/stats'
+import Study from '../public/svgs/undraw_studying_s3l7.svg'
+import Knowledge from '../public/svgs/undraw_knowledge_g5gf.svg'
+import Prof from '../public/svgs/undraw_professor_8lrt.svg'
+import Comparison from '../public/svgs/comparison.svg'
+import BrowseCoursesButton from '../components/browseCoursesButton'
 
 const Item = ({num, text}) => (
 	<Box mx={[1, 2, 3]} textAlign="center">
@@ -17,28 +17,28 @@ const Item = ({num, text}) => (
 		</Text>
 		<Text fontSize={[1, 2, 3]}> {text}</Text>
 	</Box>
-);
+)
 
-const Tick = () => <Box width="1px" bg="lightgrey"/>;
+const Tick = () => <Box width="1px" bg="lightgrey" />
 
 const desc2 = [
 	'Our classes have lectures, homework, and other things you would expect from a classroom-type learning environment.',
 	'They are not for students who just want extra resources.'
-];
+]
 
 const index = () => {
-	const [stats, setStats] = useState('');
+	const [stats, setStats] = useState('')
 
 	useEffect(async () => {
-		const d = async () => setStats(await get());
-		d();
-	}, []);
+		const d = async () => setStats(await get())
+		d()
+	}, [])
 	return (
 		<Layout waves header>
 			<Box width={[1, 2 / 3]} mx="auto">
 				<Flex flexDirection={['column', 'row']} my={3} pb={[2, 1, 0]}>
 					<Flex justifyContent="center" width={[1, 2 / 3]} pt={[0, 4]}>
-						<a name="about"/>
+						<a name="about" />
 						<Box textAlign="center">
 							<Text textAlign="left" mb={3} fontSize={[2, 3, 4]} mx={[3, 1, 0]}>
 								Beyond The Five is an online platform and community that
@@ -59,7 +59,7 @@ const index = () => {
 						</Box>
 					</Flex>
 					<Flex justifyContent="center" width={[1, 1 / 2]}>
-						<Study width="16em" height="13em"/>
+						<Study width="16em" height="13em" />
 					</Flex>
 				</Flex>
 			</Box>
@@ -70,23 +70,23 @@ const index = () => {
 				width={1}
 				bg="whitesmoke"
 			>
-				<a name="learn-more"/>
+				<a name="learn-more" />
 
-				<Prof width="20em" height="16em"/>
+				<Prof width="20em" height="16em" />
 				{stats ? (
 					<Flex mt={2}>
 						<Item
 							num={stats.categories.AdvancedPlacement}
 							text="AP®️ Courses"
 						/>
-						<Tick/>
+						<Tick />
 						<Item
 							num={stats.categories.CollegeLevel}
 							text="College-Level Courses"
 						/>
-						<Tick/>
-						<Item num={stats.categories.Miscellaneous} text="Misc. Courses"/>
-						<Tick/>
+						<Tick />
+						<Item num={stats.categories.Miscellaneous} text="Misc. Courses" />
+						<Tick />
 						<Item
 							num={stats.categories.CollegeTestPreparation}
 							text="College & Test Prep Courses"
@@ -117,19 +117,25 @@ const index = () => {
 					borderBottom: '1px solid lightgrey'
 				}}
 			>
-				<Comparison height="98%" width="98%"/>
+				<Comparison height="98%" width="98%" />
 			</Box>
 
 			<Box width={[1, 2 / 3]} mx="auto" my={[3, 4, 5]} px={2}>
 				<Text fontSize={[3, 4, 5]} color="bt5blue" textAlign="center">
 					<b>Our Instructors Have Been Accepted To</b>
 				</Text>
-				<Image height="98%" width="98%" src="/showcase.jpg" alt="university showcase"/>
+				<Image
+					height="98%"
+					width="98%"
+					src="/showcase.jpg"
+					alt="university showcase"
+				/>
 				<Text fontSize={[2, 3, 4]} color="bt5blue" textAlign="center">
 					...and many more prestigious universities!
 				</Text>
 				<Text fontSize={[1, 2]} textAlign="center" my={1}>
-					Beyond The Five is neither owned nor endorsed by any of these universities.
+					Beyond The Five is neither owned nor endorsed by any of these
+					universities.
 				</Text>
 				<Flex justifyContent="center">
 					<Button
@@ -156,7 +162,7 @@ const index = () => {
 					<b> What Our Students Have To Say</b>
 				</Text>
 				<Flex width={[1, 3 / 4]} mx="auto">
-					<Testimonials/>
+					<Testimonials />
 				</Flex>
 			</Box>
 
@@ -173,10 +179,10 @@ const index = () => {
 				Ready to learn with us?
 			</Text>
 			<Flex justifyContent="center">
-				<RegisterButton/>
+				<RegisterButton />
 			</Flex>
 		</Layout>
-	);
-};
+	)
+}
 
-export default index;
+export default index
