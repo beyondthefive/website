@@ -1,35 +1,35 @@
-import React, {useState, useEffect} from 'react';
-import {Box, Flex, Text, Button} from 'rebass';
-import {Input} from '@rebass/forms';
-import {FaChevronDown, FaChevronUp} from 'react-icons/fa';
-import Layout from '../components/layout';
-import LoadingIndicator from '../components/loadingIndicator';
-import fetchData from '../lib/faqs';
+import React, {useState, useEffect} from 'react'
+import {Box, Flex, Text, Button} from 'rebass'
+import {Input} from '@rebass/forms'
+import {FaChevronDown, FaChevronUp} from 'react-icons/fa'
+import Layout from '../components/layout'
+import LoadingIndicator from '../components/loadingIndicator'
+import fetchData from '../lib/faqs'
 
 export default () => {
-	const [data, setData] = useState([]);
-	const [query, setQuery] = useState('');
+	const [data, setData] = useState([])
+	const [query, setQuery] = useState('')
 	useEffect(() => {
 		const d = async () => {
 			// SetAdministrativeData(await fetchData());
-			setData(await fetchData());
-		};
+			setData(await fetchData())
+		}
 
-		d();
-	}, []);
+		d()
+	}, [])
 
-	const updateFilter = e => {
-		setQuery(e.target.value);
-	};
+	const updateFilter = (e) => {
+		setQuery(e.target.value)
+	}
 
-	const searchFilter = i => {
+	const searchFilter = (i) => {
 		if (
 			i.Question.toLowerCase().includes(query.toLowerCase()) ||
-      i.Answer.toLowerCase().includes(query.toLowerCase())
+			i.Answer.toLowerCase().includes(query.toLowerCase())
 		) {
-			return i;
+			return i
 		}
-	};
+	}
 
 	return (
 		<Layout>
@@ -48,7 +48,7 @@ export default () => {
 						<Input
 							placeholder="Search"
 							value={query}
-							onChange={e => updateFilter(e)}
+							onChange={(e) => updateFilter(e)}
 						/>
 					</Box>
 				</Flex>
@@ -60,15 +60,15 @@ export default () => {
 					}}
 				>
 					{data.length === 0 ? (
-						<LoadingIndicator/>
+						<LoadingIndicator />
 					) : (
 						data
-							.filter(i => searchFilter(i))
-							.map(i => <Card question={i.Question} answer={i.Answer}/>)
+							.filter((i) => searchFilter(i))
+							.map((i) => <Card question={i.Question} answer={i.Answer} />)
 					)}
 				</Box>
 				<Text textAlign="right">
-					Displaying {data.filter(i => searchFilter(i)).length} of{' '}
+					Displaying {data.filter((i) => searchFilter(i)).length} of{' '}
 					{data.length} FAQs
 				</Text>
 				<Text mt={3} fontSize={[2, 3, 4]} textAlign="center">
@@ -77,11 +77,11 @@ export default () => {
 				</Text>
 			</Box>
 		</Layout>
-	);
-};
+	)
+}
 
 const Card = ({question, answer}) => {
-	const [open, setOpen] = useState(false);
+	const [open, setOpen] = useState(false)
 	return (
 		<Box
 			m={1}
@@ -103,7 +103,7 @@ const Card = ({question, answer}) => {
 				<Flex mb={2} mx={2} justifyContent="space-between" color="bt5blue">
 					<Text textAlign="left">{question}</Text>
 
-					{open ? <FaChevronUp size="1.2em"/> : <FaChevronDown size="1.2em"/>}
+					{open ? <FaChevronUp size="1.2em" /> : <FaChevronDown size="1.2em" />}
 				</Flex>
 			</Button>
 			{open ? (
@@ -112,5 +112,5 @@ const Card = ({question, answer}) => {
 				</Box>
 			) : null}
 		</Box>
-	);
-};
+	)
+}

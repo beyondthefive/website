@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from 'react';
-import Layout from '../../components/layout';
-import {Box, Flex, Text, Button, Link} from 'rebass';
-import cor from '../../lib/courses';
-import LoadingIndicator from '../../components/loadingIndicator';
-import Popup from 'reactjs-popup';
-import {MdClose} from 'react-icons/md';
-import FilterCheckbox from '../../components/filterCheckbox';
-import Collapse from '../../components/collapse';
+import React, {useState, useEffect} from 'react'
+import Layout from '../../components/layout'
+import {Box, Flex, Text, Button, Link} from 'rebass'
+import cor from '../../lib/courses'
+import LoadingIndicator from '../../components/loadingIndicator'
+import Popup from 'reactjs-popup'
+import {MdClose} from 'react-icons/md'
+import FilterCheckbox from '../../components/filterCheckbox'
+import Collapse from '../../components/collapse'
 
 const Tag = ({children}) => (
 	<Box
@@ -19,7 +19,7 @@ const Tag = ({children}) => (
 	>
 		{children}
 	</Box>
-);
+)
 
 const TagList = ({c}) => {
 	return (
@@ -32,22 +32,22 @@ const TagList = ({c}) => {
 			</Flex>
 			<Flex alignItems="center">
 				<Text fontSize={[1, 2, 3]}>Subject:</Text>
-				{c.Subject.map(s => (
+				{c.Subject.map((s) => (
 					<Tag key={s}>
 						<Text fontSize={[1, 2]}>{s}</Text>
 					</Tag>
 				))}
 			</Flex>
 		</Box>
-	);
-};
+	)
+}
 
 const categoryFilters = [
 	{name: 'AP®️ Courses', filter: 'Advanced Placement'},
 	{name: 'College-Level', filter: 'College-Level'},
 	{name: 'College & Test Preparation', filter: 'College & Test Preparation'},
 	{name: 'Misc.', filter: 'Miscellaneous'}
-];
+]
 
 const subjectFilters = [
 	{name: 'English', filter: 'English'},
@@ -62,42 +62,42 @@ const subjectFilters = [
 	{name: 'College & Test Prep.', filter: 'College & Test Prep.'},
 	{name: 'Neuropsychology', filter: 'Neuropsychology'},
 	{name: 'Misc.', filter: 'Misc.'}
-];
+]
 
 const courses = () => {
-	const [courses, setCourses] = useState([]);
-	const [filter, setFilter] = useState([]);
+	const [courses, setCourses] = useState([])
+	const [filter, setFilter] = useState([])
 
 	useEffect(() => {
-		const d = async () => setCourses(removeDuds(await cor()));
-		d();
-	}, []);
+		const d = async () => setCourses(removeDuds(await cor()))
+		d()
+	}, [])
 
 	// Removes all courses with no category or subject
 	// does not work yet
-	const removeDuds = c => {
-		const out = [];
-		c.map(i => {
+	const removeDuds = (c) => {
+		const out = []
+		c.map((i) => {
 			if (i.Category != null && i.Subject != null) {
-				out.push(i);
+				out.push(i)
 			}
-		});
-		return out;
-	};
+		})
+		return out
+	}
 
-	const update = async c => {
+	const update = async (c) => {
 		// If filter is already applied, remove it
 		if (filter.includes(c)) {
-			filter.splice(filter.indexOf(c), 1);
+			filter.splice(filter.indexOf(c), 1)
 		} else {
-			filter.push(c);
+			filter.push(c)
 		}
 
 		// For the reload
-		const data = courses.slice();
-		setCourses([]);
-		setCourses(data);
-	};
+		const data = courses.slice()
+		setCourses([])
+		setCourses(data)
+	}
 
 	return (
 		<Layout>
@@ -117,7 +117,11 @@ const courses = () => {
 								<Text>All other courses are open year round.</Text>
 							</Text>
 							<Text fontSize={[1, 2, 3]}>
-								You are permitted to enroll in up to 50 credits of courses.<Text>Read our <Link href="/courses/paths">FAQs</Link> to learn how to get more credits.</Text>
+								You are permitted to enroll in up to 50 credits of courses.
+								<Text>
+									Read our <Link href="/courses/paths">FAQs</Link> to learn how
+									to get more credits.
+								</Text>
 							</Text>
 							<Text my={3} fontSize={[1, 2, 3]}>
 								Don't know what courses to take?
@@ -143,7 +147,7 @@ const courses = () => {
 						>
 							<Collapse title="Filter courses:">
 								<Collapse title="Filter by course category">
-									{categoryFilters.map(c => (
+									{categoryFilters.map((c) => (
 										<FilterCheckbox
 											key={c.name}
 											title={c.name}
@@ -154,7 +158,7 @@ const courses = () => {
 								</Collapse>
 
 								<Collapse title="Filter by course subject">
-									{subjectFilters.map(c => (
+									{subjectFilters.map((c) => (
 										<FilterCheckbox
 											key={c.name}
 											title={c.name}
@@ -168,16 +172,16 @@ const courses = () => {
 								Showing{' '}
 								{
 									// Copied from other filter
-									courses.filter(c => {
+									courses.filter((c) => {
 										function hasAllElements(array, array2) {
-											return array.every(i => array2.includes(i));
+											return array.every((i) => array2.includes(i))
 										}
 
-										const comparison = c.Subject.slice();
-										comparison.push(c.Category);
+										const comparison = c.Subject.slice()
+										comparison.push(c.Category)
 										return (
 											filter.length == 0 || hasAllElements(filter, comparison)
-										);
+										)
 									}).length
 								}{' '}
 								of {courses.length} courses
@@ -187,21 +191,21 @@ const courses = () => {
 
 					<Box my={2} mx={[0, 2]} width={[1, 2 / 3]}>
 						{courses.length === 0 ? (
-							<LoadingIndicator/>
+							<LoadingIndicator />
 						) : (
 							courses
-								.filter(c => {
+								.filter((c) => {
 									function hasAllElements(array, array2) {
-										return array.every(i => array2.includes(i));
+										return array.every((i) => array2.includes(i))
 									}
 
-									const comparison = c.Subject.slice();
-									comparison.push(c.Category);
+									const comparison = c.Subject.slice()
+									comparison.push(c.Category)
 									return (
 										filter.length == 0 || hasAllElements(filter, comparison)
-									);
+									)
 								})
-								.map(c => (
+								.map((c) => (
 									<Box
 										key={c.FormattedName}
 										my={2}
@@ -234,7 +238,7 @@ const courses = () => {
 											justifyContent="space-between"
 											p={2}
 										>
-											<TagList c={c}/>
+											<TagList c={c} />
 											<Popup
 												closeOnDocumentClick
 												modal
@@ -250,11 +254,11 @@ const courses = () => {
 													</Button>
 												}
 											>
-												{close => (
+												{(close) => (
 													<Box
-													sx={{borderRadius: 3, border: '1px solid grey'}}
-													mx={[2,3,4]}
-													bg="whitesmoke"
+														sx={{borderRadius: 3, border: '1px solid grey'}}
+														mx={[2, 3, 4]}
+														bg="whitesmoke"
 														fontSize={[1, 2, 3]}
 														p={[1, 2, 3]}
 														color="#373C3F"
@@ -267,7 +271,7 @@ const courses = () => {
 																<b>{c.Name}</b>
 															</Text>
 															<Button variant="blank" onClick={close}>
-															<MdClose size="1.5em"/>
+																<MdClose size="1.5em" />
 															</Button>
 														</Flex>
 														{c.Description ? (
@@ -302,7 +306,7 @@ const courses = () => {
 																<Text>Syllabus</Text>
 															</Link>
 														) : null}
-														<TagList c={c}/>
+														<TagList c={c} />
 													</Box>
 												)}
 											</Popup>
@@ -314,7 +318,7 @@ const courses = () => {
 				</Flex>
 			</Box>
 		</Layout>
-	);
-};
+	)
+}
 
-export default courses;
+export default courses

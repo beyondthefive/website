@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import {Flex, Box, Heading, Link, Text, Button} from 'rebass';
-import RegisterButton from '../components/registerButton';
-import BrowseCoursesButton from '../components/browseCoursesButton';
-import Waves from './waves';
-import {MdClose} from 'react-icons/md';
-import Learn from '../public/svgs/undraw_researching_22gp.svg';
-import Logo from '../public/logo.svg';
+import React, {useState} from 'react'
+import {Flex, Box, Heading, Link, Text, Button} from 'rebass'
+import RegisterButton from '../components/registerButton'
+import BrowseCoursesButton from '../components/browseCoursesButton'
+import Waves from './waves'
+import {MdClose} from 'react-icons/md'
+import Learn from '../public/svgs/undraw_researching_22gp.svg'
+import Logo from '../public/logo.svg'
 
 const links = [
 	/* { href: '/#about', label: 'About' }, */
@@ -15,7 +15,7 @@ const links = [
 	{href: '/donate', label: 'Donate'}
 
 	// {href: 'https://canvas.instructure.com/courses/', label: 'Login'}
-];
+]
 
 const focusLinks = [
 	/* { href: '/#about', label: 'About' }, */
@@ -24,11 +24,11 @@ const focusLinks = [
 	{href: '/register', label: 'Register'}
 
 	// {href: 'https://canvas.instructure.com/courses/', label: 'Login'}
-];
+]
 
-const NavLinks = props => {
-	const links = props.links;
-	const linkList = links.map(link => (
+const NavLinks = (props) => {
+	const links = props.links
+	const linkList = links.map((link) => (
 		<Link
 			key={link.label}
 			p={[0, 1]}
@@ -46,9 +46,9 @@ const NavLinks = props => {
 				{link.label}
 			</Text>
 		</Link>
-	));
-	return <Flex p={[0, 3]}>{linkList}</Flex>;
-};
+	))
+	return <Flex p={[0, 3]}>{linkList}</Flex>
+}
 
 const header = ({header = false, waves = false}) => {
 	return (
@@ -68,7 +68,7 @@ const header = ({header = false, waves = false}) => {
 						ml={[0, 1, 2, 3]}
 						pl={[0, 1, 2, 3]}
 					>
-						<Logo height="2.3em" width="2.3em"/>
+						<Logo height="2.3em" width="2.3em" />
 						<Link
 							fontSize={[2, 3, 4]}
 							href="/"
@@ -85,7 +85,7 @@ const header = ({header = false, waves = false}) => {
 						alignSelf="center"
 						justifyContent="center"
 					>
-						<NavLinks links={links}/>
+						<NavLinks links={links} />
 					</Flex>
 
 					<Flex
@@ -94,14 +94,17 @@ const header = ({header = false, waves = false}) => {
 						mr={[0, 1, 2, 3]}
 						justifyContent={['center', 'flex-end']}
 					>
-						<NavLinks links={focusLinks}/>
+						<NavLinks links={focusLinks} />
 					</Flex>
 				</Flex>
 
 				<Box>
 					{header ? (
 						<Box mx="auto" px={[3, 4, 5]} width={1}>
-							<Flex justifyContent="center" flexDirection={['column', 'row-reverse']}>
+							<Flex
+								justifyContent="center"
+								flexDirection={['column', 'row-reverse']}
+							>
 								<Box mx={[0, 3, 5]}>
 									<Text fontSize={[3, 4, 5]} textAlign={['center', 'right']}>
 										Free, online, self-paced courses
@@ -109,15 +112,25 @@ const header = ({header = false, waves = false}) => {
 											in AP®️, SAT/ACT, and college level classes
 										</Text>
 									</Text>
-									<Flex my={3} flexDirection={['column', 'row']} justifyContent={['center', 'flex-end']}>
-										<BrowseCoursesButton/>
-										<Box width={10}/>
-										<RegisterButton/>
+									<Flex
+										my={3}
+										flexDirection={['column', 'row']}
+										justifyContent={['center', 'flex-end']}
+									>
+										<BrowseCoursesButton />
+										<Box width={10} />
+										<RegisterButton />
 									</Flex>
-									<Text mt={[2, 3, 4]} fontSize={[1, 2, 3]} textAlign={['center', 'right']}>Registration for the 2020-21 school year is now open!</Text>
+									<Text
+										mt={[2, 3, 4]}
+										fontSize={[1, 2, 3]}
+										textAlign={['center', 'right']}
+									>
+										Registration for the 2020-21 school year is now open!
+									</Text>
 								</Box>
 								<Flex justifyContent="center">
-									<Learn height="16em" width="18em"/>
+									<Learn height="16em" width="18em" />
 								</Flex>
 							</Flex>
 						</Box>
@@ -125,9 +138,9 @@ const header = ({header = false, waves = false}) => {
 				</Box>
 			</Box>
 
-			{waves ? <Waves top/> : null}
+			{waves ? <Waves top /> : null}
 		</Box>
-	);
-};
+	)
+}
 
-export default header;
+export default header

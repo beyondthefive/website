@@ -1,23 +1,24 @@
-import {Flex, Box, Link, Text, Heading, Button} from 'rebass';
-import Waves from './waves';
+import {Flex, Box, Link, Text, Heading, Button} from 'rebass'
+import Waves from './waves'
 import {
 	FaDiscord,
 	FaInstagram,
 	FaFacebookSquare,
-	FaLinkedin, FaNewspaper
-} from 'react-icons/fa';
+	FaLinkedin,
+	FaNewspaper
+} from 'react-icons/fa'
 const socialLinks = [
 	{
-		component: <FaInstagram color="white" size="1.3em"/>,
+		component: <FaInstagram color="white" size="1.3em" />,
 		alt: 'Instagram',
 		link: 'https://www.instagram.com/beyond_the_five/'
 	},
 	{
-		component: <FaDiscord color="white" size="1.3em"/>,
+		component: <FaDiscord color="white" size="1.3em" />,
 		alt: 'Discord',
 		link: '/discord'
 	},
-	/*{
+	/* {
 		component: <FaTumblrSquare color="white" size="1.3em"/>,
 		alt: 'Tumblr',
 		link: 'https://beyondthefive.tumblr.com/'
@@ -26,34 +27,40 @@ const socialLinks = [
 		component: <FaFacebookSquare color="white" size="1.3em"/>,
 		alt: 'Facebook',
 		link: 'https://www.facebook.com/beyond.thefive/'
-	},*/
+	}, */
 	{
-		component: <FaLinkedin color="white" size="1.3em"/>,
+		component: <FaLinkedin color="white" size="1.3em" />,
 		alt: 'Linkedin',
 		link: 'https://linkedin.com/company/beyondthefive'
 	},
 	{
-		component: <FaNewspaper color="white" size="1.3em"/>,
+		component: <FaNewspaper color="white" size="1.3em" />,
 		alt: 'Newsletter',
 		link: '/newsletter'
 	}
-];
+]
 
 const aboutLinks = [
-
 	{link: '/#about', text: 'About Us'},
 	{link: '/staff', text: 'Our Staff'},
 	{link: '/register/instructor', text: 'Join Our Team'},
 	{link: '/donate', text: 'Donate'},
 	{link: '/privacypolicy', text: 'Privacy Policy'},
 	{link: '/register', text: 'Register Now!'}
-];
+]
 
 const footer = ({waves = false, instructorAd = true}) => (
 	<Box>
-		{waves ? <Waves/> : null}
+		{waves ? <Waves /> : null}
 
-		<Flex bg="bt5blue" color="white" my={-2} px={[3, 5]} pt={waves ? 0 : 3} pb={4}>
+		<Flex
+			bg="bt5blue"
+			color="white"
+			my={-2}
+			px={[3, 5]}
+			pt={waves ? 0 : 3}
+			pb={4}
+		>
 			<Box width={1}>
 				<Flex width={1} my={2} flexDirection={['column', 'row']}>
 					<Box width={[1, 1 / 2]} my={[3, 'auto']}>
@@ -62,8 +69,7 @@ const footer = ({waves = false, instructorAd = true}) => (
 								<Box pl={[0, 1, 2]}>
 									<Text fontSize={[1, 2]}>
 										<b>
-											Interested in being an instructor for
-											Beyond The Five?
+											Interested in being an instructor for Beyond The Five?
 										</b>
 									</Text>
 									<Text fontSize={[1, 2]} my={[1, 2, 3]}>
@@ -98,7 +104,7 @@ const footer = ({waves = false, instructorAd = true}) => (
 													team@beyondthefive.org
 												</Link>
 											</Text>
-											{socialLinks.map(icon => (
+											{socialLinks.map((icon) => (
 												<Link
 													key={icon.alt}
 													color="white"
@@ -118,7 +124,7 @@ const footer = ({waves = false, instructorAd = true}) => (
 										</Box>
 										<Box ml={2}>
 											<Heading mb={3}>About</Heading>
-											{aboutLinks.map(l => (
+											{aboutLinks.map((l) => (
 												<Link
 													key={l.link}
 													color="white"
@@ -144,16 +150,33 @@ const footer = ({waves = false, instructorAd = true}) => (
 							not sponsor or endorse Beyond The Five.
 						</Text>
 					</Box>
-					<Flex width={[1, 1 / 3]} justifyContent={['center', 'flex-end']} alignItems="center">
-						<Text fontSize={[1, 2]} m={[2,3]}>
+					<Flex
+						width={[1, 1 / 3]}
+						justifyContent={['center', 'flex-end']}
+						alignItems="center"
+					>
+						<Text fontSize={[1, 2]} m={[2, 3]}>
 							© 2020 Beyond The Five
 						</Text>
-						<a href="//www.dmca.com/Protection/Status.aspx?ID=9ea468f8-343f-43a9-b0b8-d5db3873314d" title="DMCA.com Protection Status" className="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=9ea468f8-343f-43a9-b0b8-d5db3873314d"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+						<a
+							href="//www.dmca.com/Protection/Status.aspx?ID=9ea468f8-343f-43a9-b0b8-d5db3873314d"
+							title="DMCA.com Protection Status"
+							className="dmca-badge"
+						>
+							{' '}
+							<img
+								src="https://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=9ea468f8-343f-43a9-b0b8-d5db3873314d"
+								alt="DMCA.com Protection Status"
+							/>
+						</a>{' '}
+						<script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js">
+							{' '}
+						</script>
 					</Flex>
 				</Flex>
 			</Box>
 		</Flex>
 	</Box>
-);
+)
 
-export default footer;
+export default footer

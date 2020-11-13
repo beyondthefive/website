@@ -1,22 +1,22 @@
-import React from 'react';
-import {Flex, Box} from 'rebass';
-import Header from './header';
-import Footer from './footer';
-import css from 'styled-jsx/css';
+import React from 'react'
+import {Flex, Box} from 'rebass'
+import Header from './header'
+import Footer from './footer'
+import css from 'styled-jsx/css'
 // Import IBMPlexSans from '../public/fonts/IBMPlexSans-Regular.ttf';
 
 const globalStyle = css.global`
-  @font-face {
-    font-family: "IBM Plex Sans";
+	@font-face {
+		font-family: 'IBM Plex Sans';
 
-    font-weight: 400;
-    font-display: fallback;
-  }
-  :global(body) {
-    font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
-    margin: 0;
-  }
-`;
+		font-weight: 400;
+		font-display: fallback;
+	}
+	:global(body) {
+		font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+		margin: 0;
+	}
+`
 
 const layout = ({
 	children,
@@ -33,7 +33,7 @@ const layout = ({
 					minHeight: '100vh'
 				}}
 			>
-				<Header waves={waves} header={header}/>
+				<Header waves={waves} header={header} />
 
 				<Flex
 					sx={{
@@ -51,13 +51,15 @@ const layout = ({
 						{children}
 					</Box>
 				</Flex>
-				{!noFooter ? <Footer instructorAd={instructorAd} waves={waves}/> : null}
+				{!noFooter ? (
+					<Footer instructorAd={instructorAd} waves={waves} />
+				) : null}
 			</Flex>
 			<style jsx global>
 				{globalStyle}
 			</style>
 		</>
-	);
-};
+	)
+}
 
-export default layout;
+export default layout
