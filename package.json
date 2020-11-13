@@ -15,19 +15,19 @@
   "dependencies": {
     "@happykit/analytics": "^1.0.1",
     "@hcaptcha/react-hcaptcha": "^0.2.1",
-    "@mdx-js/loader": "^1.6.19",
-    "@next/mdx": "^10.0.0",
+    "@mdx-js/loader": "^1.6.21",
+    "@next/mdx": "^10.0.1",
     "@rebass/forms": "^4.0.6",
     "@rebass/preset": "^4.0.5",
     "@zeit/next-css": "^1.0.1",
-    "airtable": "^0.10.0",
+    "airtable": "^0.10.1",
     "axios": "^0.21.0",
     "dotenv": "^8.2.0",
-    "emotion-theming": "^10.0.27",
+    "emotion-theming": "^11.0.0",
     "isomorphic-unfetch": "^3.1.0",
     "moment": "^2.29.1",
-    "next": "^10.0.0",
-    "next-fonts": "^1.4.0",
+    "next": "^10.0.1",
+    "next-fonts": "^1.5.1",
     "next-images": "^1.6.2",
     "react": "^17.0.1",
     "react-collapse": "^5.0.1",
@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^1.1.2",
-    "netlify-cli": "^2.67.0",
-    "xo": "^0.34.1"
+    "netlify-cli": "^2.68.5",
+    "xo": "^0.34.2"
   }
 }
