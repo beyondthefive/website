@@ -1,4 +1,4 @@
-import {Button, Text, Link} from 'rebass';
+import {Button, Text, Link} from 'rebass'
 
 export default () => {
 	return (
@@ -20,5 +20,5 @@ export default () => {
 				</Text>
 			</Link>
 		</Button>
-	);
-};
+	)
+}

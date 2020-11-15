@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
-import Layout from '../components/layout';
-import {Flex} from 'rebass';
-import LoadingIndicator from '../components/loadingIndicator';
+import React, {useState} from 'react'
+import Layout from '../components/layout'
+import {Flex} from 'rebass'
+import LoadingIndicator from '../components/loadingIndicator'
 
 const register = () => {
-	const [loaded, setLoaded] = useState(false);
-	const onLoad = () => setLoaded(true);
+	const [loaded, setLoaded] = useState(false)
+	const onLoad = () => setLoaded(true)
 	return (
 		<Layout noFooter instructorAd={false}>
 			{!loaded ? (
 				<Flex justifyContent="center">
-					<LoadingIndicator/>
+					<LoadingIndicator />
 				</Flex>
 			) : null}
 
@@ -24,7 +24,7 @@ const register = () => {
 				onLoad={() => onLoad()}
 			/>
 		</Layout>
-	);
-};
+	)
+}
 
-export default register;
+export default register

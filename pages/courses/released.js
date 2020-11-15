@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
-import Layout from '../../components/layout';
-import {Flex, Text, Box} from 'rebass';
-import LoadingIndicator from '../../components/loadingIndicator';
+import React, {useState} from 'react'
+import Layout from '../../components/layout'
+import {Flex, Text, Box} from 'rebass'
+import LoadingIndicator from '../../components/loadingIndicator'
 
-let released = () => {
-	const [loaded, setLoaded] = useState(false);
-	const onLoad = () => setLoaded(true);
+const released = () => {
+	const [loaded, setLoaded] = useState(false)
+	const onLoad = () => setLoaded(true)
 	return (
 		<Layout instructorAd={false}>
 			{!loaded ? (
 				<Flex justifyContent="center">
-					<LoadingIndicator/>
+					<LoadingIndicator />
 				</Flex>
 			) : null}
 			<Text fontSize={[2, 3, 4]} mt={2} textAlign="center">
@@ -33,7 +33,7 @@ let released = () => {
 				/>
 			</Box>
 		</Layout>
-	);
-};
+	)
+}
 
 export default released
