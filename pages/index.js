@@ -95,7 +95,7 @@ const index = () => {
 				) : null}
 
 				<Text my={2} fontSize={[3, 4, 5]} textAlign="center">
-					<b>900+</b> students from <b>50+</b> countries
+					<b>1000+</b> students from <b>50+</b> countries
 				</Text>
 				<BrowseCoursesButton
 					bold
