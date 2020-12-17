@@ -3,12 +3,11 @@ import {Collapse} from 'react-collapse'
 import {FaPlus, FaMinus} from 'react-icons/fa'
 import {Box, Flex, Text, Button, Link} from 'rebass'
 
-export default ({children, title}) => {
+const collapse = ({children, title}) => {
 	const [open, setOpen] = useState(false)
 	return (
 		<Box>
 			<Button variant="blank" p={1} onClick={() => setOpen(!open)}>
-				{' '}
 				<Flex alignItems="center">
 					{open ? (
 						<Flex alignItems="center">
@@ -43,3 +42,5 @@ export default ({children, title}) => {
 		</Box>
 	)
 }
+
+export default collapse
