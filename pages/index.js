@@ -21,11 +21,6 @@ const Item = ({num, text}) => (
 
 const Tick = () => <Box width="1px" bg="lightgrey" />
 
-const desc2 = [
-	'Our classes have lectures, homework, and other things you would expect from a classroom-type learning environment.',
-	'They are not for students who just want extra resources.'
-]
-
 const index = () => {
 	const [stats, setStats] = useState('')
 
