@@ -113,7 +113,7 @@ const courses = () => {
 							p={2}
 						>
 							<Text mb={3} fontSize={[1, 2, 3]}>
-								Deadline to enroll in AP®️ courses: January 1st
+								Deadline to enroll in AP®️ courses: January 2nd 11:59 PST
 								<Text>All other courses are open year round.</Text>
 							</Text>
 							<Text fontSize={[1, 2, 3]}>
