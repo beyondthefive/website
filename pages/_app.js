@@ -2,7 +2,7 @@ import App from 'next/app'
 import Head from 'next/head'
 import React from 'react'
 import {useAnalytics} from '@happykit/analytics'
-import {ThemeProvider} from 'emotion-theming'
+import {ThemeProvider} from 'theme-ui'
 import theme from '../lib/theme'
 
 const MyApp = ({Component, pageProps}) => {
@@ -22,6 +22,7 @@ const MyApp = ({Component, pageProps}) => {
 					href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
 					rel="stylesheet"
 				/>
+				<script async src="https://arc.io/widget.min.js#cdDwSEjc"></script>
 			</Head>
 			<ThemeProvider theme={theme}>
 				<Component {...pageProps} />
