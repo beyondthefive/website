@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^1.1.2",
-    "netlify-cli": "^3.0.0",
+    "netlify-cli": "^3.1.0",
     "xo": "^0.37.1"
   },
   "repository": "https://github.com/beyondthefive/website.git"
