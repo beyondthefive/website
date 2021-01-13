@@ -4,9 +4,8 @@
   "scripts": {
     "start": "next start",
     "build": "next build",
-    "postbuild": "next-on-netlify",
     "next:dev": "next",
-    "dev": "npm run build && next-on-netlify && netlify dev -c next dev -f functions/ -p 8000",
+    "dev": "netlify dev -c next dev -f functions/ -p 8000",
     "lint": "xo --fix --no-semicolon --prettier",
     "export": "next build && next export"
   },
@@ -30,7 +29,6 @@
     "next": "^10.0.5",
     "next-fonts": "^1.5.1",
     "next-images": "^1.6.2",
-    "next-on-netlify": "^2.7.2",
     "react": "^17.0.1",
     "react-collapse": "^5.1.0",
     "react-dom": "^17.0.1",
