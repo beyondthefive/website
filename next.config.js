@@ -8,7 +8,8 @@ module.exports = withFonts(
 	withCSS(
 		withImages(
 			withMDX({
-				pageExtensions: ['js', 'jsx', 'md', 'mdx']
+				pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+				target: "serverless",
 			})
 		)
 	)
