@@ -9,6 +9,7 @@ import Logo from '../public/logo.svg'
 
 const links = [
 	/* { href: '/#about', label: 'About' }, */
+	{href: 'https://blog.beyondthefive.org', label: 'Blog'},
 	{href: '/courses', label: 'Courses'},
 	{href: '/faqs', label: 'FAQs'},
 	{href: '/staff', label: 'Our Team'},
