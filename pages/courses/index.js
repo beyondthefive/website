@@ -180,7 +180,7 @@ const courses = () => {
 										const comparison = c.Subject.slice()
 										comparison.push(c.Category)
 										return (
-											filter.length == 0 || hasAllElements(filter, comparison)
+											filter.length === 0 || hasAllElements(filter, comparison)
 										)
 									}).length
 								}{' '}
@@ -202,7 +202,7 @@ const courses = () => {
 									const comparison = c.Subject.slice()
 									comparison.push(c.Category)
 									return (
-										filter.length == 0 || hasAllElements(filter, comparison)
+										filter.length === 0 || hasAllElements(filter, comparison)
 									)
 								})
 								.map((c) => (

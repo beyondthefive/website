@@ -29,9 +29,9 @@ exports.handler = function (event, context, callback) {
 				})
 				fetchNextPage()
 			},
-			function done(err) {
-				if (err) {
-					callback(err)
+			function done(error) {
+				if (error) {
+					callback(error)
 				}
 
 				callback(null, {
