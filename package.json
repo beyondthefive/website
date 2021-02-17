@@ -15,9 +15,9 @@
   "license": "MIT",
   "dependencies": {
     "@happykit/analytics": "^1.0.1",
-    "@hcaptcha/react-hcaptcha": "^0.2.2",
+    "@hcaptcha/react-hcaptcha": "^0.3.2",
     "@mdx-js/loader": "^1.6.22",
-    "@next/mdx": "^10.0.5",
+    "@next/mdx": "^10.0.7",
     "@rebass/forms": "^4.0.6",
     "@rebass/preset": "^4.0.5",
     "@zeit/next-css": "^1.0.1",
@@ -26,22 +26,22 @@
     "dotenv": "^8.2.0",
     "isomorphic-unfetch": "^3.1.0",
     "moment": "^2.29.1",
-    "next": "^10.0.5",
+    "next": "^10.0.7",
     "next-images": "^1.7.0",
     "react": "^17.0.1",
     "react-collapse": "^5.1.0",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.1.0",
+    "react-icons": "^4.2.0",
     "reactjs-popup": "^2.0.4",
     "rebass": "^4.0.7",
     "spinners-react": "^1.0.4",
     "styled-components": "^5.2.1",
-    "styled-jsx": "^3.4.1",
+    "styled-jsx": "^3.4.4",
     "theme-ui": "^0.3.5"
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^1.1.2",
-    "netlify-cli": "^3.4.2",
+    "netlify-cli": "^3.8.3",
     "xo": "^0.37.1"
   },
   "repository": "https://github.com/beyondthefive/website.git"
