@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import {Box, Flex, Text, Button} from 'rebass'
 import {Input} from '@rebass/forms'
-import {FaChevronDown, FaChevronUp} from 'react-icons/fa.js'
-import Layout from '../components/layout.js'
-import LoadingIndicator from '../components/loadingIndicator.js'
-import fetchData from '../lib/faqs.js'
+import {FaChevronDown, FaChevronUp} from 'react-icons/fa'
+import Layout from '../components/layout'
+import LoadingIndicator from '../components/loadingIndicator'
+import fetchData from '../lib/faqs'
 
 export default () => {
 	const [data, setData] = useState([])

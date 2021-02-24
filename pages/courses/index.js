@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react'
-import Layout from '../../components/layout.js'
+import Layout from '../../components/layout'
 import {Box, Flex, Text, Button, Link} from 'rebass'
-import cor from '../../lib/courses.js'
-import LoadingIndicator from '../../components/loadingIndicator.js'
+import cor from '../../lib/courses'
+import LoadingIndicator from '../../components/loadingIndicator'
 import Popup from 'reactjs-popup'
-import {MdClose} from 'react-icons/md.js'
-import FilterCheckbox from '../../components/filterCheckbox.js'
-import Collapse from '../../components/collapse.js'
+import {MdClose} from 'react-icons/md'
+import FilterCheckbox from '../../components/filterCheckbox'
+import Collapse from '../../components/collapse'
 
 const Tag = ({children}) => (
 	<Box
