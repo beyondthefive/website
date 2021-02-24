@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import Layout from '../../components/layout'
+import Layout from '../../components/layout.js'
 import {Flex, Box} from 'rebass'
-import LoadingIndicator from '../../components/loadingIndicator'
+import LoadingIndicator from '../../components/loadingIndicator.js'
 import HCaptcha from '@hcaptcha/react-hcaptcha'
 
 const register = () => {

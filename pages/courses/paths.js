@@ -1,5 +1,5 @@
 import React, {Children} from 'react'
-import Layout from '../../components/layout'
+import Layout from '../../components/layout.js'
 import {Box, Flex, Text} from 'rebass'
 import Math from '../../public/svgs/paths/math.svg'
 import Bio from '../../public/svgs/paths/bio.svg'

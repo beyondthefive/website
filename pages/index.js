@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/layout.js'
 import {Text, Box, Flex, Link, Button, Image} from 'rebass'
-import RegisterButton from '../components/registerButton'
-import Testimonials from '../components/testimonials'
-import get from '../lib/stats'
+import RegisterButton from '../components/registerButton.js'
+import Testimonials from '../components/testimonials.js'
+import get from '../lib/stats.js'
 import Study from '../public/svgs/undraw_studying_s3l7.svg'
 import Knowledge from '../public/svgs/undraw_knowledge_g5gf.svg'
 import Prof from '../public/svgs/undraw_professor_8lrt.svg'
 import Comparison from '../public/svgs/comparison.svg'
-import BrowseCoursesButton from '../components/browseCoursesButton'
+import BrowseCoursesButton from '../components/browseCoursesButton.js'
 
 const Item = ({num, text}) => (
 	<Box mx={[1, 2, 3]} textAlign="center">

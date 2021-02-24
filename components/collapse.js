@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Collapse} from 'react-collapse'
-import {FaPlus, FaMinus} from 'react-icons/fa'
+import {FaPlus, FaMinus} from 'react-icons/fa.js'
 import {Box, Flex, Text, Button, Link} from 'rebass'
 
 const collapse = ({children, title}) => {

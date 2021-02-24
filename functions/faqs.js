@@ -10,12 +10,12 @@ exports.handler = function (event, context, callback) {
 		})
 		.eachPage(
 			function page(records, fetchNextPage) {
-				records.forEach((record) => {
+				for (const record of records) {
 					data.push({
 						Question: record.get('Question'),
 						Answer: record.get('Answer')
 					})
-				})
+				}
 
 				fetchNextPage()
 			},

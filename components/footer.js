@@ -1,5 +1,5 @@
 import {Flex, Box, Link, Text, Heading, Button} from 'rebass'
-import Waves from './waves'
+import Waves from './waves.js'
 import {
 	FaDiscord,
 	FaInstagram,

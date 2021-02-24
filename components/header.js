@@ -1,9 +1,8 @@
 import React, {useState} from 'react'
 import {Flex, Box, Heading, Link, Text, Button} from 'rebass'
-import RegisterButton from '../components/registerButton'
-import BrowseCoursesButton from '../components/browseCoursesButton'
-import Waves from './waves'
-import {MdClose} from 'react-icons/md'
+import RegisterButton from '../components/registerButton.js'
+import BrowseCoursesButton from '../components/browseCoursesButton.js'
+import Waves from './waves.js'
 import Learn from '../public/svgs/undraw_researching_22gp.svg'
 import Logo from '../public/logo.svg'
 

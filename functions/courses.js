@@ -10,7 +10,7 @@ exports.handler = function (event, context, callback) {
 		})
 		.eachPage(
 			function page(records, fetchNextPage) {
-				records.forEach((record) => {
+				for (const record of records) {
 					courses.push({
 						FormattedName: record.get('Formatted Name'),
 						Name: record.get('Name'),
@@ -26,7 +26,8 @@ exports.handler = function (event, context, callback) {
 						Subject: record.get('Raw Subject').split(', '),
 						Category: record.get('Raw Category')
 					})
-				})
+				}
+
 				fetchNextPage()
 			},
 			function done(error) {
