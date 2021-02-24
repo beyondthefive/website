@@ -17,7 +17,7 @@ const MyApp = ({Component, pageProps}) => {
 					name="description"
 					content="Beyond The Five is an online platform and community that provides free instruction in AP®️, SAT/ACT, and college level classes. 100% of our students pass their AP®️ exams. Registration for the 2020-21 school year is now open!"
 				/>
-				<meta property="og:image" content="/logo.png"/>
+				<meta property="og:image" content="/logo.png" />
 
 				<link rel="icon" href="/favicon.ico" />
 				<link
