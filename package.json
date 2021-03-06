@@ -17,7 +17,7 @@
     "@happykit/analytics": "^1.0.1",
     "@hcaptcha/react-hcaptcha": "^0.3.4",
     "@mdx-js/loader": "^1.6.22",
-    "@next/mdx": "^10.0.7",
+    "@next/mdx": "^10.0.8",
     "@rebass/forms": "^4.0.6",
     "@rebass/preset": "^4.0.5",
     "airtable": "^0.10.1",
@@ -25,7 +25,7 @@
     "dotenv": "^8.2.0",
     "isomorphic-unfetch": "^3.1.0",
     "moment": "^2.29.1",
-    "next": "^10.0.7",
+    "next": "^10.0.8",
     "next-images": "^1.7.0",
     "react": "^17.0.1",
     "react-collapse": "^5.1.0",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^2.0.1",
-    "netlify-cli": "^3.10.2",
+    "netlify-cli": "^3.10.6",
     "xo": "^0.38.2"
   },
   "repository": "https://github.com/beyondthefive/website.git"
