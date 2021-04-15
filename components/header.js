@@ -130,7 +130,7 @@ const header = ({header = false, waves = false}) => {
 									</Text>
 								</Box>
 								<Flex justifyContent="center">
-									<Learn  height="16em" width="18em" />
+									<Learn objectFit="contain" height="16em" width="18em" />
 								</Flex>
 							</Flex>
 						</Box>
