@@ -54,7 +54,7 @@ const index = () => {
 						</Box>
 					</Flex>
 					<Flex justifyContent="center" width={[1, 1 / 2]}>
-						<Study width="16em" height="13em" />
+						<Study objectFit="contain" width="16em" height="13em" />
 					</Flex>
 				</Flex>
 			</Box>

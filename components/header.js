@@ -68,7 +68,7 @@ const header = ({header = false, waves = false}) => {
 						ml={[0, 1, 2, 3]}
 						pl={[0, 1, 2, 3]}
 					>
-						<Logo height="2.3em" width="2.3em" />
+						<Logo objectFit="contain" height="2.3em" width="2.3em" />
 						<Link
 							fontSize={[2, 3, 4]}
 							href="/"
@@ -130,7 +130,7 @@ const header = ({header = false, waves = false}) => {
 									</Text>
 								</Box>
 								<Flex justifyContent="center">
-									<Learn height="16em" width="18em" />
+									<Learn  height="16em" width="18em" />
 								</Flex>
 							</Flex>
 						</Box>
