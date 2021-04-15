@@ -67,7 +67,7 @@ const index = () => {
 			>
 				<a name="learn-more" />
 
-				<Prof width="20em" height="16em" />
+				<Prof objectFit="contain" width="20em" height="16em" />
 				{stats ? (
 					<Flex mt={2}>
 						<Item
@@ -112,7 +112,7 @@ const index = () => {
 					borderBottom: '1px solid lightgrey'
 				}}
 			>
-				<Comparison height="98%" width="98%" />
+				<Comparison objectFit="contain" height="98%" width="98%" />
 			</Box>
 
 			<Box width={[1, 2 / 3]} mx="auto" my={[3, 4, 5]} px={2}>
